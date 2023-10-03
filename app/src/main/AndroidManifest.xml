@@ -2,6 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.DIAL" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +19,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AplicacionSeminarioIntegrador"
         tools:targetApi="31">
+        <activity
+            android:name=".StartActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MenuAplication"
+            android:exported="false" />
+        <activity
+            android:name=".CreditsAplication"
+            android:exported="false" />
+        <activity
+            android:name=".creditsaplication"
+            android:exported="false" />
         <activity
             android:name=".SecondMain"
             android:exported="false" />

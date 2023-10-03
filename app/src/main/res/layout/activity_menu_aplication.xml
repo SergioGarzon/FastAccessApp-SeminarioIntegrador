@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    tools:context=".MenuAplication">
+
+    <Button
+        android:id="@+id/btnCreditsOk2"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/border_buttons"
+        android:onClick="changeActivityPresentation"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:foregroundTint="#00DB8C"
+        android:text="FAST ACCESS APP"
+        android:textColor="#00E87E"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.566"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:foregroundTint="#00DB8C"
+        android:text="Welcome to"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.67" />
+
+    <ImageButton
+        android:id="@+id/imgBtnChat"
+        android:layout_width="124dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="92dp"
+        android:background="@color/black"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnNotifications"
+        app:layout_constraintHorizontal_bias="0.842"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/chatapp"
+        android:tooltipText="Press this button to chat with guests"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnNotifications"
+        android:layout_width="124dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="4dp"
+        android:background="@color/black"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnScanQR"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/notificationbutton"
+        android:tooltipText="Press this button to see notifications"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnScanQR"
+        android:layout_width="124dp"
+        android:layout_height="113dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/black"
+        android:scaleType="fitCenter"
+        android:tooltipText="Press this button to scan QR code"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        app:srcCompat="@drawable/scanqr" />
+
+    <ImageButton
+        android:id="@+id/imgBtnProfile"
+        android:layout_width="124dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/black"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk2"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnPolice"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnChat"
+        app:layout_constraintVertical_bias="0.006"
+        app:srcCompat="@drawable/profilebutton"
+        android:tooltipText="Press this button to change profile configurations"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnPolice"
+        android:layout_width="124dp"
+        android:layout_height="115dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imgBtnSecurityGuard"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnNotifications"
+        app:srcCompat="@drawable/policebutton"
+        android:tooltipText="Press this button to called to police"/>
+
+    <ImageButton
+        android:id="@+id/imgBtnSecurityGuard"
+        android:layout_width="120dp"
+        android:layout_height="116dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="4dp"
+        android:scaleType="fitCenter"
+        android:tooltipText="Press this button to called security guard"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnScanQR"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/sosbutton" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

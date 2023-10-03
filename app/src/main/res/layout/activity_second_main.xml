@@ -5,48 +5,94 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".SecondMain"
-    android:background="@color/black"
+    android:background="@drawable/backgroundimage"
     >
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="215dp"
+        android:layout_height="46dp"
         android:background="#000000"
         android:foregroundTint="#00DB8C"
         android:text="FAST ACCESS APP"
         android:textColor="#00E87E"
-        android:textSize="34sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.874"
+        app:layout_constraintHorizontal_bias="0.852"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.091" />
+
+    <Button
+        android:id="@+id/btnRegisterOk"
+        android:layout_width="167dp"
+        android:layout_height="58dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal|bold|italic"
+        android:background="@drawable/border_buttons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.267" />
 
     <Button
         android:id="@+id/btnCancel"
-        android:layout_width="200dp"
-        android:layout_height="54dp"
+        android:layout_width="160dp"
+        android:layout_height="60dp"
+        android:background="@drawable/border_buttons"
         android:onClick="changeActivity"
         android:text="Cancel"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="normal|bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegisterOk"
+        app:layout_constraintHorizontal_bias="0.579"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.914" />
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.254" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="89dp"
         android:layout_height="82dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.049"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.024"
+        app:layout_constraintVertical_bias="0.041"
         app:srcCompat="@drawable/useradd" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="333dp"
+        android:layout_height="418dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.146">
+
+
+        <EditText
+            android:id="@+id/editTextText2"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Enter first name"
+            android:textColor="@color/black"
+            android:textSize="30sp" />
+
+
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
