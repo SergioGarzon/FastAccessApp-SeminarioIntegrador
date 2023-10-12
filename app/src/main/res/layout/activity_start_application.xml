@@ -9,8 +9,8 @@
 
     <Button
         android:id="@+id/btnIdRegister"
-        android:layout_width="240dp"
-        android:layout_height="55dp"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityRegisterAcoount"
         android:text="REGISTER"
@@ -19,15 +19,15 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnIdLogin2"
-        app:layout_constraintVertical_bias="0.139" />
+        app:layout_constraintVertical_bias="0.063" />
 
     <Button
         android:id="@+id/btnIdLogin2"
-        android:layout_width="240dp"
-        android:layout_height="55dp"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityLogin"
         android:text="LOGIN"
@@ -36,27 +36,26 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblFastAccessAppPrincipalTitle"
-        app:layout_constraintVertical_bias="0.28" />
+        app:layout_constraintVertical_bias="0.227" />
 
     <ImageView
         android:id="@+id/imageView5"
-        android:layout_width="129dp"
-        android:layout_height="109dp"
+        android:layout_width="155dp"
+        android:layout_height="137dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.136"
+        app:layout_constraintVertical_bias="0.232"
         app:srcCompat="@drawable/fastaccessapp" />
 
     <TextView
         android:id="@+id/lblFastAccessAppPrincipalTitle"
         android:layout_width="344dp"
         android:layout_height="69dp"
-        android:layout_marginTop="76dp"
         android:text="FAST ACCESS APP"
         android:textAlignment="center"
         android:textColor="#00DB8C"
@@ -64,14 +63,15 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView5"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.074" />
 
     <Button
         android:id="@+id/btnInfo"
-        android:layout_width="63dp"
-        android:layout_height="66dp"
+        android:layout_width="58dp"
+        android:layout_height="57dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityCredits"
         android:text="I"
