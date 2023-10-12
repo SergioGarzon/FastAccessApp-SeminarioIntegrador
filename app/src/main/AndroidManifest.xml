@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
     <queries>
         <intent>
             <action android:name="android.intent.action.DIAL" />
@@ -9,6 +13,7 @@
     </queries>
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -21,6 +26,15 @@
         android:theme="@style/Theme.AplicacionSeminarioIntegrador"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AvisoNoAutorizado"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterAccount"
+            android:exported="false" />
+        <activity
             android:name=".StartApplication"
             android:exported="false" />
         <activity
@@ -29,12 +43,6 @@
         <activity
             android:name=".CreditsAplication"
             android:exported="false" />
-        <activity
-            android:name=".SecondMain"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivity"
-            android:exported="false"></activity>
         <activity
             android:name=".StartActivity"
             android:exported="true">

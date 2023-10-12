@@ -26,15 +26,19 @@ public class StartApplication extends AppCompatActivity {
         animation();
     }
 
-    public void changeActivityApplication(View view) {
-        Intent nextActivity = new Intent(this, MainActivity.class);
+    public void changeActivityLogin(View view) {
+        Intent nextActivity = new Intent(this, LoginActivity.class);
         startActivity(nextActivity);
     }
 
+    public void changeActivityRegisterAcoount(View view) {
+        Intent nextActivity = new Intent(this, RegisterAccount.class);
+        startActivity(nextActivity);
+    }
 
-    public void changeSecondMain(View view) {
-        Intent nextActivity2 = new Intent(this, SecondMain.class);
-        startActivity(nextActivity2);
+    public void changeActivityCredits(View view) {
+        Intent nextActivity = new Intent(this, CreditsAplication.class);
+        startActivity(nextActivity);
     }
 
     @Override

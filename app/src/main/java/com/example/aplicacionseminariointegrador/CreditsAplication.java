@@ -45,7 +45,7 @@ public class CreditsAplication extends AppCompatActivity {
 
     // Metodo para el boton Ingresar
     public void changeActivity(View view) {
-        Intent nextActivity = new Intent(this, MainActivity.class);
+        Intent nextActivity = new Intent(this, StartApplication.class);
         startActivity(nextActivity);
     }
 }
