@@ -3,36 +3,29 @@ package com.example.aplicacionseminariointegrador;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.pm.ActivityInfo;
 import android.os.Vibrator;
 import android.view.View;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
     }
 
-    // Metodo para el boton Ingresar
-    public void changeActivity(View view) {
-        Intent nextActivity = new Intent(this, SecondMain.class);
-        startActivity(nextActivity);
-    }
-
-    // Metodo para el boton Ingresar a los creditos.
-    public void changeActivityCredits(View view) {
-
-        Intent nextActivity = new Intent(this, CreditsAplication.class);
-        startActivity(nextActivity);
-    }
 
     // Metodo para el boton Ingresar al menu principal.
     public void changeActivityMenu(View view) {
@@ -60,6 +53,12 @@ public class MainActivity extends AppCompatActivity {
                         }
                     }).show();
         }
+    }
+
+    // Metodo para el boton Ingresar
+    public void changeActivityStartApplicacion(View view) {
+        Intent nextActivity = new Intent(this, StartApplication.class);
+        startActivity(nextActivity);
     }
 
 

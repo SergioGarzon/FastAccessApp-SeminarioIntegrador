@@ -3,6 +3,7 @@ package com.example.aplicacionseminariointegrador;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -14,6 +15,7 @@ public class MenuAplication extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_menu_aplication);
 
@@ -34,7 +36,13 @@ public class MenuAplication extends AppCompatActivity {
 
     // Metodo para el boton Ingresar a los creditos.
     public void changeActivityPresentation(View view) {
-        Intent nextActivity = new Intent(this, StartActivity.class);
-        startActivity(nextActivity);
+        //Intent nextActivity = new Intent(this, StartActivity.class);
+        //startActivity(nextActivity);
+    }
+
+    public void callPolice(View view) {
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse("tel:3517416569"));
+        startActivity(intent);
     }
 }

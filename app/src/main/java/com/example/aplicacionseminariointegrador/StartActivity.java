@@ -4,30 +4,23 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+
 public class StartActivity extends AppCompatActivity {
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
 
-        Thread thread = new Thread() {
-
+        new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                try {
-                    sleep(2000);
-                    Intent newActivity = new Intent(getApplicationContext(), MainActivity.class);
-                    startActivity(newActivity);
-                }
-                catch(InterruptedException e) {
-                    e.printStackTrace();
-                }
+                Intent nextActivity = new Intent(getApplicationContext(), StartApplication.class);
+                startActivity(nextActivity);
             }
-        };
+        }, 3000);
 
-        thread.start();
+
     }
 }

@@ -10,36 +10,37 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="215dp"
-        android:layout_height="46dp"
+        android:layout_width="306dp"
+        android:layout_height="48dp"
         android:background="#000000"
         android:foregroundTint="#00DB8C"
-        android:text="FAST ACCESS APP"
-        android:textColor="#00E87E"
-        android:textSize="25sp"
+        android:text="CREATE ACCOUNT"
+        android:textAlignment="center"
+        android:textColor="#FDFDFD"
+        android:textSize="34sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.852"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.091" />
+        app:layout_constraintVertical_bias="0.105" />
 
     <Button
         android:id="@+id/btnRegisterOk"
         android:layout_width="167dp"
         android:layout_height="58dp"
+        android:background="@drawable/border_buttons"
         android:text="Register"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="normal|bold|italic"
-        android:background="@drawable/border_buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.934"
+        app:layout_constraintHorizontal_bias="0.848"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.267" />
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.86" />
 
     <Button
         android:id="@+id/btnCancel"
@@ -53,46 +54,9 @@
         android:textStyle="normal|bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegisterOk"
-        app:layout_constraintHorizontal_bias="0.579"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
-        app:layout_constraintVertical_bias="0.254" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="89dp"
-        android:layout_height="82dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.506"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.041"
-        app:srcCompat="@drawable/useradd" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="333dp"
-        android:layout_height="418dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.146">
-
-
-        <EditText
-            android:id="@+id/editTextText2"
-            android:layout_width="wrap_content"
-            android:layout_height="15dp"
-            android:background="@color/white"
-            android:ems="10"
-            android:inputType="text"
-            android:text="Enter first name"
-            android:textColor="@color/black"
-            android:textSize="30sp" />
-
-
-    </ScrollView>
+        app:layout_constraintVertical_bias="0.863" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
