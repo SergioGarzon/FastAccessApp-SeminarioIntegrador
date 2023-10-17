@@ -35,7 +35,7 @@ public class MenuAplication extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_menu_aplication);
+        setContentView(R.layout. activity_menu_aplication);
 
         btnCalledPolice = (ImageButton) findViewById(R.id.imgBtnPolice);
 

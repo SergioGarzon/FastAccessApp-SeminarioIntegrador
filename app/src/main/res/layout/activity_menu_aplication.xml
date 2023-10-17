@@ -8,7 +8,7 @@
     tools:context=".MenuAplication">
 
     <Button
-        android:id="@+id/btnCreditsOk2"
+        android:id="@+id/btnLogoutMenuApplication"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:background="@drawable/border_buttons"
@@ -102,7 +102,7 @@
         android:layout_marginTop="24dp"
         android:background="@color/black"
         android:scaleType="fitCenter"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk2"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogoutMenuApplication"
         app:layout_constraintEnd_toStartOf="@+id/imgBtnPolice"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +133,7 @@
         android:layout_marginEnd="4dp"
         android:scaleType="fitCenter"
         android:tooltipText="Press this button to called security guard"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk2"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogoutMenuApplication"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgBtnScanQR"
         app:layout_constraintVertical_bias="0.0"

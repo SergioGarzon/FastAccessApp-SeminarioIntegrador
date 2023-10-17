@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.052" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnRegisterUser"
         android:layout_width="176dp"
         android:layout_height="58dp"
         android:background="@drawable/border_buttons"
@@ -176,7 +176,7 @@
         app:layout_constraintVertical_bias="0.515" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnCancelCreateAccount"
         android:layout_width="176dp"
         android:layout_height="58dp"
         android:background="@drawable/border_buttons"
@@ -185,7 +185,7 @@
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegisterUser"
         app:layout_constraintHorizontal_bias="0.79"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner"

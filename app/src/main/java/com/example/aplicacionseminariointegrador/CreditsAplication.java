@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 
 public class CreditsAplication extends AppCompatActivity {
 
-    ImageButton getImgBtnSergioLinkedIn, imgBtnFacundoLinkedIn;
+    ImageButton imgBtnSergioLinkedIn, imgBtnFacundoLinkedIn,imgBtnGenaroLinkedIn, imgBtnMatiasLinkedIn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,9 +19,9 @@ public class CreditsAplication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_credits_aplication);
 
-        getImgBtnSergioLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinSergio);
+        imgBtnSergioLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinSergio);
 
-        getImgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
+        imgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Uri uri = Uri.parse("https://www.linkedin.com/in/sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
@@ -40,6 +40,30 @@ public class CreditsAplication extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        imgBtnGenaroLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedInGenaro);
+
+        imgBtnGenaroLinkedIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.linkedin.com/in/genaro-paredes-6b5785238/"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+        imgBtnMatiasLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinMatias);
+
+        imgBtnMatiasLinkedIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Uri uri = Uri.parse("https://www.linkedin.com/in/matias-leonel-farach-b2482528a/"); // missing 'http://' will cause crashed
+                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 
