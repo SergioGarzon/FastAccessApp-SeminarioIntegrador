@@ -19,7 +19,7 @@ Esta aplicación es para el proyecto final de Seminario Integrador de la carrera
 
 ##### Login
 
-<img src="./Photos/Login.png" alt="Login screen" width="2500px" height="430px"/>
+<img src="./Photos/Login.png" alt="Login screen" width="250px" height="430px"/>
 
 ##### Creditos
 
