@@ -26,6 +26,14 @@
         android:theme="@style/Theme.AplicacionSeminarioIntegrador"
         tools:targetApi="31">
         <activity
+            android:name=".GoogleMapsLocation"
+            android:exported="false" />
+        <activity
+            android:name=".LocationGoogleMaps"
+            android:exported="false"
+            android:label="@string/title_activity_location_google_maps"
+            android:theme="@style/Theme.AplicacionSeminarioIntegrador" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity

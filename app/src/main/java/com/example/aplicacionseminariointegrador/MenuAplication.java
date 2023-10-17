@@ -9,6 +9,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
@@ -25,7 +26,7 @@ import android.widget.Toast;
 
 public class MenuAplication extends AppCompatActivity {
 
-    ImageButton btnCalledPolice;
+    ImageButton btnCalledPolice, btnGoogleMaps;
 
     private static final int REQUEST_CALL = 1;
     private EditText mEditTextNumber;
@@ -45,24 +46,30 @@ public class MenuAplication extends AppCompatActivity {
                 makePhoneCall();
             }
         });
+
+        btnGoogleMaps = (ImageButton) findViewById(R.id.imgBtnSecurityGuard);
+        btnGoogleMaps.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToSecurityGuard();
+            }
+        });
+
     }
 
+    private void goToSecurityGuard() {
+        Intent nextActivity = new Intent(this, GoogleMapsLocation.class);
+        startActivity(nextActivity);
+    }
+
+
+
     private void makePhoneCall() {
-        String number = mEditTextNumber.getText().toString();
-        if (number.trim().length() > 0) {
+        Intent intent = new Intent(Intent.ACTION_CALL);
+        intent.setData(Uri.parse("tel:911"));
+        startActivity(intent);
 
-            if (ContextCompat.checkSelfPermission(MenuAplication.this,
-                    Manifest.permission.CALL_PHONE) != PackageManager.PERMISSION_GRANTED) {
-                ActivityCompat.requestPermissions(MenuAplication.this,
-                        new String[]{Manifest.permission.CALL_PHONE}, REQUEST_CALL);
-            } else {
-                String dial = "tel:3516090392";
-                startActivity(new Intent(Intent.ACTION_CALL, Uri.parse(dial)));
-            }
-
-        } else {
-            Toast.makeText( MenuAplication.this, "Enter Phone Number", Toast.LENGTH_SHORT).show();
-        }
+        Log.d("Eror", "No llama");
     }
 
 
@@ -75,9 +82,4 @@ public class MenuAplication extends AppCompatActivity {
         //startActivity(nextActivity);
     }
 
-    public void callPolice(View view) {
-        Intent intent = new Intent(Intent.ACTION_DIAL);
-        intent.setData(Uri.parse("tel:3517416569"));
-        startActivity(intent);
-    }
 }
