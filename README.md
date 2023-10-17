@@ -1,10 +1,9 @@
  # Aplicación "FAST ACCESS APP"
 
-<br>
+Esta aplicación es para el proyecto final de Seminario Integrador de la carrera de Ingenieria en Sistemas de Información de la Universidad Tecnologica Nacional - Facultad Regional Córdoba
 
-#### Esta aplicación es para el proyecto final de Seminario Integrador
+<img src="./Photos/utnfrc.png" alt="UTN FRC" />
 
-<br>
 
 ##### **Integrantes**
 > * Farach, Matías Leonel
@@ -12,25 +11,23 @@
 > * Paredes, Genaro
 > * Rago, Facundo Matías
 
-<br>
-
 #### Pantallas de la aplicación
 
 ##### Pantalla inicial
 
-<img src="./Photos/Main.png" alt="Main screen" width="165px" height="300px"/>
+<img src="./Photos/Main.png" alt="Main screen" width="200px" height="430px"/>
 
 ##### Login
 
-<img src="./Photos/Login.png" alt="Login screen" width="165px" height="300px"/>
+<img src="./Photos/Login.png" alt="Login screen" width="200px" height="430px"/>
 
 ##### Creditos
 
-<img src="./Photos/Credits.png" alt="Credits screen" width="165px" height="300px"/>
+<img src="./Photos/Credits.png" alt="Credits screen" width="200px" height="430px"/>
 
 ##### Registrar nueva cuenta
 
-<img src="./Photos/Register.png" alt="Create account" width="165px" height="300px"/>
+<img src="./Photos/Register.png" alt="Create account" width="200px" height="430px"/>
 
 
 
