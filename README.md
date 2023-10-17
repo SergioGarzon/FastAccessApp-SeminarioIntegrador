@@ -15,19 +15,19 @@ Esta aplicación es para el proyecto final de Seminario Integrador de la carrera
 
 ##### Pantalla inicial
 
-<img src="./Photos/Main.png" alt="Main screen" width="200px" height="430px"/>
+<img src="./Photos/Main.png" alt="Main screen" width="250px" height="430px"/>
 
 ##### Login
 
-<img src="./Photos/Login.png" alt="Login screen" width="200px" height="430px"/>
+<img src="./Photos/Login.png" alt="Login screen" width="2500px" height="430px"/>
 
 ##### Creditos
 
-<img src="./Photos/Credits.png" alt="Credits screen" width="200px" height="430px"/>
+<img src="./Photos/Credits.png" alt="Credits screen" width="250px" height="430px"/>
 
 ##### Registrar nueva cuenta
 
-<img src="./Photos/Register.png" alt="Create account" width="200px" height="430px"/>
+<img src="./Photos/Register.png" alt="Create account" width="250px" height="430px"/>
 
 
 
