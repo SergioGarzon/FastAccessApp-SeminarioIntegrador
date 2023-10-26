@@ -7,6 +7,8 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
+import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+
 public class StartActivity extends AppCompatActivity {
 
     @Override
@@ -14,6 +16,8 @@ public class StartActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start);
+
+        LanguageSelected.languageSelected = 1;
 
         new Handler().postDelayed(new Runnable() {
             @Override

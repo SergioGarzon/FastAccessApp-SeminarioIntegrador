@@ -1,4 +1,10 @@
 <resources>
     <string name="app_name">Fast Access App</string>
     <string name="title_activity_location_google_maps">LocationGoogleMaps</string>
+
+    <string-array name="array_name">
+        <item>Personal de Seguridad</item>
+        <item>Inquilino</item>
+    </string-array>
+
 </resources>

@@ -11,15 +11,16 @@ import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
+import android.widget.TextView;
 
+import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
     Button btnLogin, btnCancelLogin;
     TextInputLayout txtUsername, txtPassword;
+    TextView txtLblUsername, txtLblPassword, lblLogin;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,12 +29,26 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
-
         btnCancelLogin = (Button) findViewById(R.id.btnCancelLogin);
-
         txtUsername = (TextInputLayout) findViewById(R.id.txtInputUsername);
-
         txtPassword = (TextInputLayout) findViewById(R.id.txtInputPassword);
+        txtLblUsername = (TextView) findViewById(R.id.txtLblUsername);
+        txtLblPassword = (TextView) findViewById(R.id.txtLblPass);
+        lblLogin = (TextView) findViewById(R.id.lblLogin);
+
+        if(LanguageSelected.languageSelected == 0) {
+            btnLogin.setText("SIGN IN");
+            btnCancelLogin.setText("CANCEL");
+            txtLblUsername.setText("Username:");
+            txtLblPassword.setText("Password");
+            lblLogin.setText("LOGIN");
+        } else {
+            btnLogin.setText("INICIAR SESION");
+            btnCancelLogin.setText("CANCELAR");
+            txtLblUsername.setText("Nombre de usuario::");
+            txtLblPassword.setText("Contraseña");
+            lblLogin.setText("ACCESO");
+        }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
