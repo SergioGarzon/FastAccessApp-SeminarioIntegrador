@@ -26,6 +26,12 @@
         android:theme="@style/Theme.AplicacionSeminarioIntegrador"
         tools:targetApi="31">
         <activity
+            android:name=".EmergencyCall"
+            android:exported="false" />
+        <activity
+            android:name=".RegisterSucessful"
+            android:exported="false" />
+        <activity
             android:name=".OptionsActivity"
             android:exported="false" />
         <activity

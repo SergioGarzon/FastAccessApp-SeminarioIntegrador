@@ -38,7 +38,7 @@ public class OptionsActivity extends AppCompatActivity {
             btnCancelOption.setText("CANCEL");
             lblOptions.setText("OPTIONS");
             txtLblLanguage.setText("Language:");
-            txtLblSound.setText("Activate sound:");
+            txtLblSound.setText("Sound:");
         } else {
             chkEnglish.setText("Ingles");
             chkSpanish.setText("Español");
@@ -46,7 +46,7 @@ public class OptionsActivity extends AppCompatActivity {
             btnCancelOption.setText("CANCELAR");
             lblOptions.setText("OPCIONES");
             txtLblLanguage.setText("Idioma:");
-            txtLblSound.setText("Activar sonido:");
+            txtLblSound.setText("Sonido:");
         }
 
         btnAcceptOption.setOnClickListener(new View.OnClickListener() {

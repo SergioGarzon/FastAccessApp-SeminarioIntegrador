@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/lblLogin"
-        android:layout_width="186dp"
-        android:layout_height="67dp"
+        android:layout_width="291dp"
+        android:layout_height="79dp"
         android:text="LOGIN"
         android:textAlignment="center"
         android:textColor="#F6F6F6"
@@ -27,6 +27,7 @@
         android:id="@+id/txtInputUsername"
         android:layout_width="305dp"
         android:layout_height="56dp"
+        android:maxLines="1"
         android:background="@drawable/border_button_white"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -44,23 +45,23 @@
 
     <TextView
         android:id="@+id/txtLblUsername"
-        android:layout_width="138dp"
-        android:layout_height="29dp"
+        android:layout_width="267dp"
+        android:layout_height="23dp"
         android:text="Username:"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.205"
+        app:layout_constraintHorizontal_bias="0.419"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblLogin"
-        app:layout_constraintVertical_bias="0.075" />
+        app:layout_constraintVertical_bias="0.059" />
 
     <TextView
         android:id="@+id/txtLblPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="291dp"
+        android:layout_height="31dp"
         android:layout_marginTop="20dp"
         android:text="Password:"
         android:textColor="@color/white"
@@ -68,28 +69,29 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputUsername"
-        app:layout_constraintVertical_bias="0.017" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtInputPassword"
         android:layout_width="305dp"
         android:layout_height="56dp"
+        android:maxLines="1"
         android:background="@drawable/border_button_white"
-        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLblPass"
-        app:layout_constraintVertical_bias="0.025">
+        app:layout_constraintVertical_bias="0.025"
+        app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Enter your password" />
+            android:hint="Enter your password"
+            />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button

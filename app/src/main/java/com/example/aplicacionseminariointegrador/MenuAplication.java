@@ -1,36 +1,15 @@
 package com.example.aplicacionseminariointegrador;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.net.Uri;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.Menu;
-import android.view.View;
-import android.widget.ImageButton;
-import android.widget.EditText;
-import android.Manifest;
-import android.content.Intent;
-import android.content.pm.PackageManager;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.Button;
 
 public class MenuAplication extends AppCompatActivity {
 
-    ImageButton btnCalledPolice, btnGoogleMaps;
-
-    private static final int REQUEST_CALL = 1;
-    private EditText mEditTextNumber;
-
+    Button btnEmergencyNewActivity, btnLogoutMenuApplication;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,48 +17,40 @@ public class MenuAplication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout. activity_menu_aplication);
 
-        btnCalledPolice = (ImageButton) findViewById(R.id.imgBtnPolice);
+        btnEmergencyNewActivity = (Button) findViewById(R.id.btnEmergencyNewActivity);
+        btnLogoutMenuApplication = (Button) findViewById(R.id.btnLogoutMenuApplication);
 
-        btnCalledPolice.setOnClickListener(new View.OnClickListener() {
+        btnEmergencyNewActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                makePhoneCall();
+                makePhoneCall(v);
             }
         });
 
-        btnGoogleMaps = (ImageButton) findViewById(R.id.imgBtnSecurityGuard);
-        btnGoogleMaps.setOnClickListener(new View.OnClickListener() {
+        btnLogoutMenuApplication.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToSecurityGuard();
+                logoutSesion(v);
             }
         });
+
 
     }
 
-    private void goToSecurityGuard() {
-        Intent nextActivity = new Intent(this, GoogleMapsLocation.class);
+    private void makePhoneCall(View v) {
+        Intent nextActivity = new Intent(this, EmergencyCall.class);
         startActivity(nextActivity);
     }
 
-
-
-    private void makePhoneCall() {
-        Intent intent = new Intent(Intent.ACTION_CALL);
-        intent.setData(Uri.parse("tel:911"));
-        startActivity(intent);
-
-        Log.d("Eror", "No llama");
+    private void logoutSesion(View v) {
+        Intent nextActivity = new Intent(this, StartApplication.class);
+        startActivity(nextActivity);
     }
 
-
-
-
-
-    // Metodo para el boton Ingresar a los creditos.
-    public void changeActivityPresentation(View view) {
-        //Intent nextActivity = new Intent(this, StartActivity.class);
-        //startActivity(nextActivity);
+    @Override
+    public void onBackPressed() {
+        //Toast.makeText(StartApplication.this, "Action not allowed!", Toast.LENGTH_SHORT).show();
+        return;
     }
 
 }

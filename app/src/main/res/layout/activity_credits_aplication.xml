@@ -10,14 +10,14 @@
 
     <Button
         android:id="@+id/btnCreditsOk"
-        android:layout_width="160dp"
-        android:layout_height="60dp"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:background="@drawable/border_buttons"
         android:onClick="changeActivity"
         android:text="OK"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
-        android:background="@drawable/border_buttons"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

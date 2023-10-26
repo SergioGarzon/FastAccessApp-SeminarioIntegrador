@@ -10,8 +10,8 @@
 
     <Button
         android:id="@+id/btnCancelOptions"
-        android:layout_width="196dp"
-        android:layout_height="57dp"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="68dp"
         android:background="@drawable/border_buttons"
         android:text="CANCEL"
@@ -27,8 +27,8 @@
 
     <Button
         android:id="@+id/btnAcceptOptions"
-        android:layout_width="196dp"
-        android:layout_height="57dp"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
         android:layout_marginBottom="176dp"
         android:background="@drawable/border_buttons"
         android:text="OK"
@@ -49,33 +49,33 @@
         android:backgroundTintMode="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.275"
+        app:layout_constraintHorizontal_bias="0.08"
         app:layout_constraintStart_toEndOf="@+id/txtLblSound"
         app:layout_constraintTop_toBottomOf="@+id/txtLblOptions"
-        app:layout_constraintVertical_bias="0.325" />
+        app:layout_constraintVertical_bias="0.39" />
 
     <TextView
         android:id="@+id/txtLblSound"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
+        android:layout_width="188dp"
+        android:layout_height="52dp"
         android:text="Sound:"
-        android:textAlignment="viewEnd"
+        android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.245"
+        app:layout_constraintHorizontal_bias="0.237"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLblLanguage"
-        app:layout_constraintVertical_bias="0.194" />
+        app:layout_constraintVertical_bias="0.255" />
 
     <TextView
         android:id="@+id/txtLblLanguage"
-        android:layout_width="150dp"
-        android:layout_height="46dp"
+        android:layout_width="228dp"
+        android:layout_height="49dp"
         android:layout_marginTop="32dp"
         android:text="Language:"
-        android:textAlignment="viewEnd"
+        android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -116,8 +116,8 @@
 
     <TextView
         android:id="@+id/txtLblOptions"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="348dp"
+        android:layout_height="88dp"
         android:text="OPTIONS"
         android:textAlignment="center"
         android:textColor="#F6F6F6"
