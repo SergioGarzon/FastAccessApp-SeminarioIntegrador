@@ -150,7 +150,7 @@
         app:layout_constraintVertical_bias="0.033" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spinnerRol"
         android:layout_width="351dp"
         android:layout_height="58dp"
         android:background="@drawable/border_button_white"
@@ -174,7 +174,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerRol"
         app:layout_constraintVertical_bias="0.351" />
 
     <Button

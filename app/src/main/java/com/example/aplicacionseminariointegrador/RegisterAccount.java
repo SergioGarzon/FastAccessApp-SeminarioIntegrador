@@ -1,17 +1,27 @@
 package com.example.aplicacionseminariointegrador;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
-
+import android.widget.Toast;
+import com.android.volley.AuthFailureError;
+import com.android.volley.Request;
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
-
-import org.w3c.dom.Text;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterAccount extends AppCompatActivity {
 
@@ -19,20 +29,30 @@ public class RegisterAccount extends AppCompatActivity {
     TextView txtLblCreateAccount, txtLblNameSurnames,
             txtLblUsernameCreateAccount, txtLblPasswordCreateAccount, txtLblSelectRole;
 
+    Spinner spinnerRol;
+
+    RequestQueue requestQueue;
+
+    private static final String url1 = "http://192.168.56.1/proyectobdejemplo/save.php";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
 
-        btnCancelCreateAccount = (Button) findViewById(R.id.btnCancelCreateAccount);
-        btnRegisterUser = (Button) findViewById(R.id.btnRegisterUser);
+        requestQueue = Volley.newRequestQueue(this);
 
-        txtLblCreateAccount = (TextView) findViewById(R.id.txtLblCreateAccount);
-        txtLblNameSurnames = (TextView) findViewById(R.id.txtLblNamesSurnames);
-        txtLblUsernameCreateAccount = (TextView) findViewById(R.id.txtLblUsernameCreateAccount);
-        txtLblPasswordCreateAccount = (TextView) findViewById(R.id.txtLblPasswordCreateAccount);
-        txtLblSelectRole = (TextView) findViewById(R.id.txtLblSelectRole);
+        btnCancelCreateAccount = findViewById(R.id.btnCancelCreateAccount);
+        btnRegisterUser = findViewById(R.id.btnRegisterUser);
+
+        txtLblCreateAccount =  findViewById(R.id.txtLblCreateAccount);
+        txtLblNameSurnames =  findViewById(R.id.txtLblNamesSurnames);
+        txtLblUsernameCreateAccount =  findViewById(R.id.txtLblUsernameCreateAccount);
+        txtLblPasswordCreateAccount =  findViewById(R.id.txtLblPasswordCreateAccount);
+        txtLblSelectRole = findViewById(R.id.txtLblSelectRole);
+
+        spinnerRol = findViewById(R.id.spinnerRol);
 
         if(LanguageSelected.languageSelected == 0) {
             btnCancelCreateAccount.setText("CANCEL");
@@ -42,6 +62,10 @@ public class RegisterAccount extends AppCompatActivity {
             txtLblUsernameCreateAccount.setText("Username:");
             txtLblPasswordCreateAccount.setText("Password:");
             txtLblSelectRole.setText("Select Role:");
+
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_name_english, android.R.layout.simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerRol.setAdapter(adapter);
         } else {
             btnCancelCreateAccount.setText("CANCELAR");
             btnRegisterUser.setText("REGISTRARSE");
@@ -50,6 +74,10 @@ public class RegisterAccount extends AppCompatActivity {
             txtLblUsernameCreateAccount.setText("Nombre de usuario:");
             txtLblPasswordCreateAccount.setText("Contraseña:");
             txtLblSelectRole.setText("Seleccionar rol:");
+
+            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.array_name, android.R.layout.simple_spinner_dropdown_item);
+            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spinnerRol.setAdapter(adapter2);
         }
 
         btnCancelCreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -62,7 +90,8 @@ public class RegisterAccount extends AppCompatActivity {
         btnRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                nextRegisterSucessfully();
+                createUser(txtLblUsernameCreateAccount.getText().toString().trim(),
+                        txtLblPasswordCreateAccount.getText().toString().trim());
             }
         });
     }
@@ -75,5 +104,46 @@ public class RegisterAccount extends AppCompatActivity {
     private void nextRegisterSucessfully() {
         Intent nextActivity = new Intent(this, RegisterSucessful.class);
         startActivity(nextActivity);
+    }
+
+    private void createUser(final String nombreUser1, final String password1) {
+
+
+        nextRegisterSucessfully();
+
+        /*
+        StringRequest stringRequest = new StringRequest(
+
+                Request.Method.POST,
+                url1,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        nextRegisterSucessfully();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(RegisterAccount.this, "Error", Toast.LENGTH_SHORT).show();
+                    }
+                }
+        ){
+            @Nullable
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("nombreUsuario", nombreUser1);
+                params.put("passwordUser", password1);
+                params.put("accesoValor", "0");
+                params.put("IdPersona", "0");
+                return params;
+            }
+        };
+
+        requestQueue.add(stringRequest);
+        */
+
+
     }
 }

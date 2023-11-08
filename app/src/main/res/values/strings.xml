@@ -3,8 +3,15 @@
     <string name="title_activity_location_google_maps">LocationGoogleMaps</string>
 
     <string-array name="array_name">
-        <item>Personal de Seguridad</item>
         <item>Inquilino</item>
+        <item>Seguridad</item>
+        <item>Administrador</item>
+    </string-array>
+
+    <string-array name="array_name_english">
+        <item>Tenant</item>
+        <item>Security</item>
+        <item>Administrator</item>
     </string-array>
 
 </resources>

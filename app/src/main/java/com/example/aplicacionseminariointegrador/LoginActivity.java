@@ -40,12 +40,12 @@ public class LoginActivity extends AppCompatActivity {
             btnLogin.setText("SIGN IN");
             btnCancelLogin.setText("CANCEL");
             txtLblUsername.setText("Username:");
-            txtLblPassword.setText("Password");
+            txtLblPassword.setText("Password:");
             lblLogin.setText("LOGIN");
         } else {
             btnLogin.setText("INICIAR SESION");
             btnCancelLogin.setText("CANCELAR");
-            txtLblUsername.setText("Nombre de usuario::");
+            txtLblUsername.setText("Nombre de usuario:");
             txtLblPassword.setText("Contraseña");
             lblLogin.setText("ACCESO");
         }
@@ -80,7 +80,12 @@ public class LoginActivity extends AppCompatActivity {
             startActivity(nextActivity);
         }
 
-        if(txtUsername.getEditText().getText().toString().compareTo("Otro") != 0 && txtUsername.getEditText().getText().toString().compareTo("Admin") != 0) {
+        if(txtUsername.getEditText().getText().toString().equals("Otro2") && txtPassword.getEditText().getText().toString().equals("1")) {
+            Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+            startActivity(nextActivity);
+        }
+
+        if(txtUsername.getEditText().getText().toString().compareTo("Otro") != 0 && txtUsername.getEditText().getText().toString().compareTo("Admin") != 0 && txtUsername.getEditText().getText().toString().compareTo("Otro2") != 0) {
             Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(1000);
 
