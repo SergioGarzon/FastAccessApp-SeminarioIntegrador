@@ -14,4 +14,10 @@
         <item>Administrator</item>
     </string-array>
 
+    <string-array name="tipo_documento">
+        <item>DNI</item>
+        <item>PASAPORTE</item>
+        <item>OTRO</item>
+    </string-array>
+
 </resources>

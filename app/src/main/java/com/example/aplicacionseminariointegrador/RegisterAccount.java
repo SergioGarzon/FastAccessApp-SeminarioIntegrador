@@ -20,6 +20,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.google.android.material.textfield.TextInputLayout;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -28,6 +30,8 @@ public class RegisterAccount extends AppCompatActivity {
     Button btnCancelCreateAccount, btnRegisterUser;
     TextView txtLblCreateAccount, txtLblNameSurnames,
             txtLblUsernameCreateAccount, txtLblPasswordCreateAccount, txtLblSelectRole;
+
+    TextInputLayout textInputLayoutNombre, txtInputLayoutPassword;
 
     Spinner spinnerRol;
 
@@ -51,6 +55,9 @@ public class RegisterAccount extends AppCompatActivity {
         txtLblUsernameCreateAccount =  findViewById(R.id.txtLblUsernameCreateAccount);
         txtLblPasswordCreateAccount =  findViewById(R.id.txtLblPasswordCreateAccount);
         txtLblSelectRole = findViewById(R.id.txtLblSelectRole);
+
+        textInputLayoutNombre = findViewById(R.id.textInputLayout2);
+        txtInputLayoutPassword = findViewById(R.id.textInputLayout3);
 
         spinnerRol = findViewById(R.id.spinnerRol);
 
@@ -90,8 +97,8 @@ public class RegisterAccount extends AppCompatActivity {
         btnRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createUser(txtLblUsernameCreateAccount.getText().toString().trim(),
-                        txtLblPasswordCreateAccount.getText().toString().trim());
+                createUser(String.valueOf(textInputLayoutNombre.getEditText().getText().toString()),
+                        String.valueOf(txtInputLayoutPassword.getEditText().getText().toString()));
             }
         });
     }
@@ -109,9 +116,6 @@ public class RegisterAccount extends AppCompatActivity {
     private void createUser(final String nombreUser1, final String password1) {
 
 
-        nextRegisterSucessfully();
-
-        /*
         StringRequest stringRequest = new StringRequest(
 
                 Request.Method.POST,
@@ -142,7 +146,7 @@ public class RegisterAccount extends AppCompatActivity {
         };
 
         requestQueue.add(stringRequest);
-        */
+
 
 
     }

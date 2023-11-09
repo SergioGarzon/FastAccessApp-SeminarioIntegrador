@@ -6,6 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 
@@ -13,6 +14,7 @@ public class MenuAplication extends AppCompatActivity {
 
     Button btnEmergencyNewActivity, btnLogoutMenuApplication, btnMenuAccountProfiler,
             btnMenuChat, btnMenuNotification, btnMenuVisitorRegister, btnMenuPeopleHistory;
+    TextView txtLblWelcomeFastAccessApp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,21 +29,26 @@ public class MenuAplication extends AppCompatActivity {
         btnMenuNotification = (Button) findViewById(R.id.btnMenuNotifications);
         btnMenuVisitorRegister = (Button) findViewById(R.id.btnMenuRegisterVisitors);
         btnMenuPeopleHistory = (Button) findViewById(R.id.btnMenuPeopleHistory);
+        txtLblWelcomeFastAccessApp = (TextView) findViewById(R.id.txtLblWelcomeFastAccessApp);
 
         if(LanguageSelected.languageSelected == 0) {
             btnEmergencyNewActivity.setText("CALL EMERGENCY");
-            btnMenuAccountProfiler.setText("ACCOUNT PROFILER");
+            btnMenuAccountProfiler.setText("MANAGER YOUR ACCOUNT");
             btnMenuChat.setText("CHAT");
             btnMenuNotification.setText("NOTIFICATIONS");
             btnMenuVisitorRegister.setText("VISITOR REGISTER");
             btnMenuPeopleHistory.setText("ACCESS HISTORY");
+            txtLblWelcomeFastAccessApp.setText("Welcome to");
+            btnLogoutMenuApplication.setText("LOGOUT");
         } else {
             btnEmergencyNewActivity.setText("LLAMAR A EMERGENCIAS");
-            btnMenuAccountProfiler.setText("PERFIL DE LA CUENTA");
-            btnMenuChat.setText("CHAT CON LOS USUARIOS");
-            btnMenuNotification.setText("NOTIFICATIONES");
+            btnMenuAccountProfiler.setText("ADMINISTRAR TU CUENTA");
+            btnMenuChat.setText("CHATEAR CON LOS USUARIOS");
+            btnMenuNotification.setText("NOTIFICACIONES");
             btnMenuVisitorRegister.setText("REGISTRAR VISITANTE");
             btnMenuPeopleHistory.setText("HISTORIAL DE ACCESOS");
+            txtLblWelcomeFastAccessApp.setText("Bienvenido a");
+            btnLogoutMenuApplication.setText("CERRAR SESION");
         }
 
         btnEmergencyNewActivity.setOnClickListener(new View.OnClickListener() {
@@ -58,11 +65,23 @@ public class MenuAplication extends AppCompatActivity {
             }
         });
 
+        btnMenuVisitorRegister.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                registerVisitorActivity(v);
+            }
+        });
+
 
     }
 
     private void makePhoneCall(View v) {
         Intent nextActivity = new Intent(this, EmergencyCall.class);
+        startActivity(nextActivity);
+    }
+
+    private void registerVisitorActivity(View v) {
+        Intent nextActivity = new Intent(this, VisitorsRegister.class);
         startActivity(nextActivity);
     }
 

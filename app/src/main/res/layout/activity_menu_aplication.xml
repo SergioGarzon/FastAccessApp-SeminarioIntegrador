@@ -15,7 +15,7 @@
         android:onClick="changeActivityPresentation"
         android:text="Logout"
         android:textColor="@color/white"
-        android:textSize="30sp"
+        android:textSize="25sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,11 +41,12 @@
         app:layout_constraintVertical_bias="0.126" />
 
     <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/txtLblWelcomeFastAccessApp"
+        android:layout_width="321dp"
+        android:layout_height="49dp"
         android:foregroundTint="#00DB8C"
         android:text="Welcome to"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="34sp"
         android:textStyle="bold|italic"
