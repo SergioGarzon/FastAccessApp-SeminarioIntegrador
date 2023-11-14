@@ -4,13 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundimage"
-    tools:context=".MenuAplication">
+    tools:context=".MenuApplicationResidente"
+    android:background="@drawable/backgroundimage">
 
     <Button
         android:id="@+id/btnLogoutResident"
         android:layout_width="232dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="68dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityPresentation"
         android:text="Logout"
@@ -19,10 +20,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.564"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegisterVisitorResident"
+        app:layout_constraintVertical_bias="0.886" />
 
     <TextView
         android:id="@+id/txtFastAccessAppTitleResident"
@@ -125,8 +126,8 @@
         android:id="@+id/btnRegisterVisitorResident"
         android:layout_width="281dp"
         android:layout_height="55dp"
-        android:background="@drawable/border_button_gray"
-        android:text="SCAN QR VISITOR"
+        android:background="@drawable/border_button_blackgreen"
+        android:text="VISITOR REGISTER"
         android:textColor="@color/white"
         android:textSize="20sp"
         android:textStyle="bold|italic"
@@ -137,21 +138,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btnNotificationsResident"
         app:layout_constraintVertical_bias="0.045" />
 
-    <Button
-        android:id="@+id/btnMenuPeopleHistory"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_button_black"
-        android:text="ACCESS HISTORY"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterVisitorResident"
-        app:layout_constraintVertical_bias="0.079" />
+
 
     <ImageView
         android:id="@+id/imageView9"
@@ -190,18 +177,6 @@
         app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/sosbutton" />
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.065"
-        app:srcCompat="@drawable/peoplehistory" />
 
     <ImageView
         android:id="@+id/imageView13"
@@ -214,7 +189,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
         app:layout_constraintVertical_bias="0.037"
-        app:srcCompat="@drawable/qrbuttonimage" />
+        app:srcCompat="@drawable/personaimage" />
 
     <ImageView
         android:id="@+id/imageView14"
@@ -228,5 +203,4 @@
         app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
         app:layout_constraintVertical_bias="0.007"
         app:srcCompat="@drawable/profileaccount" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -146,7 +146,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/txtDateIngreso"
+        android:id="@+id/txtDateEntry"
         android:layout_width="169dp"
         android:layout_height="55dp"
         android:text="Fecha y hora de ingreso:"
@@ -173,7 +173,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtDateIngreso"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateEntry"
         app:layout_constraintVertical_bias="0.027" />
 
     <Button
@@ -210,7 +210,7 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/txtLicencePlate"
         android:layout_width="169dp"
         android:layout_height="55dp"
         android:text="\nPatente:"
@@ -221,7 +221,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.377"
-        app:layout_constraintStart_toEndOf="@+id/txtDateIngreso"
+        app:layout_constraintStart_toEndOf="@+id/txtDateEntry"
         app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutNroDocument"
         app:layout_constraintVertical_bias="0.038" />
 
@@ -236,7 +236,7 @@
         app:endIconMode="clear_text"
         app:layout_constraintHorizontal_bias="0.684"
         app:layout_constraintStart_toEndOf="@+id/editTextTime"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintTop_toBottomOf="@+id/txtLicencePlate"
         app:layout_constraintVertical_bias="0.004">
 
         <com.google.android.material.textfield.TextInputEditText

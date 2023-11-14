@@ -9,39 +9,67 @@
 
     <Button
         android:id="@+id/btnEnabledScan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_width="232dp"
+        android:layout_height="44dp"
+        android:background="@drawable/border_buttons"
+        android:text="ESCANEAR QR"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextResultScanQR"
-        app:layout_constraintVertical_bias="0.157" />
+        app:layout_constraintVertical_bias="0.204" />
 
     <EditText
         android:id="@+id/editTextResultScanQR"
-        android:layout_width="263dp"
-        android:layout_height="55dp"
+        android:layout_width="331dp"
+        android:layout_height="79dp"
         android:ems="10"
         android:inputType="text"
+        android:text="Código Escaneado"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.725" />
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleCodeQRScan"
+        app:layout_constraintVertical_bias="0.28" />
 
     <Button
         android:id="@+id/btnCancelScan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="44dp"
         android:layout_marginTop="8dp"
-        android:text="Button"
+        android:background="@drawable/border_buttons"
+        android:text="CANCELAR"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnEnabledScan"
-        app:layout_constraintVertical_bias="0.096" />
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtTitleCodeQRScan"
+        android:layout_width="295dp"
+        android:layout_height="160dp"
+        android:text="ESCANEO DE QR"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="60sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.113" />
 </androidx.constraintlayout.widget.ConstraintLayout>

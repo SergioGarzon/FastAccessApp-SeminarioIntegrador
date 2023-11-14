@@ -22,14 +22,17 @@ public class MenuAplication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout. activity_menu_aplication);
 
-        btnEmergencyNewActivity = findViewById(R.id.btnMenuCallEmergency);
-        btnLogoutMenuApplication = findViewById(R.id.btnLogoutMenuApplication);
-        btnMenuAccountProfiler = findViewById(R.id.btnMenuAccountProfiler);
-        btnMenuChat = findViewById(R.id.btnMenuChat);
-        btnMenuNotification = findViewById(R.id.btnMenuNotifications);
-        btnMenuVisitorRegister = findViewById(R.id.btnMenuRegisterVisitors);
+        btnEmergencyNewActivity = findViewById(R.id.btnCallEmergencyResident);
+        btnLogoutMenuApplication = findViewById(R.id.btnLogoutResident);
+        btnMenuAccountProfiler = findViewById(R.id.btnProfilerAccountResident);
+        btnMenuChat = findViewById(R.id.btnChatResident);
+        btnMenuNotification = findViewById(R.id.btnNotificationsResident);
+        btnMenuVisitorRegister = findViewById(R.id.btnRegisterVisitorResident);
         btnMenuPeopleHistory = findViewById(R.id.btnMenuPeopleHistory);
-        txtLblWelcomeFastAccessApp = findViewById(R.id.txtLblWelcomeFastAccessApp);
+        txtLblWelcomeFastAccessApp = findViewById(R.id.txtVisitorWelcomeMessage);
+
+        btnMenuChat.setEnabled(false);
+        btnMenuPeopleHistory.setEnabled(false);
 
         Intent intent = getIntent();
         String user = intent.getStringExtra("Usuario");
@@ -39,7 +42,7 @@ public class MenuAplication extends AppCompatActivity {
             btnMenuAccountProfiler.setText("MANAGER YOUR ACCOUNT");
             btnMenuChat.setText("CHAT");
             btnMenuNotification.setText("NOTIFICATIONS");
-            btnMenuVisitorRegister.setText("VISITOR REGISTER");
+            btnMenuVisitorRegister.setText("VISITOR QR SCAN");
             btnMenuPeopleHistory.setText("ACCESS HISTORY");
             txtLblWelcomeFastAccessApp.setText("Welcome " + user + " to");
             btnLogoutMenuApplication.setText("LOGOUT");
@@ -48,7 +51,7 @@ public class MenuAplication extends AppCompatActivity {
             btnMenuAccountProfiler.setText("ADMINISTRAR TU CUENTA");
             btnMenuChat.setText("CHATEAR CON LOS USUARIOS");
             btnMenuNotification.setText("NOTIFICACIONES");
-            btnMenuVisitorRegister.setText("REGISTRAR VISITANTE");
+            btnMenuVisitorRegister.setText("ESCANEAR QR VISITANTE");
             btnMenuPeopleHistory.setText("HISTORIAL DE ACCESOS");
             txtLblWelcomeFastAccessApp.setText("Bienvenido " + user + " a");
             btnLogoutMenuApplication.setText("CERRAR SESION");
@@ -64,7 +67,7 @@ public class MenuAplication extends AppCompatActivity {
         btnMenuAccountProfiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                lectorQR(v);
+
             }
         });
 
@@ -78,7 +81,14 @@ public class MenuAplication extends AppCompatActivity {
         btnMenuVisitorRegister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                registerVisitorActivity(v);
+                lectorQR(v);
+            }
+        });
+
+        btnMenuNotification.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                changeNotificationActivity(v);
             }
         });
 
@@ -87,6 +97,11 @@ public class MenuAplication extends AppCompatActivity {
 
     private void makePhoneCall(View v) {
         Intent nextActivity = new Intent(this, EmergencyCall.class);
+        startActivity(nextActivity);
+    }
+
+    private void changeNotificationActivity(View v) {
+        Intent nextActivity = new Intent(this, NotificationsUsersAccount.class);
         startActivity(nextActivity);
     }
 

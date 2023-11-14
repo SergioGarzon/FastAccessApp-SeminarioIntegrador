@@ -1,11 +1,15 @@
 package com.example.aplicacionseminariointegrador;
 
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.Vibrator;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -35,7 +39,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     Spinner spinnerRol;
 
-    RequestQueue requestQueue;
+    RequestQueue requestQueueRegisterAccount;
 
     private static final String url1 = "https://fastaccessapp.000webhostapp.com/proyectobdejemplo/save.php?";
 
@@ -45,7 +49,7 @@ public class RegisterAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
 
-        requestQueue = Volley.newRequestQueue(this);
+        requestQueueRegisterAccount = Volley.newRequestQueue(this);
 
         btnCancelCreateAccount = findViewById(R.id.btnCancelCreateAccount);
         btnRegisterUser = findViewById(R.id.btnRegisterUser);
@@ -97,11 +101,45 @@ public class RegisterAccount extends AppCompatActivity {
         btnRegisterUser.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                createUser(String.valueOf(textInputLayoutNombre.getEditText().getText().toString()),
-                        String.valueOf(txtInputLayoutPassword.getEditText().getText().toString()));
+                createUserValidation();
             }
         });
     }
+
+    private boolean getValidateAccount() {
+        boolean flag = true;
+
+        if(textInputLayoutNombre.getEditText().getText().toString().compareTo("") == 0 ||
+                txtInputLayoutPassword.getEditText().getText().toString().compareTo("") == 0
+               ) {
+            flag = false;
+        }
+
+        return flag;
+    }
+
+    private void createUserValidation() {
+        if(getValidateAccount()) {
+            createUser(String.valueOf(textInputLayoutNombre.getEditText().getText().toString()),
+                    String.valueOf(txtInputLayoutPassword.getEditText().getText().toString()));
+        } else {
+            Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
+            vibrator.vibrate(1000);
+
+            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
+            dialog.setMessage("Falta rellenar algunos campos");
+            dialog.setTitle("Error!");
+            dialog.setPositiveButton("Ok",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            dialog.cancel();
+                        }
+                    });
+            dialog.setCancelable(true);
+            dialog.create().show();
+        }
+    }
+
 
     private void backStart_Activity(View v) {
         Intent nextActivity = new Intent(this, StartApplication.class);
@@ -115,7 +153,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     private void createUser(final String nombreUser1, final String password1) {
 
-        StringRequest stringRequest = new StringRequest(
+        StringRequest stringRequest2 = new StringRequest(
 
                 Request.Method.POST,
                 url1,
@@ -144,6 +182,6 @@ public class RegisterAccount extends AppCompatActivity {
             }
         };
 
-        requestQueue.add(stringRequest);
+        requestQueueRegisterAccount.add(stringRequest2);
     }
 }

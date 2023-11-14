@@ -2,6 +2,7 @@ package com.example.aplicacionseminariointegrador;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
@@ -42,6 +43,13 @@ public class RegisterSucessful extends AppCompatActivity {
     }
 
     private void changeBackActivityStartDisplay() {
+
+        // Obtén el contexto de la aplicación
+        Context context = getApplicationContext();
+
+        // Limpia la caché de la aplicación
+        context.getCacheDir().delete();
+
         Intent nextActivity = new Intent(this, StartApplication.class);
         startActivity(nextActivity);
     }

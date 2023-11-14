@@ -8,8 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -17,6 +19,8 @@ public class LectorQR extends AppCompatActivity {
 
     Button btnEnabledScan, btnCancelScan;
     EditText editTextResultScanQR;
+
+    TextView txtTitleCodeQRScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +31,21 @@ public class LectorQR extends AppCompatActivity {
         btnEnabledScan = findViewById(R.id.btnEnabledScan);
         btnCancelScan = findViewById(R.id.btnCancelScan);
         editTextResultScanQR = findViewById(R.id.editTextResultScanQR);
+        txtTitleCodeQRScan = findViewById(R.id.txtTitleCodeQRScan);
+
+        editTextResultScanQR.setEnabled(false);
+
+        if(LanguageSelected.languageSelected == 0) {
+            editTextResultScanQR.setText("Scanned code");
+            btnEnabledScan.setText("SCAN QR");
+            btnCancelScan.setText("CANCEL");
+            txtTitleCodeQRScan.setText("QR SCAN");
+        } else {
+            editTextResultScanQR.setText("Código Escaneado");
+            btnEnabledScan.setText("ESCANEAR QR");
+            btnCancelScan.setText("CANCELAR");
+            txtTitleCodeQRScan.setText("ESCANEO DE QR");
+        }
         
         btnEnabledScan.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,8 +60,19 @@ public class LectorQR extends AppCompatActivity {
 
             }
         });
+
+        btnCancelScan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                backMenuApplicationApp(v);
+            }
+        });
     }
 
+    private void backMenuApplicationApp(View v) {
+        Intent nextActivity = new Intent(this, MenuAplication.class);
+        startActivity(nextActivity);
+    }
 
     protected void onActivityResult(int requestCode, int initResultCode, Intent data) {
 

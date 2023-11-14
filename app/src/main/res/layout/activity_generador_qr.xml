@@ -59,7 +59,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/border_buttons"
-        android:text="ACEPTAR"
+        android:text="SIGUIENTE"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold|italic"
