@@ -23,10 +23,12 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class NotificationsUsersAccount extends AppCompatActivity {
 
@@ -77,25 +79,11 @@ public class NotificationsUsersAccount extends AppCompatActivity {
     }
 
     private void changeActivityModify() {
-        Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-        vibrator.vibrate(1000);
-
-        AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-        dialog.setMessage("Function not available!");
-        dialog.setTitle("Error!");
-        dialog.setPositiveButton("Ok",
-                new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        dialog.cancel();
-                    }
-                });
-        dialog.setCancelable(true);
-        dialog.create().show();
+        Intent modifyActivity = new Intent(this, ModifyUsers.class);
+        startActivity(modifyActivity);
     }
     private void readUsers() {
         String urlnueva="https://fastaccessapp.000webhostapp.com/proyectobdejemplo/consultarDatosCuentas.php";
-
-
 
         JsonObjectRequest _jsonobjectrequest = new JsonObjectRequest(
                 Request.Method.GET,
@@ -104,16 +92,15 @@ public class NotificationsUsersAccount extends AppCompatActivity {
                 new Response.Listener<JSONObject>() {
                     @Override
                     public void onResponse(JSONObject response) {
-                        String nombreUsuario, accesoValor;
 
                         try {
-                            nombreUsuario = response.getString("nombreUsuario");
-                            accesoValor = response.getString("accesoValor");
+                            String id = response.getString("Id");
+                            String nombreUsuario = response.getString("nombreUsuario");
+                            String accesoValor = response.getString("accesoValor");
 
-                            String[] datos = {nombreUsuario, accesoValor};
-                            _grid.setAdapter(new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, datos));
+                            String[] datos = {id, nombreUsuario, accesoValor};
 
-
+                            _grid.setAdapter(new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_list_item_1, datos));
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }

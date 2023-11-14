@@ -33,7 +33,7 @@
         android:text="FAST ACCESS APP"
         android:textColor="#00E87E"
         android:textSize="34sp"
-        android:textStyle="bold|italic"
+        android:fontFamily="@font/bomberescortcondital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

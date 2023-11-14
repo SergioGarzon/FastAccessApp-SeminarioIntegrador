@@ -74,8 +74,26 @@ public class EmergencyCall extends AppCompatActivity {
     }
 
     private void backMenuApplication(View v) {
-        Intent nextActivity = new Intent(this, MenuAplication.class);
-        startActivity(nextActivity);
+        switch (LanguageSelected.sesion) {
+            case 0:
+                Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+                startActivity(nextActivity);
+                break;
+            case 1:
+                Intent nextActivity2 = new Intent(this, AvisoNoAutorizado.class);
+                startActivity(nextActivity2);
+                break;
+            case 2:
+                Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
+                nextActivity3.putExtra("Usuario", "nuevamente");
+                startActivity(nextActivity3);
+                break;
+            case 3:
+                Intent nextActivity4 = new Intent(this, MenuAplication.class);
+                nextActivity4.putExtra("Usuario", "nuevamente");
+                startActivity(nextActivity4);
+                break;
+        }
     }
     private void makePhoneAndCall(String tel) {
         Intent intent = new Intent(Intent.ACTION_CALL);

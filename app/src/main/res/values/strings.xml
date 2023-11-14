@@ -3,13 +3,13 @@
     <string name="title_activity_location_google_maps">LocationGoogleMaps</string>
 
     <string-array name="array_name">
-        <item>Inquilino</item>
+        <item>Residente</item>
         <item>Seguridad</item>
         <item>Administrador</item>
     </string-array>
 
     <string-array name="array_name_english">
-        <item>Tenant</item>
+        <item>Resident</item>
         <item>Security</item>
         <item>Administrator</item>
     </string-array>
