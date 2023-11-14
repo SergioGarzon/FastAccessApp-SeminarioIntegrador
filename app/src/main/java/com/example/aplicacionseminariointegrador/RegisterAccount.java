@@ -136,7 +136,6 @@ public class RegisterAccount extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
-                params.put("Id", "2");
                 params.put("nombreUsuario", nombreUser1);
                 params.put("passwordUser", password1);
                 params.put("accesoValor", "0");
