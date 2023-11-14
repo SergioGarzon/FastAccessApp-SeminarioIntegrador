@@ -46,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             btnLogin.setText("INICIAR SESION");
             btnCancelLogin.setText("CANCELAR");
             txtLblUsername.setText("Nombre de usuario:");
-            txtLblPassword.setText("Contraseña");
+            txtLblPassword.setText("Contraseña:");
             lblLogin.setText("ACCESO");
         }
 
@@ -72,16 +72,19 @@ public class LoginActivity extends AppCompatActivity {
 
         if(txtUsername.getEditText().getText().toString().equals("Admin") && txtPassword.getEditText().getText().toString().equals("1")) {
             Intent nextActivity = new Intent(this, MenuAplication.class);
+            nextActivity.putExtra("Usuario", txtUsername.getEditText().getText().toString());
             startActivity(nextActivity);
         }
 
         if(txtUsername.getEditText().getText().toString().equals("Otro") && txtPassword.getEditText().getText().toString().equals("1")) {
             Intent nextActivity = new Intent(this, AvisoNoAutorizado.class);
+            nextActivity.putExtra("Usuario", txtUsername.getEditText().getText().toString());
             startActivity(nextActivity);
         }
 
         if(txtUsername.getEditText().getText().toString().equals("Otro2") && txtPassword.getEditText().getText().toString().equals("1")) {
             Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+            nextActivity.putExtra("Usuario", txtUsername.getEditText().getText().toString());
             startActivity(nextActivity);
         }
 

@@ -37,7 +37,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     RequestQueue requestQueue;
 
-    private static final String url1 = "http://192.168.56.1/proyectobdejemplo/save.php";
+    private static final String url1 = "https://fastaccessapp.000webhostapp.com/proyectobdejemplo/save.php?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -115,7 +115,6 @@ public class RegisterAccount extends AppCompatActivity {
 
     private void createUser(final String nombreUser1, final String password1) {
 
-
         StringRequest stringRequest = new StringRequest(
 
                 Request.Method.POST,
@@ -137,6 +136,7 @@ public class RegisterAccount extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new HashMap<>();
+                params.put("Id", "2");
                 params.put("nombreUsuario", nombreUser1);
                 params.put("passwordUser", password1);
                 params.put("accesoValor", "0");
@@ -146,8 +146,5 @@ public class RegisterAccount extends AppCompatActivity {
         };
 
         requestQueue.add(stringRequest);
-
-
-
     }
 }

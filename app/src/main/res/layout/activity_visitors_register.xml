@@ -8,7 +8,7 @@
     tools:context=".VisitorsRegister">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/txtTitleRegisterVisitor"
         android:layout_width="356dp"
         android:layout_height="55dp"
         android:text="REGISTRO DE VISITANTE"
@@ -23,7 +23,7 @@
         app:layout_constraintVertical_bias="0.048" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
+        android:id="@+id/txtInputLayoutNameVisitor"
         android:layout_width="370dp"
         android:layout_height="44dp"
         android:background="@drawable/border_button_white"
@@ -33,7 +33,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.536"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView5"
+        app:layout_constraintTop_toBottomOf="@+id/txtNameVisitorRegister"
         app:layout_constraintVertical_bias="0.015">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -44,7 +44,7 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView5"
+        android:id="@+id/txtNameVisitorRegister"
         android:layout_width="355dp"
         android:layout_height="35dp"
         android:text="Nombre del visitante:"
@@ -56,11 +56,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitleRegisterVisitor"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/txtLastNameVisitorRegister"
         android:layout_width="355dp"
         android:layout_height="35dp"
         android:text="Apellido del visitante:"
@@ -72,11 +72,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutNameVisitor"
         app:layout_constraintVertical_bias="0.046" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout5"
+        android:id="@+id/txtInputLayoutLastNameVisitor"
         android:layout_width="376dp"
         android:layout_height="44dp"
         android:background="@drawable/border_button_white"
@@ -86,7 +86,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6"
+        app:layout_constraintTop_toBottomOf="@+id/txtLastNameVisitorRegister"
         app:layout_constraintVertical_bias="0.03">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -96,10 +96,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView8"
+        android:id="@+id/txtDocumentVisitorRegister"
         android:layout_width="355dp"
         android:layout_height="35dp"
-        android:text="Ingrese el Documento:"
+        android:text="Documento del visitante:"
         android:textAlignment="viewStart"
         android:textColor="#F6F6F6"
         android:textSize="20dp"
@@ -108,7 +108,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutLastNameVisitor"
         app:layout_constraintVertical_bias="0.017" />
 
     <Spinner
@@ -121,10 +121,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumentVisitorRegister"
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutNroDocument"
         android:layout_width="236dp"
         android:layout_height="47dp"
         android:layout_marginEnd="12dp"
@@ -135,7 +136,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.905"
         app:layout_constraintStart_toEndOf="@+id/spinnerDocumento"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintTop_toBottomOf="@+id/txtDocumentVisitorRegister"
         app:layout_constraintVertical_bias="0.034">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -145,10 +146,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView9"
-        android:layout_width="355dp"
-        android:layout_height="35dp"
-        android:text="Ingrese la fecha y hora de ingreso:"
+        android:id="@+id/txtDateIngreso"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:text="Fecha y hora de ingreso:"
         android:textAlignment="viewStart"
         android:textColor="#F6F6F6"
         android:textSize="20dp"
@@ -156,14 +157,14 @@
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintHorizontal_bias="0.115"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerDocumento"
-        app:layout_constraintVertical_bias="0.029" />
+        app:layout_constraintVertical_bias="0.052" />
 
     <EditText
         android:id="@+id/editTextTime"
-        android:layout_width="234dp"
+        android:layout_width="161dp"
         android:layout_height="44dp"
         android:background="@drawable/border_button_white"
         android:ems="10"
@@ -172,11 +173,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
+        app:layout_constraintTop_toBottomOf="@+id/txtDateIngreso"
         app:layout_constraintVertical_bias="0.027" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/btnNextVisitorGenerateQR"
         android:layout_width="232dp"
         android:layout_height="44dp"
         android:layout_marginTop="24dp"
@@ -190,10 +191,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTime"
-        app:layout_constraintVertical_bias="0.191" />
+        app:layout_constraintVertical_bias="0.359" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/btnCancelVisitorGenerate"
         android:layout_width="232dp"
         android:layout_height="44dp"
         android:background="@drawable/border_buttons"
@@ -205,8 +206,44 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button4"
-        app:layout_constraintVertical_bias="0.09" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNextVisitorGenerateQR"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="169dp"
+        android:layout_height="55dp"
+        android:text="\nPatente:"
+        android:textColor="#F6F6F6"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.377"
+        app:layout_constraintStart_toEndOf="@+id/txtDateIngreso"
+        app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutNroDocument"
+        app:layout_constraintVertical_bias="0.038" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtInputLayoutLicencePlate"
+        android:layout_width="171dp"
+        android:layout_height="44dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/border_button_white"
+        android:maxLines="1"
+        app:endIconMode="clear_text"
+        app:layout_constraintHorizontal_bias="0.684"
+        app:layout_constraintStart_toEndOf="@+id/editTextTime"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.004">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

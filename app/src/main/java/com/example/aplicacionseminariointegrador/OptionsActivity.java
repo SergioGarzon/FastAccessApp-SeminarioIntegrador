@@ -3,6 +3,7 @@ package com.example.aplicacionseminariointegrador;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,16 +21,17 @@ public class OptionsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        chkEnglish = (CheckBox) findViewById(R.id.chkEnglishLanguage);
-        chkSpanish = (CheckBox) findViewById(R.id.chkSpanishLanguage);
+        chkEnglish = findViewById(R.id.chkEnglishLanguage);
+        chkSpanish = findViewById(R.id.chkSpanishLanguage);
 
-        btnAcceptOption = (Button) findViewById(R.id.btnAcceptOptions);
-        btnCancelOption = (Button) findViewById(R.id.btnCancelOptions);
+        btnAcceptOption = findViewById(R.id.btnAcceptOptions);
+        btnCancelOption = findViewById(R.id.btnCancelOptions);
 
-        lblOptions = (TextView) findViewById(R.id.txtLblOptions);
-        txtLblLanguage = (TextView) findViewById(R.id.txtLblLanguage);
-        txtLblSound = (TextView) findViewById(R.id.txtLblSound);
+        lblOptions = findViewById(R.id.txtLblOptions);
+        txtLblLanguage =  findViewById(R.id.txtLblLanguage);
+        txtLblSound = findViewById(R.id.txtLblSound);
 
         if(LanguageSelected.languageSelected == 0) {
             chkEnglish.setText("English");

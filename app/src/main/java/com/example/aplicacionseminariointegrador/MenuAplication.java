@@ -22,14 +22,17 @@ public class MenuAplication extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout. activity_menu_aplication);
 
-        btnEmergencyNewActivity = (Button) findViewById(R.id.btnMenuCallEmergency);
-        btnLogoutMenuApplication = (Button) findViewById(R.id.btnLogoutMenuApplication);
-        btnMenuAccountProfiler = (Button) findViewById(R.id.btnMenuAccountProfiler);
-        btnMenuChat = (Button) findViewById(R.id.btnMenuChat);
-        btnMenuNotification = (Button) findViewById(R.id.btnMenuNotifications);
-        btnMenuVisitorRegister = (Button) findViewById(R.id.btnMenuRegisterVisitors);
-        btnMenuPeopleHistory = (Button) findViewById(R.id.btnMenuPeopleHistory);
-        txtLblWelcomeFastAccessApp = (TextView) findViewById(R.id.txtLblWelcomeFastAccessApp);
+        btnEmergencyNewActivity = findViewById(R.id.btnMenuCallEmergency);
+        btnLogoutMenuApplication = findViewById(R.id.btnLogoutMenuApplication);
+        btnMenuAccountProfiler = findViewById(R.id.btnMenuAccountProfiler);
+        btnMenuChat = findViewById(R.id.btnMenuChat);
+        btnMenuNotification = findViewById(R.id.btnMenuNotifications);
+        btnMenuVisitorRegister = findViewById(R.id.btnMenuRegisterVisitors);
+        btnMenuPeopleHistory = findViewById(R.id.btnMenuPeopleHistory);
+        txtLblWelcomeFastAccessApp = findViewById(R.id.txtLblWelcomeFastAccessApp);
+
+        Intent intent = getIntent();
+        String user = intent.getStringExtra("Usuario");
 
         if(LanguageSelected.languageSelected == 0) {
             btnEmergencyNewActivity.setText("CALL EMERGENCY");
@@ -38,7 +41,7 @@ public class MenuAplication extends AppCompatActivity {
             btnMenuNotification.setText("NOTIFICATIONS");
             btnMenuVisitorRegister.setText("VISITOR REGISTER");
             btnMenuPeopleHistory.setText("ACCESS HISTORY");
-            txtLblWelcomeFastAccessApp.setText("Welcome to");
+            txtLblWelcomeFastAccessApp.setText("Welcome " + user + " to");
             btnLogoutMenuApplication.setText("LOGOUT");
         } else {
             btnEmergencyNewActivity.setText("LLAMAR A EMERGENCIAS");
@@ -47,7 +50,7 @@ public class MenuAplication extends AppCompatActivity {
             btnMenuNotification.setText("NOTIFICACIONES");
             btnMenuVisitorRegister.setText("REGISTRAR VISITANTE");
             btnMenuPeopleHistory.setText("HISTORIAL DE ACCESOS");
-            txtLblWelcomeFastAccessApp.setText("Bienvenido a");
+            txtLblWelcomeFastAccessApp.setText("Bienvenido " + user + " a");
             btnLogoutMenuApplication.setText("CERRAR SESION");
         }
 
@@ -55,6 +58,13 @@ public class MenuAplication extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 makePhoneCall(v);
+            }
+        });
+
+        btnMenuAccountProfiler.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                lectorQR(v);
             }
         });
 
@@ -87,6 +97,11 @@ public class MenuAplication extends AppCompatActivity {
 
     private void logoutSesion(View v) {
         Intent nextActivity = new Intent(this, StartApplication.class);
+        startActivity(nextActivity);
+    }
+
+    private void lectorQR(View v) {
+        Intent nextActivity = new Intent(this, LectorQR.class);
         startActivity(nextActivity);
     }
 
