@@ -113,7 +113,7 @@
         android:id="@+id/imgBtnWhatsapp"
         android:layout_width="94dp"
         android:layout_height="80dp"
-        android:background="@drawable/border_button_image"
+        android:background="@drawable/border_buttons"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

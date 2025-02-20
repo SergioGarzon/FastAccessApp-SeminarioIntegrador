@@ -31,7 +31,7 @@
         android:layout_height="38dp"
         android:foregroundTint="#00DB8C"
         android:text="FAST ACCESS APP"
-        android:textColor="#00E87E"
+        android:textColor="#0ea4af"
         android:textSize="34sp"
         android:fontFamily="@font/bomberescortcondital"
         app:layout_constraintBottom_toBottomOf="parent"
