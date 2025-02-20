@@ -24,6 +24,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
 import java.util.HashMap;
@@ -36,6 +37,8 @@ public class RegisterAccount extends AppCompatActivity {
             txtLblUsernameCreateAccount, txtLblPasswordCreateAccount, txtLblSelectRole;
 
     TextInputLayout textInputLayoutNombre, txtInputLayoutPassword;
+
+    TextInputEditText txtInputEditTextName, txtInputEditTextUserName;
 
     Spinner spinnerRol;
 
@@ -63,6 +66,9 @@ public class RegisterAccount extends AppCompatActivity {
         textInputLayoutNombre = findViewById(R.id.textInputLayout2);
         txtInputLayoutPassword = findViewById(R.id.textInputLayout3);
 
+        txtInputEditTextName = findViewById(R.id.txtInputEditTextName);
+        txtInputEditTextUserName = findViewById(R.id.txtInputEditTextUserName);
+
         spinnerRol = findViewById(R.id.spinnerRol);
 
         if(LanguageSelected.languageSelected == 0) {
@@ -73,6 +79,8 @@ public class RegisterAccount extends AppCompatActivity {
             txtLblUsernameCreateAccount.setText("Username:");
             txtLblPasswordCreateAccount.setText("Password:");
             txtLblSelectRole.setText("Select Role:");
+
+            txtInputEditTextUserName.setHint("Enter your username");
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_name_english, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -85,6 +93,8 @@ public class RegisterAccount extends AppCompatActivity {
             txtLblUsernameCreateAccount.setText("Nombre de usuario:");
             txtLblPasswordCreateAccount.setText("Contraseña:");
             txtLblSelectRole.setText("Seleccionar rol:");
+            txtInputEditTextName.setHint("Ingrese su nombre y apellido");
+
 
             ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.array_name, android.R.layout.simple_spinner_dropdown_item);
             adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

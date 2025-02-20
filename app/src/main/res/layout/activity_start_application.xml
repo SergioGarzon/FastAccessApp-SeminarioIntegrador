@@ -59,7 +59,7 @@
         android:fontFamily="@font/bomberescortcondital"
         android:text="FAST ACCESS APP"
         android:textAlignment="center"
-        android:textColor="#00DB8C"
+        android:textColor="#0ea4af"
         android:textSize="38sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
