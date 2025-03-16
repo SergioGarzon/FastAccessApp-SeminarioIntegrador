@@ -1,11 +1,10 @@
 <?php
 
-    $mysql = new mysqli("localhost", "root", "", "proyectobdejemplo");
-
-    if($mysql -> connect_error){
-        die("Failed to connect". $mysql->connect_error);
-        
+    $conn = new mysqli("localhost", "root", "", "fastaccessapp");
+/*
+    if($conn){
+        echo "Se conecto correctamente";        
     } else {
-        echo "Conectado correctamente";
-    }    
+        echo "No se pudo conectar";
+    } */   
 ?>

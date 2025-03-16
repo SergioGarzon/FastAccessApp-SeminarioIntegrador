@@ -1,26 +1,28 @@
 <?php
 
-    if($_SERVER['REQUEST_METHOD'] == 'POST') {
-        require_once("db.php");
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $nombreUsuario = $_POST["nombreUsuario"];
-        $passwordUser = $_POST["passwordUser"];
-        $accesoValor = $_POST["accesoValor"];
-        $IdPersona = $_POST["IdPersona"];
+    $name_user = $_POST['name_user'];
+    $password = $_POST['password_user'];
+    $value_access = $_POST['value_access'];
+    $id_person = $_POST['id_person'];
 
-        $query = "INSERT INTO user (nombreUsuario, passwordUser, accesoValor, IdPersona) VALUES ('$nombreUsuario', '$passwordUser', '$accesoValor', '$IdPersona')";
+    $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $result = $mysql->query($query);
+    require_once 'db.php';
 
-        if($result === TRUE){
-           echo "Usuario creado";
-        } else {
-            echo "ERROR";
-        }
+    $sql = "INSERT INTO users (name_user, password_user, value_access, id_person) VALUES ('$name_user', '$password', $value_access, $id_person)";
 
-        $mysql->close();
+    if (mysqli_query($conn, $sql)) {
+        $result["success"] = "1";
+        $result["message"] = "success";
+
+    } else {
+        $result["success"] = "0";
+        $result["message"] = "error";
     }
 
-    
-
+    echo json_encode($result);
+    mysqli_close($conn);
+}
 ?>

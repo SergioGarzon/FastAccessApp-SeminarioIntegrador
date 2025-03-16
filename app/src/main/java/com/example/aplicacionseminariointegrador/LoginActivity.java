@@ -3,6 +3,7 @@ package com.example.aplicacionseminariointegrador;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -12,18 +13,24 @@ import android.os.Vibrator;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputLayout;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -82,12 +89,18 @@ public class LoginActivity extends AppCompatActivity {
 
     private void validateUser(View v) {
 
-        if(txtUsername.getEditText().getText().toString().compareTo("") == 0 &&  txtPassword.getEditText().getText().toString().compareTo("") == 0) {
+        if(txtUsername.getEditText().getText().toString().compareTo("") == 0 || txtPassword.getEditText().getText().toString().compareTo("") == 0) {
             Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
             vibrator.vibrate(1000);
 
             AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setMessage("User o password incorrect");
+
+            if(LanguageSelected.languageSelected == 0) {
+                dialog.setMessage("Username and/or password is required");
+            } else {
+                dialog.setMessage("Falta ingresar usuario y/o contraseña");
+            }
+
             dialog.setTitle("Error!");
             dialog.setPositiveButton("Ok",
                     new DialogInterface.OnClickListener() {
@@ -104,6 +117,89 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void readUsers() {
+
+        String urlNueva = "http://192.168.0.22:8080/FastAccessApp/login.php";
+        String name_user = txtUsername.getEditText().getText().toString().trim();
+        String password_user = txtPassword.getEditText().getText().toString().trim();
+
+        ProgressDialog progressDialog = new ProgressDialog(this);
+        progressDialog.setMessage("Cargando...");
+        progressDialog.show();
+
+        try {
+            Thread.sleep(2000);
+        } catch (Exception e) {}
+
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, urlNueva,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            String success = jsonObject.getString("success");
+                            JSONArray jsonArray = jsonObject.getJSONArray("login");
+
+                            if (success.equals("1")) {
+                                for (int i = 0; i < jsonArray.length(); i++) {
+                                    JSONObject object = jsonArray.getJSONObject(i);
+                                    int idUsuario = object.getInt("id_usuario"); // Usar getInt()
+                                    String objusername = object.getString("name_user");
+                                    String passwordUser = object.getString("password_user");
+                                    int valueAccess = object.getInt("value_access"); // Usar getInt()
+                                    int idPerson = object.getInt("id_person"); // Usar getInt()
+
+                                    switch (valueAccess) {
+                                        case 0:
+                                            usuarioPendiente();
+                                            LanguageSelected.sesion = 0;
+                                            break;
+                                        case 1:
+                                            usuarioNoAutorizado();
+                                            LanguageSelected.sesion = 1;
+                                            break;
+                                        case 2:
+                                            menuResidente(objusername);
+                                            LanguageSelected.sesion = 2;
+                                            break;
+                                        case 3:
+                                            menuAplicacion(objusername); // Menu usuario administrador
+                                            LanguageSelected.sesion = 3;
+                                            break;
+                                    }
+                                }
+                            } else {
+                                userNotFound();
+                            }
+
+                            progressDialog.dismiss();
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                            Toast.makeText(LoginActivity.this, "Error JSON: " + e.toString(), Toast.LENGTH_LONG).show();
+                            progressDialog.dismiss();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(LoginActivity.this, "Error Volley: " + error.toString(), Toast.LENGTH_LONG).show();
+                        progressDialog.dismiss();
+                    }
+                }) {
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new HashMap<>();
+                params.put("name_user", name_user);
+                params.put("password_user", password_user); // Agregar password_user
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue = Volley.newRequestQueue(this);
+        requestQueue.add(stringRequest);
+
+        /*
         String urlnueva="https://fastaccessapp.000webhostapp.com/proyectobdejemplo/consultarUsuarios.php?nombreUsuario=" + txtUsername.getEditText().getText().toString() + "&passwordUser=" + txtPassword.getEditText().getText().toString();
         JsonObjectRequest _jsonobjectrequest = new JsonObjectRequest(
                 Request.Method.GET,
@@ -150,6 +246,8 @@ public class LoginActivity extends AppCompatActivity {
         );
 
         requestQueue.add(_jsonobjectrequest);
+        * */
+
     }
 
     private void userNotFound() {
