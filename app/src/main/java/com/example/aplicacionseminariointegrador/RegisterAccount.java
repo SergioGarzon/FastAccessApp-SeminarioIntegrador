@@ -44,7 +44,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     RequestQueue requestQueueRegisterAccount;
 
-    private static final String url1 = "https://fastaccessapp.000webhostapp.com/proyectobdejemplo/save.php?";
+    // private static final String url1 = "https://fastaccessapp.000webhostapp.com/proyectobdejemplo/save.php?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,6 +163,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     private void createUser(final String nombreUser1, final String password1) {
 
+        /*
         StringRequest stringRequest2 = new StringRequest(
 
                 Request.Method.POST,
@@ -192,6 +193,6 @@ public class RegisterAccount extends AppCompatActivity {
             }
         };
 
-        requestQueueRegisterAccount.add(stringRequest2);
+        requestQueueRegisterAccount.add(stringRequest2);*/
     }
 }

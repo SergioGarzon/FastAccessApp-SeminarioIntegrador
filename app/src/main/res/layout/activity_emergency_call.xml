@@ -37,21 +37,6 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <ImageButton
-        android:id="@+id/btnImgMedicalEmergency"
-        android:layout_width="140dp"
-        android:layout_height="89dp"
-        android:background="@drawable/border_buttons"
-        android:scaleType="fitCenter"
-        android:tooltipText="Call to Medical Emergency 107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.212"
-        app:srcCompat="@drawable/ambulancebutton" />
-
-    <ImageButton
         android:id="@+id/imgBtnCallPolice"
         android:layout_width="140dp"
         android:layout_height="89dp"
@@ -61,7 +46,7 @@
         android:tooltipText="Call to Police 911"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnImgMedicalEmergency"
         app:layout_constraintVertical_bias="0.02"
@@ -76,10 +61,10 @@
         android:tooltipText="Call to Fire Fighter 100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toEndOf="@+id/btnImgMedicalEmergency"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.212"
+        app:layout_constraintVertical_bias="0.196"
         app:srcCompat="@drawable/firefightersbutton" />
 
     <ImageButton
@@ -91,10 +76,10 @@
         android:tooltipText="Call to Security Guard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintHorizontal_bias="0.292"
         app:layout_constraintStart_toEndOf="@+id/imgBtnCallPolice"
         app:layout_constraintTop_toBottomOf="@+id/imgBtnFireFigther"
-        app:layout_constraintVertical_bias="0.102"
+        app:layout_constraintVertical_bias="0.085"
         app:srcCompat="@drawable/securitybutton" />
 
     <Button
@@ -113,4 +98,22 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgBtnCallPolice"
         app:layout_constraintVertical_bias="1.0" />
+
+
+    <ImageButton
+        android:id="@+id/btnImgMedicalEmergency"
+        android:layout_width="138dp"
+        android:layout_height="86dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/border_buttons"
+        android:scaleType="fitCenter"
+        android:tooltipText="Call to Medical Emergency 107"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.241"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/ambulancebutton" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

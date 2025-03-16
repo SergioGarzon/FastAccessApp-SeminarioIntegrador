@@ -54,32 +54,33 @@
 
     <ImageButton
         android:id="@+id/imgBtnLinkedinSergio"
-        android:layout_width="50dp"
-        android:layout_height="45dp"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
         android:background="@color/black"
         android:scaleType="fitCenter"
         android:tooltipText="View Sergio Garzón's linkedin profiler"
         app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.766"
-        app:layout_constraintStart_toEndOf="@+id/lblSergioGarzon"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.772"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedinMatias"
+        app:layout_constraintVertical_bias="0.06"
         app:srcCompat="@drawable/linkedin" />
 
     <ImageButton
         android:id="@+id/imgBtnLinkedinMatias"
-        android:layout_width="47dp"
-        android:layout_height="44dp"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
+        android:layout_marginBottom="240dp"
         android:background="@color/black"
         android:scaleType="fitCenter"
         android:tooltipText="View Matias Farach's linkedin profiler"
         app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.751"
-        app:layout_constraintStart_toEndOf="@+id/lblMatiasFarach"
+        app:layout_constraintEnd_toStartOf="@+id/lblMatiasFarach"
+        app:layout_constraintHorizontal_bias="0.831"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.546"
+        app:layout_constraintVertical_bias="0.463"
         app:srcCompat="@drawable/linkedin" />
 
     <ImageButton
@@ -91,10 +92,10 @@
         android:tooltipText="View Genaro Paredes's linkedin profiler"
         app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.712"
-        app:layout_constraintStart_toEndOf="@+id/lblGenaroParedes"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.327"
+        app:layout_constraintHorizontal_bias="0.175"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedinSergio"
+        app:layout_constraintVertical_bias="0.082"
         app:srcCompat="@drawable/linkedin" />
 
     <ImageButton
@@ -106,16 +107,16 @@
         android:tooltipText="View Facundo Rago's linkedin profiler"
         app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
-        app:layout_constraintStart_toEndOf="@+id/lblFacundoRago"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.111"
+        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedInGenaro"
+        app:layout_constraintVertical_bias="0.12"
         app:srcCompat="@drawable/linkedin" />
 
     <TextView
         android:id="@+id/lblTxtCredits"
-        android:layout_width="316dp"
-        android:layout_height="124dp"
+        android:layout_width="351dp"
+        android:layout_height="119dp"
         android:layout_marginTop="44dp"
         android:text="Fast Access App"
         android:textColor="@color/white"
@@ -131,57 +132,57 @@
         android:id="@+id/lblFacundoRago"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="- Facundo Rago"
+        android:text="-> Rago, Facundo"
         android:textColor="@color/white"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblGenaroParedes"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.172"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.54" />
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnLinkedinFacundo"
+        app:layout_constraintTop_toBottomOf="@+id/lblGenaroParedes"
+        app:layout_constraintVertical_bias="0.132" />
 
     <TextView
         android:id="@+id/lblGenaroParedes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="- Genaro Paredes"
+        android:text="-> Paredes, Genaro"
         android:textColor="@color/white"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblMatiasFarach"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.186"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.763" />
+        app:layout_constraintHorizontal_bias="0.166"
+        app:layout_constraintStart_toEndOf="@+id/imgBtnLinkedInGenaro"
+        app:layout_constraintTop_toBottomOf="@+id/lblSergioGarzon"
+        app:layout_constraintVertical_bias="0.137" />
 
     <TextView
         android:id="@+id/lblMatiasFarach"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="- Matias Farach"
+        android:layout_width="191dp"
+        android:layout_height="33dp"
+        android:text="-> Farach, Matias"
         android:textColor="@color/white"
         android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/lblSergioGarzon"
+        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.163"
+        app:layout_constraintHorizontal_bias="0.572"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.845" />
+        app:layout_constraintVertical_bias="0.112" />
 
     <TextView
         android:id="@+id/lblSergioGarzon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="- Sergio Garzón"
+        android:text="-> Garzón, Sergio"
         android:textColor="@color/white"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
+        app:layout_constraintHorizontal_bias="0.565"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.742" />
+        app:layout_constraintTop_toBottomOf="@+id/lblMatiasFarach"
+        app:layout_constraintVertical_bias="0.106" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
