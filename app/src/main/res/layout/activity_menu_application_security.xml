@@ -5,6 +5,59 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activity_menu_application_security">
+    tools:context=".activity_menu_application_security"
+    android:background="@drawable/backgroundimage">
+
+
+    <TextView
+        android:id="@+id/txtSecurityWelcomeMessage"
+        android:layout_width="321dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="32dp"
+        android:foregroundTint="#00DB8C"
+        android:text="Welcome to"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/txtFastAccessAppTitleSecurity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txtFastAccessAppTitleSecurity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/bomberescortcondital"
+        android:foregroundTint="#00DB8C"
+        android:text="FAST ACCESS APP"
+        android:textColor="#0ea4af"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnLogoutSecurity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.609"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.176" />
+
+    <Button
+        android:id="@+id/btnLogoutSecurity"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:background="@drawable/border_buttons"
+        android:onClick="changeActivityPresentation"
+        android:text="Logout"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.575"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.904" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

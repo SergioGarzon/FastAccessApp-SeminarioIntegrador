@@ -11,6 +11,7 @@
 /build
 /captures
 /caches
+/daemon
 .externalNativeBuild
 .cxx
 local.properties
