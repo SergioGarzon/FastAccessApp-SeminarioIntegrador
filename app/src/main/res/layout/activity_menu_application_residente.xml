@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MenuApplicationResidente"
-    android:background="@drawable/backgroundapp">
+    android:background="@drawable/backgroundapp"
+    tools:context=".MenuApplicationResidente">
 
     <Button
         android:id="@+id/btnLogoutResident"
@@ -29,11 +29,11 @@
         android:id="@+id/txtFastAccessAppTitleResident"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bomberescortcondital"
         android:foregroundTint="#00DB8C"
         android:text="FAST ACCESS APP"
         android:textColor="#0ea4af"
         android:textSize="34sp"
-        android:fontFamily="@font/bomberescortcondital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.551"
@@ -73,7 +73,8 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnChatResident"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.07" />
+
 
     <Button
         android:id="@+id/btnChatResident"
@@ -89,7 +90,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnProfilerAccountResident"
-        app:layout_constraintVertical_bias="0.046" />
+        app:layout_constraintVertical_bias="0.051" />
 
     <Button
         android:id="@+id/btnProfilerAccountResident"
@@ -105,7 +106,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.137" />
 
     <Button
         android:id="@+id/btnRegisterVisitorResident"
@@ -121,14 +122,13 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCallEmergencyResident"
-        app:layout_constraintVertical_bias="0.065" />
-
+        app:layout_constraintVertical_bias="0.054" />
 
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/chataccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnChatResident"
@@ -140,8 +140,8 @@
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/sos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCallEmergencyResident"
@@ -153,27 +153,28 @@
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="228dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/registervisitor"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegisterVisitorResident"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11"
-        app:layout_constraintVertical_bias="0.573" />
+        app:layout_constraintVertical_bias="0.03" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="60dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="191dp"
+        android:layout_marginBottom="476dp"
         android:background="@drawable/profileaccount"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnProfilerAccountResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.116"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
-        app:layout_constraintVertical_bias="0.123" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
