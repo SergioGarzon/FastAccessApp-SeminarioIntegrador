@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.232"
-        app:srcCompat="@drawable/fastaccessapp" />
+        app:srcCompat="@drawable/startlogotype" />
 
     <TextView
         android:id="@+id/lblFastAccessAppPrincipalTitle"
@@ -72,10 +72,8 @@
         android:id="@+id/button"
         android:layout_width="67dp"
         android:layout_height="58dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/information"
         android:onClick="changeActivityCredits"
-        android:text="I"
-        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/button2"
@@ -89,10 +87,8 @@
         android:id="@+id/button2"
         android:layout_width="67dp"
         android:layout_height="58dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/configuration"
         android:onClick="changeActivityOptions"
-        android:text="*"
-        android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"

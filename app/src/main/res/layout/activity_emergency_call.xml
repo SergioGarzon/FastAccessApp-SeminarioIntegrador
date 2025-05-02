@@ -17,7 +17,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.062"
-        app:srcCompat="@drawable/fastaccessapp" />
+        app:srcCompat="@drawable/startlogotype" />
 
     <TextView
         android:id="@+id/textView"
@@ -38,10 +38,10 @@
 
     <ImageButton
         android:id="@+id/imgBtnCallPolice"
-        android:layout_width="140dp"
-        android:layout_height="89dp"
+        android:layout_width="127dp"
+        android:layout_height="109dp"
         android:layout_marginTop="20dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/police"
         android:scaleType="fitCenter"
         android:tooltipText="Call to Police 911"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,38 +49,36 @@
         app:layout_constraintHorizontal_bias="0.243"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnImgMedicalEmergency"
-        app:layout_constraintVertical_bias="0.02"
-        app:srcCompat="@drawable/policebutton" />
+        app:layout_constraintVertical_bias="0.02"/>
 
     <ImageButton
         android:id="@+id/imgBtnFireFigther"
-        android:layout_width="140dp"
-        android:layout_height="89dp"
-        android:background="@drawable/border_buttons"
+        android:layout_width="127dp"
+        android:layout_height="109dp"
+        android:background="@drawable/fireengine"
         android:scaleType="fitCenter"
         android:tooltipText="Call to Fire Fighter 100"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.313"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toEndOf="@+id/btnImgMedicalEmergency"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.196"
-        app:srcCompat="@drawable/firefightersbutton" />
+        app:layout_constraintVertical_bias="0.206" />
 
     <ImageButton
         android:id="@+id/imgBtnSecurityGuardCountry"
-        android:layout_width="140dp"
-        android:layout_height="89dp"
-        android:background="@drawable/border_buttons"
+        android:layout_width="127dp"
+        android:layout_height="109dp"
+        android:background="@drawable/administration"
         android:scaleType="fitCenter"
         android:tooltipText="Call to Security Guard"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.292"
+        app:layout_constraintHorizontal_bias="0.238"
         app:layout_constraintStart_toEndOf="@+id/imgBtnCallPolice"
         app:layout_constraintTop_toBottomOf="@+id/imgBtnFireFigther"
-        app:layout_constraintVertical_bias="0.085"
-        app:srcCompat="@drawable/securitybutton" />
+        app:layout_constraintVertical_bias="0.105"
+        />
 
     <Button
         android:id="@+id/btnBackEmergencyMenuApplication"
@@ -102,10 +100,10 @@
 
     <ImageButton
         android:id="@+id/btnImgMedicalEmergency"
-        android:layout_width="138dp"
-        android:layout_height="86dp"
+        android:layout_width="127dp"
+        android:layout_height="109dp"
         android:layout_marginTop="84dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/ambulance"
         android:scaleType="fitCenter"
         android:tooltipText="Call to Medical Emergency 107"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,7 +111,6 @@
         app:layout_constraintHorizontal_bias="0.241"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/ambulancebutton" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

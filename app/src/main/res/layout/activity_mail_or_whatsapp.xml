@@ -113,28 +113,26 @@
         android:id="@+id/imgBtnWhatsapp"
         android:layout_width="94dp"
         android:layout_height="80dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/iconwsp"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.324"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutPhoneNumberWhatsapp"
-        app:layout_constraintVertical_bias="0.208"
-        app:srcCompat="@drawable/whatsappweb" />
+        app:layout_constraintVertical_bias="0.208" />
 
     <ImageButton
         android:id="@+id/imgBtnEmail"
         android:layout_width="94dp"
         android:layout_height="80dp"
-        android:background="@drawable/border_button_blue"
+        android:background="@drawable/iconemail"
         android:scaleType="fitCenter"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
         app:layout_constraintStart_toEndOf="@+id/imgBtnWhatsapp"
         app:layout_constraintTop_toBottomOf="@+id/txtInputLayoutPhoneNumberWhatsapp"
-        app:layout_constraintVertical_bias="0.208"
-        app:srcCompat="@drawable/emailbutton" />
+        app:layout_constraintVertical_bias="0.208"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
