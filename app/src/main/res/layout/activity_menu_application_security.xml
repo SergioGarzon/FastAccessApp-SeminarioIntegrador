@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".activity_menu_application_security"
-    android:background="@drawable/backgroundimage">
+    android:background="@drawable/backgroundapp">
 
 
     <TextView
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/bomberescortcondital"
         android:foregroundTint="#00DB8C"
-        android:text="FAST ACCESS APP"
+        android:text="incompleto aun"
         android:textColor="#0ea4af"
         android:textSize="34sp"
         app:layout_constraintBottom_toTopOf="@+id/btnLogoutSecurity"
@@ -48,7 +48,6 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:background="@drawable/border_buttons"
-        android:onClick="changeActivityPresentation"
         android:text="Logout"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -59,5 +58,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.904" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="281dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="52dp"
+        android:background="@drawable/border_buttons"
+        android:text="ACCOUNT PROFILE"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.769"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleSecurity"
+        app:layout_constraintVertical_bias="0.0" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

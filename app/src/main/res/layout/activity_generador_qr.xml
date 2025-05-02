@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".GeneradorQR"
-    android:background="@drawable/backgroundimage">
+    android:background="@drawable/backgroundapp">
 
     <TextView
         android:id="@+id/txtViewQRGenerateCode"
@@ -59,7 +59,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/border_buttons"
-        android:text="SIGUIENTE"
+        android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold|italic"
@@ -75,7 +75,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:background="@drawable/border_buttons"
-        android:text="CANCELAR"
+        android:text="CANCEL"
         android:textColor="@color/white"
         android:textSize="25sp"
         android:textStyle="bold|italic"

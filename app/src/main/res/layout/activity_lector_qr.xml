@@ -5,14 +5,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LectorQR"
-    android:background="@drawable/backgroundimage">
+    android:background="@drawable/backgroundapp">
 
     <Button
         android:id="@+id/btnEnabledScan"
         android:layout_width="232dp"
         android:layout_height="44dp"
         android:background="@drawable/border_buttons"
-        android:text="ESCANEAR QR"
+        android:text="QR SCAN"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -46,7 +46,7 @@
         android:layout_height="44dp"
         android:layout_marginTop="8dp"
         android:background="@drawable/border_buttons"
-        android:text="CANCELAR"
+        android:text="CANCEL"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"

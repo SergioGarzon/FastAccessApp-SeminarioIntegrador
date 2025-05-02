@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundimage"
+    android:background="@drawable/backgroundapp"
     tools:context=".VisitorsRegister">
 
     <TextView
@@ -182,7 +182,7 @@
         android:layout_height="44dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/border_buttons"
-        android:text="SIGUIENTE"
+        android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -198,7 +198,7 @@
         android:layout_width="232dp"
         android:layout_height="44dp"
         android:background="@drawable/border_buttons"
-        android:text="CANCELAR"
+        android:text="CANCEL"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundimage"
+    android:background="@drawable/backgroundapp"
     tools:context=".MenuAplication">
 
     <Button
@@ -22,7 +22,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintVertical_bias="0.517" />
+        app:layout_constraintVertical_bias="0.743" />
 
     <TextView
         android:id="@+id/txtFastAccessAppTitleResident"
@@ -156,12 +156,12 @@
     <ImageView
         android:id="@+id/imageView9"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/chataccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnChatResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView14"
         app:layout_constraintVertical_bias="0.017" />
@@ -169,64 +169,93 @@
     <ImageView
         android:id="@+id/imageView10"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/notifications"
         app:layout_constraintEnd_toStartOf="@+id/btnNotificationsResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView11" />
 
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="8dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/sos"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnCallEmergencyResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.025" />
+        app:layout_constraintVertical_bias="0.015" />
 
     <ImageView
         android:id="@+id/imageView12"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/accesshistory"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintVertical_bias="0.02" />
 
     <ImageView
         android:id="@+id/imageView13"
         android:layout_width="60dp"
-        android:layout_height="45dp"
-        android:layout_marginTop="12dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/visitorqrscan"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnRegisterVisitorResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.037" />
+        app:layout_constraintVertical_bias="0.011" />
 
     <ImageView
         android:id="@+id/imageView14"
         android:layout_width="60dp"
-        android:layout_height="47dp"
-        android:layout_marginTop="32dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
         android:background="@drawable/profileaccount"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnProfilerAccountResident"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.853"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintVertical_bias="0.049" />
+
+    <Button
+        android:id="@+id/button7"
+        android:layout_width="281dp"
+        android:layout_height="55dp"
+        android:background="@drawable/border_buttons"
+        android:text="GENERALS CONFIGURATIONS"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMenuPeopleHistory"
+        app:layout_constraintVertical_bias="0.08" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="2dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button7"
+        app:layout_constraintHorizontal_bias="0.853"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12"
+        app:layout_constraintVertical_bias="0.03"
+        app:srcCompat="@drawable/configuration" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
