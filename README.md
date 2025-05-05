@@ -1,23 +1,23 @@
- # Aplicación "FAST ACCESS APP"
+ # "FAST ACCESS APP" Applications
 
-Esta aplicación es para el proyecto final de Seminario Integrador de la carrera de Ingenieria en Sistemas de Información de la Universidad Tecnologica Nacional - Facultad Regional Córdoba
+This application is for the final project of Integrative Seminar subject of the Information System Engineering degree at the National Tecnological University of Córdoba (*UTN FRC* - Universidad Tecnologica Nacional - Facultad Regional Córdoba)
 
 <img src="./Photos/utnfrc.png" alt="UTN FRC" />
 
 
-##### **Integrantes**
-> * Farach, Matías Leonel
-> * Garzón, Sergio
-> * Paredes, Genaro
-> * Rago, Facundo Matías
+##### **Members**
+> * Farach, Matías Leonel (Functional Analyst)
+> * Garzón, Sergio (Developer)
+> * Paredes, Genaro (Functional Analyst)
+> * Rago, Facundo Matías (UX/UI designer)
 
-#### Pantallas de la aplicación
+#### Application screen
 
 ##### Plash Screen
 
 <img src="./Photos/plashscreen.png" alt="Plash screen" width="250px" height="430px"/>
 
-##### Pantalla inicial
+##### Main Screen
 
 <img src="./Photos/Main.png" alt="Main screen" width="250px" height="430px"/>
 
@@ -25,35 +25,35 @@ Esta aplicación es para el proyecto final de Seminario Integrador de la carrera
 
 <img src="./Photos/Login.png" alt="Login screen" width="250px" height="430px"/>
 
-##### Login con validación
+##### Login with validation
 
 <img src="./Photos/ValidateLogin.png" alt="Login with validation screen" width="250px" height="430px"/>
 
-##### Creditos
+##### Credits
 
 <img src="./Photos/Credits.png" alt="Credits screen" width="250px" height="430px"/>
 
-##### Registrar nueva cuenta
+##### Register a new account
 
 <img src="./Photos/Register.png" alt="Register account" width="250px" height="430px"/>
 
-##### Cuenta registrada exitosamente
+##### Successful account registration
 
 <img src="./Photos/CreatedUser.png" alt="Create account" width="250px" height="430px"/>
 
-##### Inicio de sesión fallido (Cuenta no autorizada)
+##### Login failed (Unauthorized account)
 
 <img src="./Photos/UserNoAutorized.png" alt="User no autorized" width="250px" height="430px"/>
 
-##### Inicio de sesión en espera (Cuenta en espera)
+##### Login pending (Account on hold)
 
 <img src="./Photos/UserWaitAutorized.png" alt="User waited autorized" width="250px" height="430px"/>
 
-##### Menu de la aplicación
+##### Application menu
 
 <img src="./Photos/MenuApplication.png" alt="Menu Application" width="250px" height="430px"/>
 
-##### Llamadas de emergencia
+##### Emergency calls
 
 <img src="./Photos/CallEmergency.png" alt="Call emergency" width="250px" height="430px"/>
 
