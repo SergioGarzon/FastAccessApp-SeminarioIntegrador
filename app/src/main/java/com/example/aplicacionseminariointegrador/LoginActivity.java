@@ -21,6 +21,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputLayout;
@@ -117,8 +118,57 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void readUsers() {
+/*
+        String urlnueva="http://localhost:8080/fastaccessapp/login.php?name_user=" + txtUsername.getEditText().getText().toString() + "&password_user=" + txtPassword.getEditText().getText().toString();
+        JsonObjectRequest _jsonobjectrequest = new JsonObjectRequest(
+                Request.Method.GET,
+                urlnueva,
+                null,
+                new Response.Listener<JSONObject>() {
+                    @Override
+                    public void onResponse(JSONObject response) {
+                        String nombreUsuario, accesoValor;
 
-        String urlNueva = "http://192.168.0.22:8080/FastAccessApp/login.php";
+                        try {
+                            nombreUsuario = response.getString("name_user");
+                            accesoValor = response.getString("value_access");
+
+                            switch (Integer.parseInt(accesoValor)) {
+                                case 0:
+                                    usuarioPendiente();
+                                    LanguageSelected.sesion = 0;
+                                    break;
+                                case 1:
+                                    usuarioNoAutorizado();
+                                    LanguageSelected.sesion = 1;
+                                    break;
+                                case 2:
+                                    menuResidente(nombreUsuario);
+                                    LanguageSelected.sesion = 2;
+                                    break;
+                                case 3:
+                                    menuAplicacion(nombreUsuario);
+                                    LanguageSelected.sesion = 3;
+                                    break;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        userNotFound();
+                    }
+                }
+        );
+
+        requestQueue.add(_jsonobjectrequest);
+*/
+
+
+        String urlNueva = "http://localhost:8080/fastaccessapp/login.php";
         String name_user = txtUsername.getEditText().getText().toString().trim();
         String password_user = txtPassword.getEditText().getText().toString().trim();
 
@@ -199,54 +249,6 @@ public class LoginActivity extends AppCompatActivity {
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         requestQueue.add(stringRequest);
 
-        /*
-        String urlnueva="https://fastaccessapp.000webhostapp.com/proyectobdejemplo/consultarUsuarios.php?nombreUsuario=" + txtUsername.getEditText().getText().toString() + "&passwordUser=" + txtPassword.getEditText().getText().toString();
-        JsonObjectRequest _jsonobjectrequest = new JsonObjectRequest(
-                Request.Method.GET,
-                urlnueva,
-                null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        String nombreUsuario, accesoValor;
-
-                        try {
-                            nombreUsuario = response.getString("nombreUsuario");
-                            accesoValor = response.getString("accesoValor");
-
-                            switch (Integer.parseInt(accesoValor)) {
-                                case 0:
-                                    usuarioPendiente();
-                                    LanguageSelected.sesion = 0;
-                                    break;
-                                case 1:
-                                    usuarioNoAutorizado();
-                                    LanguageSelected.sesion = 1;
-                                    break;
-                                case 2:
-                                    menuResidente(nombreUsuario);
-                                    LanguageSelected.sesion = 2;
-                                    break;
-                                case 3:
-                                    menuAplicacion(nombreUsuario);
-                                    LanguageSelected.sesion = 3;
-                                    break;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        userNotFound();
-                    }
-                }
-        );
-
-        requestQueue.add(_jsonobjectrequest);
-        * */
 
     }
 
