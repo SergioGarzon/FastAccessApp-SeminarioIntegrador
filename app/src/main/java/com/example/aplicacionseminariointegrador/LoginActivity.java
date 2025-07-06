@@ -2,8 +2,6 @@ package com.example.aplicacionseminariointegrador;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -14,23 +12,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputLayout;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.util.HashMap;
+import java.util.Hashtable;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
@@ -111,145 +102,79 @@ public class LoginActivity extends AppCompatActivity {
                     });
             dialog.setCancelable(true);
             dialog.create().show();
+
+            if(txtUsername.getEditText().getText().toString().isEmpty())
+                txtUsername.requestFocus();
+            else
+                txtPassword.requestFocus();
+
         } else {
             readUsers();
         }
-
     }
 
     private void readUsers() {
-/*
-        String urlnueva="http://localhost:8080/fastaccessapp/login.php?name_user=" + txtUsername.getEditText().getText().toString() + "&password_user=" + txtPassword.getEditText().getText().toString();
-        JsonObjectRequest _jsonobjectrequest = new JsonObjectRequest(
-                Request.Method.GET,
-                urlnueva,
-                null,
-                new Response.Listener<JSONObject>() {
-                    @Override
-                    public void onResponse(JSONObject response) {
-                        String nombreUsuario, accesoValor;
 
-                        try {
-                            nombreUsuario = response.getString("name_user");
-                            accesoValor = response.getString("value_access");
+        String urlNueva = "http://192.168.0.22:8080/fastaccessapp/login.php";
 
-                            switch (Integer.parseInt(accesoValor)) {
-                                case 0:
-                                    usuarioPendiente();
-                                    LanguageSelected.sesion = 0;
-                                    break;
-                                case 1:
-                                    usuarioNoAutorizado();
-                                    LanguageSelected.sesion = 1;
-                                    break;
-                                case 2:
-                                    menuResidente(nombreUsuario);
-                                    LanguageSelected.sesion = 2;
-                                    break;
-                                case 3:
-                                    menuAplicacion(nombreUsuario);
-                                    LanguageSelected.sesion = 3;
-                                    break;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        userNotFound();
+        StringRequest respuesta;
+        respuesta = new StringRequest(Request.Method.POST, urlNueva, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.equalsIgnoreCase("ERROR1")) {
+                    Toast.makeText(LoginActivity.this, "LOS DATOS ESTAN INCOMPLETOS...!!", Toast.LENGTH_SHORT).show();
+                    txtUsername.requestFocus();
+                } else if (response.equalsIgnoreCase("ERROR2")) {
+                    userNotFound();
+                } else {
+                    String idUsuario = response.substring(0, response.indexOf("/"));
+                    String nombreUsuario = response.substring(response.indexOf("/") + 1, response.indexOf("+"));
+                    String valor = response.substring(response.indexOf("+") + 1, response.length());
+
+                    switch (Integer.parseInt(valor)) {
+                        case 0:
+                            usuarioPendiente();
+                            LanguageSelected.sesion = 0;
+                            break;
+                        case 1:
+                            usuarioNoAutorizado();
+                            LanguageSelected.sesion = 1;
+                            break;
+                        case 2:
+                            menuResidente(nombreUsuario);
+                            LanguageSelected.sesion = 2;
+                            break;
+                        case 3:
+                            menuAplicacion(nombreUsuario); // Menu usuario administrador
+                            LanguageSelected.sesion = 3;
+                            break;
+                        case 4:
+                            menuSecurity("");
+                            LanguageSelected.sesion = 4;
+                            break;
                     }
                 }
-        );
-
-        requestQueue.add(_jsonobjectrequest);
-*/
-
-
-        String urlNueva = "http://localhost:8080/fastaccessapp/login.php";
-        String name_user = txtUsername.getEditText().getText().toString().trim();
-        String password_user = txtPassword.getEditText().getText().toString().trim();
-
-        ProgressDialog progressDialog = new ProgressDialog(this);
-        progressDialog.setMessage("Cargando...");
-        progressDialog.show();
-
-        try {
-            Thread.sleep(2000);
-        } catch (Exception e) {}
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, urlNueva,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            String success = jsonObject.getString("success");
-                            JSONArray jsonArray = jsonObject.getJSONArray("login");
-
-                            if (success.equals("1")) {
-                                for (int i = 0; i < jsonArray.length(); i++) {
-                                    JSONObject object = jsonArray.getJSONObject(i);
-                                    int idUsuario = object.getInt("id_usuario"); // Usar getInt()
-                                    String objusername = object.getString("name_user");
-                                    String passwordUser = object.getString("password_user");
-                                    int valueAccess = object.getInt("value_access"); // Usar getInt()
-                                    int idPerson = object.getInt("id_person"); // Usar getInt()
-
-                                    switch (valueAccess) {
-                                        case 0:
-                                            usuarioPendiente();
-                                            LanguageSelected.sesion = 0;
-                                            break;
-                                        case 1:
-                                            usuarioNoAutorizado();
-                                            LanguageSelected.sesion = 1;
-                                            break;
-                                        case 2:
-                                            menuResidente(objusername);
-                                            LanguageSelected.sesion = 2;
-                                            break;
-                                        case 3:
-                                            menuAplicacion(objusername); // Menu usuario administrador
-                                            LanguageSelected.sesion = 3;
-                                            break;
-                                    }
-                                }
-                            } else {
-                                userNotFound();
-                            }
-
-                            progressDialog.dismiss();
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                            Toast.makeText(LoginActivity.this, "Error JSON: " + e.toString(), Toast.LENGTH_LONG).show();
-                            progressDialog.dismiss();
-                        }
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(LoginActivity.this, "Error Volley: " + error.toString(), Toast.LENGTH_LONG).show();
-                        progressDialog.dismiss();
-                    }
-                }) {
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse (VolleyError error) { // ¡Aquí está la corrección!
+                Toast.makeText(LoginActivity.this, "ERROR AL INICIAR SESION", Toast.LENGTH_SHORT).show();
+                txtUsername.getEditText().setText("");
+                txtPassword.getEditText().setText("");
+                txtUsername.requestFocus();
+            }
+        }){
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("name_user", name_user);
-                params.put("password_user", password_user); // Agregar password_user
+                Map<String, String> params = new Hashtable<>();
+                params.put("name_user", txtUsername.getEditText().getText().toString());
+                params.put("password_user", txtPassword.getEditText().getText().toString()); // Agregar password_user
                 return params;
             }
         };
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        requestQueue.add(stringRequest);
-
-
+        RequestQueue requestQueue1 = Volley.newRequestQueue(LoginActivity.this);
+        requestQueue1.add(respuesta);
     }
 
     private void userNotFound() {
@@ -267,6 +192,9 @@ public class LoginActivity extends AppCompatActivity {
                 });
         dialog.setCancelable(true);
         dialog.create().show();
+
+        txtUsername.requestFocus();
+        txtPassword.requestFocus();
     }
 
     private void usuarioPendiente() {
@@ -289,6 +217,11 @@ public class LoginActivity extends AppCompatActivity {
         Intent nextActivity4 = new Intent(this, MenuAplication.class);
         nextActivity4.putExtra("Usuario", usuario);
         startActivity(nextActivity4);
+    }
+
+    private void menuSecurity(String usuario) {
+        /*Intent nextActivity5 = new Intent(this, activity_menu_application_security.class);
+        startActivity(nextActivity5);*/
     }
 
 }

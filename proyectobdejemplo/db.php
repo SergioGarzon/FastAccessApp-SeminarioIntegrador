@@ -1,10 +1,11 @@
 <?php
 
-    $conn = new mysqli("localhost", "root", "", "fastaccessapp");
-/*
-    if($conn){
+    $bdd = "fastaccessapp";
+
+    $connected = mysqli_connect("localhost", "root", "root", $bdd) or die(mysqli_error());
+
+    /*
+    if($connected)
         echo "Se conecto correctamente";        
-    } else {
-        echo "No se pudo conectar";
-    } */   
+    */
 ?>

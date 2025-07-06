@@ -40,6 +40,22 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.187" />
 
+    <TextView
+        android:id="@+id/lblTxtCredits"
+        android:layout_width="351dp"
+        android:layout_height="119dp"
+        android:layout_marginTop="44dp"
+        android:text="Fast Access App"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintVertical_bias="0.0" />
+
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="80dp"
@@ -52,137 +68,110 @@
         app:layout_constraintVertical_bias="0.586"
         app:srcCompat="@drawable/startlogotype" />
 
-    <ImageButton
-        android:id="@+id/imgBtnLinkedinSergio"
-        android:layout_width="46dp"
-        android:layout_height="46dp"
-        android:background="@color/black"
-        android:scaleType="fitCenter"
-        android:tooltipText="View Sergio Garzón's linkedin profiler"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedinMatias"
-        app:layout_constraintVertical_bias="0.06"
-        app:srcCompat="@drawable/linkedin" />
-
-    <ImageButton
-        android:id="@+id/imgBtnLinkedinMatias"
-        android:layout_width="49dp"
-        android:layout_height="46dp"
-        android:layout_marginBottom="240dp"
-        android:background="@color/black"
-        android:scaleType="fitCenter"
-        android:tooltipText="View Matias Farach's linkedin profiler"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toStartOf="@+id/lblMatiasFarach"
-        app:layout_constraintHorizontal_bias="0.831"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.463"
-        app:srcCompat="@drawable/linkedin" />
-
-    <ImageButton
-        android:id="@+id/imgBtnLinkedInGenaro"
-        android:layout_width="47dp"
-        android:layout_height="44dp"
-        android:background="@color/black"
-        android:scaleType="fitCenter"
-        android:tooltipText="View Genaro Paredes's linkedin profiler"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedinSergio"
-        app:layout_constraintVertical_bias="0.082"
-        app:srcCompat="@drawable/linkedin" />
-
-    <ImageButton
-        android:id="@+id/imgBtnLinkedinFacundo"
-        android:layout_width="47dp"
-        android:layout_height="44dp"
-        android:background="@color/black"
-        android:scaleType="fitCenter"
-        android:tooltipText="View Facundo Rago's linkedin profiler"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.17"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgBtnLinkedInGenaro"
-        app:layout_constraintVertical_bias="0.12"
-        app:srcCompat="@drawable/linkedin" />
-
-    <TextView
-        android:id="@+id/lblTxtCredits"
-        android:layout_width="351dp"
-        android:layout_height="119dp"
-        android:layout_marginTop="44dp"
-        android:text="Fast Access App"
-        android:textColor="@color/white"
-        android:textSize="25dp"
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:padding="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/lblFacundoRago"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-> Rago, Facundo"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toEndOf="@+id/imgBtnLinkedinFacundo"
-        app:layout_constraintTop_toBottomOf="@+id/lblGenaroParedes"
-        app:layout_constraintVertical_bias="0.132" />
-
-    <TextView
-        android:id="@+id/lblGenaroParedes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-> Paredes, Genaro"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.166"
-        app:layout_constraintStart_toEndOf="@+id/imgBtnLinkedInGenaro"
-        app:layout_constraintTop_toBottomOf="@+id/lblSergioGarzon"
-        app:layout_constraintVertical_bias="0.137" />
-
-    <TextView
-        android:id="@+id/lblMatiasFarach"
-        android:layout_width="191dp"
-        android:layout_height="33dp"
-        android:text="-> Farach, Matias"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.572"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.112" />
+        app:layout_constraintVertical_bias="0.006">
 
-    <TextView
-        android:id="@+id/lblSergioGarzon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="-> Garzón, Sergio"
-        android:textColor="@color/white"
-        android:textSize="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/btnCreditsOk"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.565"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lblMatiasFarach"
-        app:layout_constraintVertical_bias="0.106" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="100dp">
+
+            <ImageButton
+                android:id="@+id/imgBtnLinkedinMatias"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:background="@color/black"
+                android:tooltipText="View Matias Farach's linkedin profiler"
+                app:srcCompat="@drawable/linkedin" />
+
+            <TextView
+                android:id="@+id/lblMatiasFarach"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text=" \t\t\t\t\t\tFarach, Matias"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/imgBtnLinkedinSergio"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:background="@color/black"
+                android:tooltipText="View Sergio Garzón's linkedin profiler"
+                app:srcCompat="@drawable/linkedin" />
+
+            <TextView
+                android:id="@+id/lblSergioGarzon"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="\t\t\t\t\t\tGarzón, Sergio"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageButton
+                android:id="@+id/imgBtnLinkedInGenaro"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:scaleType="fitCenter"
+                android:background="@color/black"
+                android:tooltipText="View Genaro Paredes's linkedin profiler"
+                app:srcCompat="@drawable/linkedin" />
+
+            <TextView
+                android:id="@+id/lblGenaroParedes"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="\t\t\t\t\t\tParedes, Genaro"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/imgBtnLinkedinFacundo"
+                android:layout_width="65dp"
+                android:layout_height="45dp"
+                android:background="@color/black"
+                android:scaleType="fitCenter"
+                android:tooltipText="View Facundo Rago's linkedin profiler"
+                app:srcCompat="@drawable/linkedin" />
+
+            <TextView
+                android:id="@+id/lblFacundoRago"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="\t\t\t\t\t\tRago, Facundo"
+                android:textColor="@color/white"
+                android:textSize="25dp" />
+        </TableRow>
+    </TableLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

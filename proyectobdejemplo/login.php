@@ -1,34 +1,28 @@
 <?php
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $name_user = $_POST['name_user'];
 
-    require_once 'db.php';
+    require_once('db.php');
+    mysqli_select_db($connected, $bdd);
 
-    $sql = "SELECT * FROM users WHERE name_user = '$name_user'";
+    $name_user = $_REQUEST['name_user'];
+    $password_user = $_REQUEST['password_user'];
 
-    $response = mysqli_query($conn, $sql);
     $result = array();
     $result['login'] = array();
-
-    if (mysqli_num_rows($response) === 1) {
-        $row = mysqli_fetch_assoc($response);
-
-        $index['id_usuario'] = $row['id_usuario'];
-        $index['name_user'] = $row['name_user'];
-        $index['password_user'] = $row['password_user'];
-        $index['value_access'] = $row['value_access'];
-        $index['id_person'] = $row['id_person'];
-
-        array_push($result['login'], $index);
-
-        $result['success'] = "1";
-        $result['message'] = "success";
+   
+    if($name_user == "" || $password_user == "") {
+        echo "ERROR1";
     } else {
-        $result['success'] = "0";
-        $result['message'] = "Error";
+        $consulta = mysqli_query($connected, "SELECT * FROM users WHERE name_user = '" . $name_user . "' AND '" . $password_user . "'") or
+        die(mysqli_error());
+
+        if(mysqli_num_rows($consulta) == 0) {
+            echo "ERROR2";
+        } else {
+            $row = mysqli_fetch_assoc($consulta);
+
+            echo "".$row['id_usuario']."/".$row['name_user']."+".$row['value_access'];          
+        }
     }
 
-    echo json_encode($result);
-    mysqli_close($conn);
-}
+        mysqli_close($connected); 
 ?>
