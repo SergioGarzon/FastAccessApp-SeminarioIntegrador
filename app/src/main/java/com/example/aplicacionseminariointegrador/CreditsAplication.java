@@ -21,6 +21,8 @@ public class CreditsAplication extends AppCompatActivity {
 
     LanguageSelected languageSelected;
 
+    String url = "https://www.linkedin.com/in/";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +48,7 @@ public class CreditsAplication extends AppCompatActivity {
         imgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse(url +"sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -57,7 +59,7 @@ public class CreditsAplication extends AppCompatActivity {
         imgBtnFacundoLinkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/facundo-rago/"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse(url + "facundo-rago/"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -68,7 +70,7 @@ public class CreditsAplication extends AppCompatActivity {
         imgBtnGenaroLinkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/genaro-paredes-6b5785238/"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse(url + "genaro-paredes-6b5785238/"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
@@ -79,14 +81,11 @@ public class CreditsAplication extends AppCompatActivity {
         imgBtnMatiasLinkedIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Uri uri = Uri.parse("https://www.linkedin.com/in/matias-leonel-farach-b2482528a/"); // missing 'http://' will cause crashed
+                Uri uri = Uri.parse(url +"matias-leonel-farach-b2482528a/"); // missing 'http://' will cause crashed
                 Intent intent = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intent);
             }
         });
-
-
-
     }
 
     // Metodo para el boton Ingresar

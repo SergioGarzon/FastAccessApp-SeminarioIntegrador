@@ -5,6 +5,71 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AvisoUsuarioDadoDeBaja">
+    tools:context=".AvisoUsuarioDadoDeBaja"
+    android:background="@drawable/backgroundapp">
 
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="217dp"
+        android:layout_height="226dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        app:srcCompat="@drawable/alertsymbol" />
+
+    <TextView
+        android:id="@+id/txtLblMessageAlert"
+        android:layout_width="348dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:text="¡Ocurrio un problema!"
+        android:textAlignment="center"
+        android:textColor="#bbcf47"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView17"
+        app:layout_constraintVertical_bias="0.03" />
+
+    <TextView
+        android:id="@+id/txtLblUserCancellation"
+        android:layout_width="290dp"
+        android:layout_height="146dp"
+        android:layout_marginBottom="156dp"
+        android:gravity="center"
+        android:text="User requested the cancellation"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtLblMessageAlert"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnCancelBackLogin"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
+        android:background="@drawable/border_buttons"
+        android:onClick="changeActivityMainBackLogin"
+        android:text="BACK LOGIN"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView14"
+        app:layout_constraintVertical_bias="0.544" />
 </androidx.constraintlayout.widget.ConstraintLayout>

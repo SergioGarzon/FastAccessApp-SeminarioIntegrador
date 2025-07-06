@@ -67,7 +67,7 @@ public class MenuAplication extends AppCompatActivity {
         btnMenuAccountProfiler.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                changeProfileSettings(v);
             }
         });
 
@@ -97,6 +97,11 @@ public class MenuAplication extends AppCompatActivity {
 
     private void makePhoneCall(View v) {
         Intent nextActivity = new Intent(this, EmergencyCall.class);
+        startActivity(nextActivity);
+    }
+
+    private void changeProfileSettings(View v) {
+        Intent nextActivity = new Intent(this, ProfileAccount.class);
         startActivity(nextActivity);
     }
 

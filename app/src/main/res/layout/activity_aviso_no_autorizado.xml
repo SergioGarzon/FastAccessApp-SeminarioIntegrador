@@ -34,7 +34,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.785"
+        app:layout_constraintVertical_bias="0.777"
         app:srcCompat="@drawable/usernoautorized" />
 
     <TextView
@@ -45,6 +45,7 @@
         android:textAlignment="center"
         android:textColor="#0ea4af"
         android:textSize="40sp"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/txtLblUserNoAutorized"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -60,6 +61,7 @@
         android:textColor="#F6F6F6"
         android:textSize="30dp"
         android:textStyle="bold"
+        android:gravity="center"
         app:layout_constraintBottom_toTopOf="@+id/btnInvalidBackLogin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -39,12 +39,6 @@ public class AvisoNoAutorizado extends AppCompatActivity {
         vibrator.vibrate(1000);
     }
 
-    @Override
-    public void onBackPressed() {
-        //Toast.makeText(StartApplication.this, "Action not allowed!", Toast.LENGTH_SHORT).show();
-        return;
-    }
-
     // Metodo para el boton Ingresar
     public void changeActivityMainBackLogin(View view) {
         Intent nextActivity = new Intent(this, LoginActivity.class);

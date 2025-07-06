@@ -45,13 +45,12 @@
         android:layout_width="351dp"
         android:layout_height="119dp"
         android:layout_marginTop="44dp"
+        android:gravity="center"
         android:text="Fast Access App"
         android:textColor="@color/white"
         android:textSize="25dp"
-        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3"
         app:layout_constraintVertical_bias="0.0" />
@@ -75,10 +74,10 @@
         android:padding="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblTxtCredits"
-        app:layout_constraintVertical_bias="0.006">
+        app:layout_constraintVertical_bias="0.0">
 
         <TableRow
             android:layout_width="match_parent"
@@ -88,15 +87,16 @@
                 android:id="@+id/imgBtnLinkedinMatias"
                 android:layout_width="65dp"
                 android:layout_height="45dp"
-                android:scaleType="fitCenter"
                 android:background="@color/black"
+                android:scaleType="fitCenter"
                 android:tooltipText="View Matias Farach's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/linkedin"
+                />
 
             <TextView
                 android:id="@+id/lblMatiasFarach"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:text=" \t\t\t\t\t\tFarach, Matias"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
@@ -111,15 +111,16 @@
                 android:id="@+id/imgBtnLinkedinSergio"
                 android:layout_width="65dp"
                 android:layout_height="45dp"
-                android:scaleType="fitCenter"
                 android:background="@color/black"
+                android:scaleType="fitCenter"
                 android:tooltipText="View Sergio Garzón's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/linkedin"
+                />
 
             <TextView
                 android:id="@+id/lblSergioGarzon"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:text="\t\t\t\t\t\tGarzón, Sergio"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
@@ -134,15 +135,16 @@
                 android:id="@+id/imgBtnLinkedInGenaro"
                 android:layout_width="65dp"
                 android:layout_height="45dp"
-                android:scaleType="fitCenter"
                 android:background="@color/black"
+                android:scaleType="fitCenter"
                 android:tooltipText="View Genaro Paredes's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/linkedin"
+                />
 
             <TextView
                 android:id="@+id/lblGenaroParedes"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:text="\t\t\t\t\t\tParedes, Genaro"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
@@ -159,19 +161,18 @@
                 android:background="@color/black"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Facundo Rago's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/linkedin"
+                />
 
             <TextView
                 android:id="@+id/lblFacundoRago"
                 android:layout_width="match_parent"
-                android:layout_height="60dp"
+                android:layout_height="55dp"
                 android:text="\t\t\t\t\t\tRago, Facundo"
                 android:textColor="@color/white"
                 android:textSize="25dp" />
         </TableRow>
     </TableLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

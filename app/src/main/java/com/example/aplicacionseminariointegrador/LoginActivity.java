@@ -138,19 +138,23 @@ public class LoginActivity extends AppCompatActivity {
                             break;
                         case 1:
                             usuarioNoAutorizado();
-                            LanguageSelected.sesion = 1;
+                            LanguageSelected.sesion = 0;
                             break;
                         case 2:
-                            menuResidente(nombreUsuario);
-                            LanguageSelected.sesion = 2;
+                            usuarioDadoBaja();
+                            LanguageSelected.sesion = 0;
                             break;
                         case 3:
                             menuAplicacion(nombreUsuario); // Menu usuario administrador
-                            LanguageSelected.sesion = 3;
+                            LanguageSelected.sesion = 1;
                             break;
                         case 4:
-                            menuSecurity("");
-                            LanguageSelected.sesion = 4;
+                            menuSecurity(nombreUsuario);
+                            LanguageSelected.sesion = 1;
+                            break;
+                        case 5:
+                            menuResidente(nombreUsuario);
+                            LanguageSelected.sesion = 1;
                             break;
                     }
                 }
@@ -219,9 +223,16 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(nextActivity4);
     }
 
+    private void usuarioDadoBaja() {
+        Intent nextActivity5 = new Intent(this, AvisoUsuarioDadoDeBaja.class);
+        startActivity(nextActivity5);
+    }
+
     private void menuSecurity(String usuario) {
         /*Intent nextActivity5 = new Intent(this, activity_menu_application_security.class);
         startActivity(nextActivity5);*/
     }
+
+
 
 }
