@@ -19,6 +19,7 @@ public class AvisoUsuarioDadoDeBaja extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_aviso_usuario_dado_de_baja);
 
