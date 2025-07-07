@@ -26,6 +26,8 @@ public class ProfileAccount extends AppCompatActivity {
                 EditVisibilityBtn(v);
             }
         });
+
+
     }
 
     private void EditVisibilityBtn(View v) {
