@@ -4,7 +4,6 @@ This application is for the final project of Integrative Seminar subject of the 
 
 <img src="./Photos/utnfrc.png" alt="UTN FRC" />
 
-
 ##### **Members**
 > * Farach, Matías Leonel (Functional Analyst)
 > * Garzón, Sergio (Developer)
