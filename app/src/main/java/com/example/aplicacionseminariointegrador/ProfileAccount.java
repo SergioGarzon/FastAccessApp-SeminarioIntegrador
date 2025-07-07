@@ -1,24 +1,35 @@
 package com.example.aplicacionseminariointegrador;
 
+import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
+import android.view.View;
+import android.widget.Button;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ProfileAccount extends AppCompatActivity {
 
+    Button btnCancelSaveProfile, btnVisibility;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_profile_account);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        btnVisibility = (Button) findViewById(R.id.btnVisibility);
+
+        btnVisibility.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                EditVisibilityBtn(v);
+            }
         });
+    }
+
+    private void EditVisibilityBtn(View v) {
+        Intent nextActivity = new Intent(this, EditVisibility.class);
+        startActivity(nextActivity);
     }
 }

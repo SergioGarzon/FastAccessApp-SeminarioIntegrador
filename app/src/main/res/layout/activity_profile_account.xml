@@ -10,25 +10,10 @@
 
 
     <Button
-        android:id="@+id/btnSaveProfile"
-        android:layout_width="232dp"
-        android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
-        android:text="SAVE"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.853" />
-
-    <Button
         android:id="@+id/btnCancelSaveProfile"
         android:layout_width="232dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="48dp"
         android:background="@drawable/border_buttons"
         android:text="CANCEL"
         android:textColor="@color/white"
@@ -36,10 +21,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.547"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnSaveProfile"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout3"
+        app:layout_constraintVertical_bias="0.909" />
 
     <ImageView
         android:id="@+id/imageView7"
@@ -76,7 +61,8 @@
         android:layout_marginStart="44dp"
         android:text="STATUS"
         android:textColor="@color/white"
-        android:textSize="20sp"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.067"
@@ -113,4 +99,151 @@
         app:layout_constraintTop_toBottomOf="@+id/lblStatus"
         app:layout_constraintVertical_bias="0.013"
         app:srcCompat="@drawable/onlinepoint" />
+
+
+    <TableLayout
+        android:id="@+id/tableLayout3"
+        android:layout_width="344dp"
+        android:layout_height="321dp"
+        android:layout_marginTop="56dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView7"
+        app:layout_constraintVertical_bias="0.006">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/editbutton"
+                tools:layout_editor_absoluteX="187dp"
+                tools:layout_editor_absoluteY="73dp" />
+
+            <Button
+                android:id="@+id/button8"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:background="@drawable/border_buttons"
+                android:text="EDIT NAME USER"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="249dp"
+                tools:layout_editor_absoluteY="137dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView19"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/passwordlock"
+                tools:layout_editor_absoluteX="277dp"
+                tools:layout_editor_absoluteY="490dp" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:background="@drawable/border_buttons"
+                android:text="CHANGE PASSWORD"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="242dp"
+                tools:layout_editor_absoluteY="147dp" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView22"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/editvisibility"
+                tools:layout_editor_absoluteX="223dp"
+                tools:layout_editor_absoluteY="104dp" />
+
+            <Button
+                android:id="@+id/btnVisibility"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:background="@drawable/border_buttons"
+                android:text="EDIT VISIBILITY"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="235dp"
+                tools:layout_editor_absoluteY="122dp" />
+
+        </TableRow>
+
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView20"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/changerolperson"
+                tools:layout_editor_absoluteX="282dp"
+                tools:layout_editor_absoluteY="505dp" />
+
+            <Button
+                android:id="@+id/button5"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:background="@drawable/border_buttons"
+                android:text="CHANGE ROL"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="264dp"
+                tools:layout_editor_absoluteY="136dp" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageView18"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/dardebajausuario"
+                tools:layout_editor_absoluteX="64dp"
+                tools:layout_editor_absoluteY="174dp" />
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="281dp"
+                android:layout_height="55dp"
+                android:background="@drawable/border_buttons"
+                android:text="CANCEL ACCOUNT"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic"
+                tools:layout_editor_absoluteX="257dp"
+                tools:layout_editor_absoluteY="169dp" />
+        </TableRow>
+
+    </TableLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

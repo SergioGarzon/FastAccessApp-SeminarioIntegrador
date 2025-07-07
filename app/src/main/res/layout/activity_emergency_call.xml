@@ -16,8 +16,9 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.062"
+        app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/startlogotype" />
+
 
     <TextView
         android:id="@+id/textView"
@@ -34,8 +35,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.02" />
-
+        app:layout_constraintVertical_bias="0.003" />
 
     <Button
         android:id="@+id/btnBackEmergencyMenuApplication"
@@ -54,17 +54,32 @@
         app:layout_constraintTop_toBottomOf="@+id/tableLayout"
         app:layout_constraintVertical_bias="1.0" />
 
-    <TableLayout
-        android:id="@+id/tableLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="312dp"
+        android:layout_height="88dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:text="You must press a button to call emergency services"
+        android:textColor="@color/white"
+        android:textSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
-        app:layout_constraintVertical_bias="0.09">
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="240dp"
+        android:layout_height="241dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.478"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintVertical_bias="0.246">
 
         <TableRow
             android:layout_width="match_parent"
@@ -113,6 +128,8 @@
         </TableRow>
 
     </TableLayout>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -5,6 +5,107 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/backgroundapp"
     tools:context=".EditVisibility">
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="100dp"
+        android:layout_height="55dp"
+        android:background="@drawable/border_buttons"
+        android:text="BACK"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023" />
+
+    <TableLayout
+        android:id="@+id/tableLayout4"
+        android:layout_width="376dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/border_button_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button10"
+        app:layout_constraintVertical_bias="0.003">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:text="Visibility:"
+                android:textColor="@color/black"
+                android:gravity="right"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="156dp"
+                tools:layout_editor_absoluteY="363dp" />
+
+            <CheckBox
+                android:id="@+id/checkBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="En linea"
+                android:textColor="#076e05"
+                android:gravity="left"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="196dp"
+                tools:layout_editor_absoluteY="325dp" />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                tools:layout_editor_absoluteX="129dp"
+                tools:layout_editor_absoluteY="397dp" />
+
+            <CheckBox
+                android:id="@+id/checkBox2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Desconectado"
+                android:textColor="#b81b02"
+                android:gravity="left"
+                android:textSize="20dp"
+                tools:layout_editor_absoluteX="161dp"
+                tools:layout_editor_absoluteY="410dp" />
+
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="366dp"
+        android:layout_height="137dp"
+        android:layout_marginBottom="356dp"
+        android:gravity="left"
+        android:text="La visibilidad permite que los demas usuarios vena que estas conectado, si desactivas esta opción no te podran ver. Recomendamos siempre tenerla activada"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.488"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout4"
+        app:layout_constraintVertical_bias="0.12" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

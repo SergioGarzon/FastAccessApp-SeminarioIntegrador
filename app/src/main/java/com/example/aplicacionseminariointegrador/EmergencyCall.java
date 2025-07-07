@@ -75,12 +75,8 @@ public class EmergencyCall extends AppCompatActivity {
 
     private void backMenuApplication(View v) {
         switch (LanguageSelected.sesion) {
-            case 0:
-                Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
-                startActivity(nextActivity);
-                break;
             case 1:
-                Intent nextActivity2 = new Intent(this, AvisoNoAutorizado.class);
+                Intent nextActivity2 = new Intent(this, MenuAplication.class);
                 startActivity(nextActivity2);
                 break;
             case 2:

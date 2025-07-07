@@ -150,11 +150,11 @@ public class LoginActivity extends AppCompatActivity {
                             break;
                         case 4:
                             menuSecurity(nombreUsuario);
-                            LanguageSelected.sesion = 1;
+                            LanguageSelected.sesion = 3;
                             break;
                         case 5:
                             menuResidente(nombreUsuario);
-                            LanguageSelected.sesion = 1;
+                            LanguageSelected.sesion = 2;
                             break;
                     }
                 }

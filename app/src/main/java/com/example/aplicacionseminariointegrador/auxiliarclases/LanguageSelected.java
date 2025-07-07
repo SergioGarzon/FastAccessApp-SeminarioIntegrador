@@ -4,4 +4,6 @@ public class LanguageSelected {
 
     public static int languageSelected;
     public static int sesion;
+
+    public static int status;
 }
