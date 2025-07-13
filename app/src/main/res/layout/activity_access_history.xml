@@ -11,8 +11,8 @@
 
     <TextView
         android:id="@+id/txtHistoryAccessData"
-        android:layout_width="330dp"
-        android:layout_height="518dp"
+        android:layout_width="318dp"
+        android:layout_height="505dp"
         android:background="@drawable/border_button_white"
         android:text="Informacion"
         android:textAlignment="center"
@@ -20,10 +20,9 @@
         android:textSize="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.23" />
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
+        app:layout_constraintVertical_bias="0.109" />
 
     <Button
         android:id="@+id/button7"
@@ -40,4 +39,19 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtHistoryAccessData" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="331dp"
+        android:layout_height="45dp"
+        android:text="ACCESS HISTORY"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="30sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.051" />
 </androidx.constraintlayout.widget.ConstraintLayout>
