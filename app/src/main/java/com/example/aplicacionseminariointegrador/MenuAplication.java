@@ -28,14 +28,15 @@ public class MenuAplication extends AppCompatActivity {
         btnMenuChat = findViewById(R.id.btnChatResident);
         //btnMenuNotification = findViewById(R.id.btnNotificationsResident);
         btnMenuVisitorRegister = findViewById(R.id.btnRegisterVisitorResident);
-        btnMenuPeopleHistory = findViewById(R.id.btnMenuPeopleHistory);
+        btnMenuPeopleHistory = findViewById(R.id.btnMenuHistory);
         txtLblWelcomeFastAccessApp = findViewById(R.id.txtVisitorWelcomeMessage);
 
         btnMenuChat.setEnabled(false);
-        btnMenuPeopleHistory.setEnabled(false);
+        //btnMenuPeopleHistory.setEnabled(false);
 
         Intent intent = getIntent();
-        String user = intent.getStringExtra("Usuario");
+        String user = LanguageSelected.nameSession;
+        //String user = intent.getStringExtra("Usuario");
 
         if(LanguageSelected.languageSelected == 0) {
             btnEmergencyNewActivity.setText("CALL EMERGENCY");
@@ -85,12 +86,20 @@ public class MenuAplication extends AppCompatActivity {
             }
         });
 
+        btnMenuPeopleHistory.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                accessHistoryActivity(v);
+            }
+        } );
+
         /*btnMenuNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeNotificationActivity(v);
             }
         });*/
+
 
 
     }
@@ -125,6 +134,10 @@ public class MenuAplication extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
+    private void accessHistoryActivity(View v) {
+        Intent nextActivity = new Intent(this, AccessHistory.class);
+        startActivity(nextActivity);
+    }
     /*
     @Override
     public void onBackPressed() {

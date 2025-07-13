@@ -43,13 +43,13 @@
 
     <TextView
         android:id="@+id/txtVisitorWelcomeMessage"
-        android:layout_width="321dp"
-        android:layout_height="49dp"
+        android:layout_width="367dp"
+        android:layout_height="47dp"
         android:foregroundTint="#00DB8C"
         android:text="Welcome to"
         android:textAlignment="center"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/txtFastAccessAppTitleResident"
         app:layout_constraintEnd_toEndOf="parent"
@@ -186,7 +186,7 @@
                 app:srcCompat="@drawable/accesshistory" />
 
             <Button
-                android:id="@+id/btnMenuPeopleHistory"
+                android:id="@+id/btnMenuHistory"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
                 android:background="@drawable/border_buttons"

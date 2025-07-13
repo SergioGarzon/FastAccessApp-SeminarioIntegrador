@@ -8,4 +8,6 @@ public class LanguageSelected {
     public static int status;
 
     public static int idUser;
+
+    public static String nameSession;
 }

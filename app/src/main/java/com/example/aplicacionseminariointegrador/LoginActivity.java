@@ -26,6 +26,7 @@ import com.google.android.material.textfield.TextInputLayout;
 import org.intellij.lang.annotations.Language;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -138,7 +139,6 @@ public class LoginActivity extends AppCompatActivity {
 
                     guardarHistorial(idUsuario);
 
-
                     switch (Integer.parseInt(valor)) {
                         case 0:
                             usuarioPendiente();
@@ -155,14 +155,17 @@ public class LoginActivity extends AppCompatActivity {
                             break;
                         case 3:
                             menuAplicacion(nombreUsuario); // Menu usuario administrador
+                            LanguageSelected.nameSession = nombreUsuario;
                             LanguageSelected.sesion = 1;
                             break;
                         case 4:
                             menuSecurity(nombreUsuario);
+                            LanguageSelected.nameSession = nombreUsuario;
                             LanguageSelected.sesion = 3;
                             break;
                         case 5:
                             menuResidente(nombreUsuario);
+                            LanguageSelected.nameSession = nombreUsuario;
                             LanguageSelected.sesion = 2;
                             break;
                     }
@@ -211,7 +214,7 @@ public class LoginActivity extends AppCompatActivity {
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new Hashtable<>();
                 params.put("id_usuario", idUsuario);
-                params.put("date_time", LocalDate.now().toString());
+                params.put("date_time", LocalDateTime.now().toString());
                 return params;
             }
         };

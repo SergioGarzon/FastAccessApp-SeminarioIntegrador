@@ -7,12 +7,14 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 
 public class MenuApplicationResidente extends AppCompatActivity {
 
     Button btnRegisterVisitorResident, btnLogoutResident, btnCallEmergencyResident;
+    TextView txtLblWelcomeFastAccessApp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,17 +24,21 @@ public class MenuApplicationResidente extends AppCompatActivity {
         btnRegisterVisitorResident = findViewById(R.id.btnRegisterVisitorResident);
         btnLogoutResident = findViewById(R.id.btnLogoutResident);
         btnCallEmergencyResident = findViewById(R.id.btnCallEmergencyResident);
+        txtLblWelcomeFastAccessApp = findViewById(R.id.txtVisitorWelcomeMessage);
 
         Intent intent = getIntent();
-        String user = intent.getStringExtra("Usuario");
+        String user = LanguageSelected.nameSession;
+        //String user = intent.getStringExtra("Usuario");
 
         if(LanguageSelected.languageSelected == 0) {
             btnRegisterVisitorResident.setText("REGISTER VISITOR");
             btnLogoutResident.setText("LOGOUT");
             btnCallEmergencyResident.setText("CALL EMERGENCY");
+            txtLblWelcomeFastAccessApp.setText("Welcome " + user + " to");
         } else {
             btnRegisterVisitorResident.setText("REGISTRAR VISITANTE");
             btnLogoutResident.setText("CERRAR SESION");
+            txtLblWelcomeFastAccessApp.setText("Bienvenido " + user + " a");
             btnCallEmergencyResident.setText("LLAMAR A EMERGENCIAS");
         }
 
