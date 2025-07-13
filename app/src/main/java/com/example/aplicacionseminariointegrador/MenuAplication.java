@@ -13,7 +13,7 @@ import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected
 public class MenuAplication extends AppCompatActivity {
 
     Button btnEmergencyNewActivity, btnLogoutMenuApplication, btnMenuAccountProfiler,
-            btnMenuChat, btnMenuNotification, btnMenuVisitorRegister, btnMenuPeopleHistory;
+            btnMenuChat/*, btnMenuNotification*/, btnMenuVisitorRegister, btnMenuPeopleHistory;
     TextView txtLblWelcomeFastAccessApp;
 
     @Override
@@ -26,7 +26,7 @@ public class MenuAplication extends AppCompatActivity {
         btnLogoutMenuApplication = findViewById(R.id.btnLogoutResident);
         btnMenuAccountProfiler = findViewById(R.id.btnProfilerAccountResident);
         btnMenuChat = findViewById(R.id.btnChatResident);
-        btnMenuNotification = findViewById(R.id.btnNotificationsResident);
+        //btnMenuNotification = findViewById(R.id.btnNotificationsResident);
         btnMenuVisitorRegister = findViewById(R.id.btnRegisterVisitorResident);
         btnMenuPeopleHistory = findViewById(R.id.btnMenuPeopleHistory);
         txtLblWelcomeFastAccessApp = findViewById(R.id.txtVisitorWelcomeMessage);
@@ -41,7 +41,7 @@ public class MenuAplication extends AppCompatActivity {
             btnEmergencyNewActivity.setText("CALL EMERGENCY");
             btnMenuAccountProfiler.setText("MANAGER YOUR ACCOUNT");
             btnMenuChat.setText("CHAT");
-            btnMenuNotification.setText("NOTIFICATIONS");
+            //btnMenuNotification.setText("NOTIFICATIONS");
             btnMenuVisitorRegister.setText("VISITOR QR SCAN");
             btnMenuPeopleHistory.setText("ACCESS HISTORY");
             txtLblWelcomeFastAccessApp.setText("Welcome " + user + " to");
@@ -50,7 +50,7 @@ public class MenuAplication extends AppCompatActivity {
             btnEmergencyNewActivity.setText("LLAMAR A EMERGENCIAS");
             btnMenuAccountProfiler.setText("ADMINISTRAR TU CUENTA");
             btnMenuChat.setText("CHATEAR CON LOS USUARIOS");
-            btnMenuNotification.setText("NOTIFICACIONES");
+            //btnMenuNotification.setText("NOTIFICACIONES");
             btnMenuVisitorRegister.setText("ESCANEAR QR VISITANTE");
             btnMenuPeopleHistory.setText("HISTORIAL DE ACCESOS");
             txtLblWelcomeFastAccessApp.setText("Bienvenido " + user + " a");
@@ -85,12 +85,12 @@ public class MenuAplication extends AppCompatActivity {
             }
         });
 
-        btnMenuNotification.setOnClickListener(new View.OnClickListener() {
+        /*btnMenuNotification.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 changeNotificationActivity(v);
             }
-        });
+        });*/
 
 
     }
@@ -125,10 +125,11 @@ public class MenuAplication extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
+    /*
     @Override
     public void onBackPressed() {
         //Toast.makeText(StartApplication.this, "Action not allowed!", Toast.LENGTH_SHORT).show();
         return;
-    }
+    }*/
 
 }

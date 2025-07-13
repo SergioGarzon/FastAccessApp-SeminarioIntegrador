@@ -1,5 +1,6 @@
 package com.example.aplicacionseminariointegrador;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
@@ -21,6 +22,10 @@ import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputLayout;
+
+import org.intellij.lang.annotations.Language;
+
+import java.time.LocalDate;
 import java.util.Hashtable;
 import java.util.Map;
 
@@ -131,9 +136,13 @@ public class LoginActivity extends AppCompatActivity {
                     String nombreUsuario = response.substring(response.indexOf("/") + 1, response.indexOf("+"));
                     String valor = response.substring(response.indexOf("+") + 1, response.length());
 
+                    guardarHistorial(idUsuario);
+
+
                     switch (Integer.parseInt(valor)) {
                         case 0:
                             usuarioPendiente();
+                            LanguageSelected.idUser = Integer.parseInt(idUsuario);
                             LanguageSelected.sesion = 0;
                             break;
                         case 1:
@@ -179,6 +188,37 @@ public class LoginActivity extends AppCompatActivity {
 
         RequestQueue requestQueue1 = Volley.newRequestQueue(LoginActivity.this);
         requestQueue1.add(respuesta);
+    }
+
+    private void guardarHistorial(String idUsuario) {
+        String urlNueva = "http://192.168.0.22:8080/fastaccessapp/accessuser.php";
+
+        StringRequest respuesta;
+        respuesta = new StringRequest(Request.Method.POST, urlNueva, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                if (response.equalsIgnoreCase("AGREGADO")) {
+                    Toast.makeText(LoginActivity.this, "ACTUALIZADO", Toast.LENGTH_SHORT).show();
+                }
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse (VolleyError error) {
+                Toast.makeText(LoginActivity.this, "ERROR", Toast.LENGTH_SHORT).show();
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                Map<String, String> params = new Hashtable<>();
+                params.put("id_usuario", idUsuario);
+                params.put("date_time", LocalDate.now().toString());
+                return params;
+            }
+        };
+
+        RequestQueue requestQueue1 = Volley.newRequestQueue(LoginActivity.this);
+        requestQueue1.add(respuesta);
+
     }
 
     private void userNotFound() {

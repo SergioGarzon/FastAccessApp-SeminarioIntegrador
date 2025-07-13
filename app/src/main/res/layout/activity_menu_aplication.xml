@@ -11,6 +11,7 @@
         android:id="@+id/btnLogoutResident"
         android:layout_width="232dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityPresentation"
         android:text="Logout"
@@ -21,24 +22,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintVertical_bias="0.743" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout5"
+        app:layout_constraintVertical_bias="0.49" />
 
     <TextView
         android:id="@+id/txtFastAccessAppTitleResident"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/bomberescortcondital"
         android:foregroundTint="#00DB8C"
         android:text="FAST ACCESS APP"
         android:textColor="#0ea4af"
         android:textSize="34sp"
-        android:fontFamily="@font/bomberescortcondital"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.125" />
 
     <TextView
         android:id="@+id/txtVisitorWelcomeMessage"
@@ -52,210 +53,172 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toTopOf="@+id/txtFastAccessAppTitleResident"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.538"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.658" />
+        app:layout_constraintVertical_bias="0.641" />
 
-    <Button
-        android:id="@+id/btnCallEmergencyResident"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="CALL EMERGENCY"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
+    <TableLayout
+        android:id="@+id/tableLayout5"
+        android:layout_width="352dp"
+        android:layout_height="469dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnChatResident"
-        app:layout_constraintVertical_bias="0.021" />
-
-    <Button
-        android:id="@+id/btnChatResident"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="CHAT"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnProfilerAccountResident"
-        app:layout_constraintVertical_bias="0.029" />
-
-    <Button
-        android:id="@+id/btnProfilerAccountResident"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="ACCOUNT PROFILE"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
-        app:layout_constraintVertical_bias="0.051" />
+        app:layout_constraintVertical_bias="0.085">
 
-    <Button
-        android:id="@+id/btnNotificationsResident"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="NOTIFICATIONS"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnCallEmergencyResident"
-        app:layout_constraintVertical_bias="0.032" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/btnRegisterVisitorResident"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="SCAN QR VISITOR"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNotificationsResident"
-        app:layout_constraintVertical_bias="0.045" />
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/profileaccount" />
 
-    <Button
-        android:id="@+id/btnMenuPeopleHistory"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="ACCESS HISTORY"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterVisitorResident"
-        app:layout_constraintVertical_bias="0.079" />
+            <Button
+                android:id="@+id/btnProfilerAccountResident"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="ACCOUNT PROFILE"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+        </TableRow>
 
-    <ImageView
-        android:id="@+id/imageView9"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/chataccount"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnChatResident"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView14"
-        app:layout_constraintVertical_bias="0.017" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/notifications"
-        app:layout_constraintEnd_toStartOf="@+id/btnNotificationsResident"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView11" />
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/chataccount" />
 
-    <ImageView
-        android:id="@+id/imageView11"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/sos"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnCallEmergencyResident"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView9"
-        app:layout_constraintVertical_bias="0.015" />
+            <Button
+                android:id="@+id/btnChatResident"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="CHAT"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+        </TableRow>
 
-    <ImageView
-        android:id="@+id/imageView12"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/accesshistory"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView13"
-        app:layout_constraintVertical_bias="0.02" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView13"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/visitorqrscan"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnRegisterVisitorResident"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView10"
-        app:layout_constraintVertical_bias="0.011" />
+            <ImageView
+                android:id="@+id/imageView15"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/sos" />
 
-    <ImageView
-        android:id="@+id/imageView14"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        android:background="@drawable/profileaccount"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnProfilerAccountResident"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtFastAccessAppTitleResident"
-        app:layout_constraintVertical_bias="0.049" />
+            <Button
+                android:id="@+id/btnCallEmergencyResident"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="CALL EMERGENCY"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+        </TableRow>
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="281dp"
-        android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
-        android:text="GENERALS CONFIGURATIONS"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnMenuPeopleHistory"
-        app:layout_constraintVertical_bias="0.08" />
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="2dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button7"
-        app:layout_constraintHorizontal_bias="0.853"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView12"
-        app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="@drawable/settingbutton" />
+            <ImageView
+                android:id="@+id/imageView23"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/notifications" />
+
+            <Button
+                android:id="@+id/button11"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="NOTIFICATIONS"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView24"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/visitorqrscan" />
+
+            <Button
+                android:id="@+id/btnRegisterVisitorResident"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="SCAN QR VISITOR"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView25"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/accesshistory" />
+
+            <Button
+                android:id="@+id/btnMenuPeopleHistory"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="ACCESS HISTORY"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView26"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:srcCompat="@drawable/settingbutton" />
+
+            <Button
+                android:id="@+id/btnUserConfiguration"
+                android:layout_width="290dp"
+                android:layout_height="60dp"
+                android:background="@drawable/border_buttons"
+                android:text="GENERALS CONFIGURATIONS"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold|italic" />
+
+        </TableRow>
+    </TableLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

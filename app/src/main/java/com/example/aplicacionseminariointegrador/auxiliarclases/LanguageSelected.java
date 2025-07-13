@@ -6,4 +6,6 @@ public class LanguageSelected {
     public static int sesion;
 
     public static int status;
+
+    public static int idUser;
 }
