@@ -58,7 +58,7 @@
         android:id="@+id/btnCancelBackLogin"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="60dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityMainBackLogin"
         android:text="BACK LOGIN"
@@ -70,6 +70,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView14"
-        app:layout_constraintVertical_bias="0.544" />
+        app:layout_constraintTop_toBottomOf="@+id/txtLblUserCancellation"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

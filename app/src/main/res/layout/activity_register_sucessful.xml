@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblMessageUserCreated"
-        app:layout_constraintVertical_bias="0.589" />
+        app:layout_constraintVertical_bias="0.663" />
 
     <ImageView
         android:id="@+id/imageView4"
