@@ -31,6 +31,9 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="35">
         <activity
+            android:name=".SelectRegisterUser"
+            android:exported="false" />
+        <activity
             android:name=".CancelAcoount"
             android:exported="false" />
         <activity
@@ -38,9 +41,6 @@
             android:exported="false" />
         <activity
             android:name=".EditVisibility"
-            android:exported="false" />
-        <activity
-            android:name=".AvisoUsuarioDadoDeBaja"
             android:exported="false" />
         <activity
             android:name=".ProfileAccount"
@@ -67,7 +67,7 @@
             android:name=".VisitorsRegister"
             android:exported="false" />
         <activity
-            android:name=".UsuarioPendienteAprobacion"
+            android:name=".UserInformationLogin"
             android:exported="false" />
         <activity
             android:name=".EmergencyCall"
@@ -80,9 +80,6 @@
             android:exported="false" />
         <activity
             android:name=".LoginActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AvisoNoAutorizado"
             android:exported="false" />
         <activity
             android:name=".RegisterAccount"

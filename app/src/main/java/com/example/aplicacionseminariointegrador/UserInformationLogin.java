@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 
-public class UsuarioPendienteAprobacion extends AppCompatActivity {
+public class UserInformationLogin extends AppCompatActivity {
     ImageView imgActivityInfo;
     Button btnBackLoginWaitingAutorization;
     TextView txtUserWaitingAutorization, txtInfoUser;
@@ -23,7 +23,7 @@ public class UsuarioPendienteAprobacion extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_usuario_pendiente_aprobacion);
+        setContentView(R.layout.activity_user_information_login);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         btnBackLoginWaitingAutorization = findViewById(R.id.btnBackLoginWaitAutorization);
@@ -45,6 +45,8 @@ public class UsuarioPendienteAprobacion extends AppCompatActivity {
                 infoUserSpanish = "Información";
                 messageUserEnglish = "User waiting autorization!";
                 messageUserSpanish = "¡Usuario a la espera de la autorización!";
+                txtInfoUser.setTextSize(45f);
+                txtInfoUser.setTextColor(Color.rgb(14, 164, 175));
                 break;
             case 1:
                 imgActivityInfo.setImageResource(R.drawable.usernoautorized);
@@ -52,13 +54,17 @@ public class UsuarioPendienteAprobacion extends AppCompatActivity {
                 infoUserSpanish = "Error";
                 messageUserEnglish = "User no autorized";
                 messageUserSpanish = "Usuario no autorizado";
+                txtInfoUser.setTextSize(45f);
+                txtInfoUser.setTextColor(Color.RED);
                 break;
             case 2:
                 imgActivityInfo.setImageResource(R.drawable.alertsymbol);
-                infoUserEnglish = "A problema has ocurred!";
+                infoUserEnglish = "A problem has ocurred!";
                 infoUserSpanish = "¡Un problema ha ocurrido!";
                 messageUserEnglish = "User requested the cancellation of his account";
                 messageUserSpanish = "El usuario solicito la cancelación de su cuenta";
+                txtInfoUser.setTextSize(30f);
+                txtInfoUser.setTextColor(Color.YELLOW);
                 break;
         }
 
@@ -78,7 +84,6 @@ public class UsuarioPendienteAprobacion extends AppCompatActivity {
                 changeActivityBackLoginInvalidAutorization(v);
             }
         });
-
     }
 
     private void changeActivityBackLoginInvalidAutorization(View v) {

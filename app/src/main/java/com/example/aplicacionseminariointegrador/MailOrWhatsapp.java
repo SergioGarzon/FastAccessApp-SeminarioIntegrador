@@ -124,15 +124,15 @@ public class MailOrWhatsapp extends AppCompatActivity {
 
     private void backActivityMenuStart(View v) {
 
-        switch (LanguageSelected.sesion) {
+        switch (LanguageSelected.sesion) {/*
             case 0:
-                Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+                Intent nextActivity = new Intent(this, UserInformationLogin.class);
                 startActivity(nextActivity);
                 break;
             case 1:
                 Intent nextActivity2 = new Intent(this, AvisoNoAutorizado.class);
                 startActivity(nextActivity2);
-                break;
+                break;*/
             case 2:
                 Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
                 nextActivity3.putExtra("Usuario", "nuevamente");

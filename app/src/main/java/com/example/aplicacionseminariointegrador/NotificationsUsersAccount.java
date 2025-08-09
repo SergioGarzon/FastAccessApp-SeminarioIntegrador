@@ -1,14 +1,10 @@
 package com.example.aplicacionseminariointegrador;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -23,12 +19,8 @@ import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class NotificationsUsersAccount extends AppCompatActivity {
 
@@ -120,15 +112,15 @@ public class NotificationsUsersAccount extends AppCompatActivity {
 
     private void backActivityMenuStart(View v) {
 
-        switch (LanguageSelected.sesion) {
+        switch (LanguageSelected.sesion) {/*
             case 0:
-                Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+                Intent nextActivity = new Intent(this, UserInformationLogin.class);
                 startActivity(nextActivity);
                 break;
             case 1:
                 Intent nextActivity2 = new Intent(this, AvisoNoAutorizado.class);
                 startActivity(nextActivity2);
-                break;
+                break;*/
             case 2:
                 Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
                 nextActivity3.putExtra("Usuario", "nuevamente");

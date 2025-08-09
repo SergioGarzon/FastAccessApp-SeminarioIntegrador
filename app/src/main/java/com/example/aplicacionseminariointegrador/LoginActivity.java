@@ -1,6 +1,5 @@
 package com.example.aplicacionseminariointegrador;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Context;
@@ -21,11 +20,9 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
-import org.intellij.lang.annotations.Language;
-
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Hashtable;
 import java.util.Map;
@@ -36,6 +33,8 @@ public class LoginActivity extends AppCompatActivity {
     TextInputLayout txtUsername, txtPassword;
     TextView txtLblUsername, txtLblPassword, lblLogin;
     RequestQueue requestQueue;
+
+    TextInputLayout txtInputETUserName, txtInputETPassword;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +51,8 @@ public class LoginActivity extends AppCompatActivity {
         txtLblUsername = (TextView) findViewById(R.id.txtLblUsername);
         txtLblPassword = (TextView) findViewById(R.id.txtLblPass);
         lblLogin = (TextView) findViewById(R.id.lblLogin);
+        txtInputETUserName = findViewById(R.id.txtInputUsername);
+        txtInputETPassword = findViewById(R.id.txtInputPassword);
 
         if(LanguageSelected.languageSelected == 0) {
             btnLogin.setText("SIGN IN");
@@ -59,12 +60,16 @@ public class LoginActivity extends AppCompatActivity {
             txtLblUsername.setText("Username:");
             txtLblPassword.setText("Password:");
             lblLogin.setText("LOGIN");
+            txtInputETUserName.setHint("Enter your username");
+            txtInputETPassword.setHint("Enter your password");
         } else {
             btnLogin.setText("INICIAR SESION");
             btnCancelLogin.setText("CANCELAR");
             txtLblUsername.setText("Nombre de usuario:");
             txtLblPassword.setText("Contraseña:");
             lblLogin.setText("ACCESO");
+            txtInputETUserName.setHint("Ingresa tu nombre de usuario");
+            txtInputETPassword.setHint("Ingresa tu contraseña");
         }
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
@@ -141,16 +146,16 @@ public class LoginActivity extends AppCompatActivity {
 
                     switch (Integer.parseInt(valor)) {
                         case 0:
-                            usuarioPendiente();
+                            usuarioPendiente(valor);
                             LanguageSelected.idUser = Integer.parseInt(idUsuario);
                             LanguageSelected.sesion = 0;
                             break;
                         case 1:
-                            usuarioNoAutorizado();
+                            usuarioPendiente(valor);
                             LanguageSelected.sesion = 0;
                             break;
                         case 2:
-                            usuarioDadoBaja();
+                            usuarioPendiente(valor);
                             LanguageSelected.sesion = 0;
                             break;
                         case 3:
@@ -159,7 +164,7 @@ public class LoginActivity extends AppCompatActivity {
                             LanguageSelected.sesion = 1;
                             break;
                         case 4:
-                            menuSecurity(nombreUsuario);
+                            //menuSecurity(nombreUsuario);
                             LanguageSelected.nameSession = nombreUsuario;
                             LanguageSelected.sesion = 3;
                             break;
@@ -244,15 +249,13 @@ public class LoginActivity extends AppCompatActivity {
         txtPassword.requestFocus();
     }
 
-    private void usuarioPendiente() {
-        Intent nextActivity = new Intent(this, UsuarioPendienteAprobacion.class);
+    private void usuarioPendiente(String valor) {
+        Intent nextActivity = new Intent(this, UserInformationLogin.class);
+        nextActivity.putExtra("valor", valor);
         startActivity(nextActivity);
     }
 
-    private void usuarioNoAutorizado() {
-        Intent nextActivity2 = new Intent(this, AvisoNoAutorizado.class);
-        startActivity(nextActivity2);
-    }
+
 
     private void menuResidente(String usuario) {
         Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
@@ -266,15 +269,13 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(nextActivity4);
     }
 
-    private void usuarioDadoBaja() {
-        Intent nextActivity5 = new Intent(this, AvisoUsuarioDadoDeBaja.class);
-        startActivity(nextActivity5);
-    }
+   /* private void menuSecurity(String usuario) {
+        Intent nextActivity3 = new Intent(this, menuSecurity.class);
+        nextActivity3.putExtra("Usuario", usuario);
+        startActivity(nextActivity3);
+    }*/
 
-    private void menuSecurity(String usuario) {
-        /*Intent nextActivity5 = new Intent(this, activity_menu_application_security.class);
-        startActivity(nextActivity5);*/
-    }
+
 
 
 

@@ -5,6 +5,35 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectRegisterUser">
+    tools:context=".SelectRegisterUser"
+    android:background="@drawable/backgroundapp">
 
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="232dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="80dp"
+        android:background="@drawable/border_buttons"
+        android:text="BACK"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="289dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="104dp"
+        android:text="Select an option:"
+        android:textAlignment="center"
+        android:textColor="#F6F6F6"
+        android:textSize="35sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -16,13 +16,9 @@ public class CreditsAplication extends AppCompatActivity {
 
     ImageButton imgBtnSergioLinkedIn, imgBtnFacundoLinkedIn,imgBtnGenaroLinkedIn, imgBtnMatiasLinkedIn;
     TextView lblCredits;
-
     Button btnCreditsOk;
-
     LanguageSelected languageSelected;
-
     String url = "https://www.linkedin.com/in/";
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
