@@ -36,8 +36,8 @@ public class StartApplication extends AppCompatActivity {
             btnIdRegister.setText("REGISTER");
         }
         else {
-            btnIdLogin2.setText("ACCEDER");
-            btnIdRegister.setText("REGISTRARSE");
+            btnIdLogin2.setText("ACCESO");
+            btnIdRegister.setText("REGISTRO");
         }
 
 
@@ -50,7 +50,7 @@ public class StartApplication extends AppCompatActivity {
     }
 
     public void changeActivityRegisterAcoount(View view) {
-        Intent nextActivity = new Intent(this, RegisterAccount.class);
+        Intent nextActivity = new Intent(this, SelectRegisterUser.class);
         startActivity(nextActivity);
     }
 

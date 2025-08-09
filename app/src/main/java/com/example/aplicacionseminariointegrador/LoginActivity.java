@@ -29,7 +29,7 @@ import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
 
-    Button btnLogin, btnCancelLogin;
+    Button btnLogin, btnCancelLogin, btnForgotPassword;
     TextInputLayout txtUsername, txtPassword;
     TextView txtLblUsername, txtLblPassword, lblLogin;
     RequestQueue requestQueue;
@@ -46,17 +46,19 @@ public class LoginActivity extends AppCompatActivity {
 
         btnLogin = (Button) findViewById(R.id.btnLogin);
         btnCancelLogin = (Button) findViewById(R.id.btnCancelLogin);
-        txtUsername = (TextInputLayout) findViewById(R.id.txtInputUsername);
-        txtPassword = (TextInputLayout) findViewById(R.id.txtInputPassword);
+        btnForgotPassword = findViewById(R.id.btnForgotPassword);
+        lblLogin = (TextView) findViewById(R.id.lblLogin);
         txtLblUsername = (TextView) findViewById(R.id.txtLblUsername);
         txtLblPassword = (TextView) findViewById(R.id.txtLblPass);
-        lblLogin = (TextView) findViewById(R.id.lblLogin);
+        txtUsername = (TextInputLayout) findViewById(R.id.txtInputUsername);
+        txtPassword = (TextInputLayout) findViewById(R.id.txtInputPassword);
         txtInputETUserName = findViewById(R.id.txtInputUsername);
         txtInputETPassword = findViewById(R.id.txtInputPassword);
 
         if(LanguageSelected.languageSelected == 0) {
             btnLogin.setText("SIGN IN");
             btnCancelLogin.setText("CANCEL");
+            btnForgotPassword.setText("Forgot Password?");
             txtLblUsername.setText("Username:");
             txtLblPassword.setText("Password:");
             lblLogin.setText("LOGIN");
@@ -65,6 +67,7 @@ public class LoginActivity extends AppCompatActivity {
         } else {
             btnLogin.setText("INICIAR SESION");
             btnCancelLogin.setText("CANCELAR");
+            btnForgotPassword.setText("¿Olvidate la contraseña?");
             txtLblUsername.setText("Nombre de usuario:");
             txtLblPassword.setText("Contraseña:");
             lblLogin.setText("ACCESO");

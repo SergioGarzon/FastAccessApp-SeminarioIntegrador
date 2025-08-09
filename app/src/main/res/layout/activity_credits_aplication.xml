@@ -20,10 +20,10 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.962" />
+        app:layout_constraintVertical_bias="0.934" />
 
     <TextView
         android:id="@+id/textView3"
@@ -90,8 +90,7 @@
                 android:background="@color/black"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Matias Farach's linkedin profiler"
-                app:srcCompat="@drawable/linkedin"
-                />
+                app:srcCompat="@drawable/linkedin" />
 
             <TextView
                 android:id="@+id/lblMatiasFarach"
@@ -114,8 +113,7 @@
                 android:background="@color/black"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Sergio Garzón's linkedin profiler"
-                app:srcCompat="@drawable/linkedin"
-                />
+                app:srcCompat="@drawable/linkedin" />
 
             <TextView
                 android:id="@+id/lblSergioGarzon"
@@ -138,8 +136,7 @@
                 android:background="@color/black"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Genaro Paredes's linkedin profiler"
-                app:srcCompat="@drawable/linkedin"
-                />
+                app:srcCompat="@drawable/linkedin" />
 
             <TextView
                 android:id="@+id/lblGenaroParedes"
@@ -161,8 +158,7 @@
                 android:background="@color/black"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Facundo Rago's linkedin profiler"
-                app:srcCompat="@drawable/linkedin"
-                />
+                app:srcCompat="@drawable/linkedin" />
 
             <TextView
                 android:id="@+id/lblFacundoRago"

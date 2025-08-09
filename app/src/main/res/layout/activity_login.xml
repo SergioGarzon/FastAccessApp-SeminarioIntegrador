@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity"
-    android:background="@drawable/backgroundapp">
+    android:background="@drawable/backgroundapp"
+    tools:context=".LoginActivity">
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/txtInputUsername"
         android:layout_width="305dp"
         android:layout_height="56dp"
-        android:maxLines="1"
         android:background="@drawable/border_button_white"
+        android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,24 +62,22 @@
         android:id="@+id/txtInputPassword"
         android:layout_width="305dp"
         android:layout_height="56dp"
-        android:maxLines="1"
         android:background="@drawable/border_button_white"
+        android:maxLines="1"
+        app:endIconDrawable="@drawable/custom_password_toggle"
+        app:endIconMode="password_toggle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.528"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLblPass"
-        app:layout_constraintVertical_bias="0.025"
-        app:endIconMode="password_toggle"
-        app:endIconDrawable="@drawable/custom_password_toggle"
-        >
+        app:layout_constraintVertical_bias="0.025">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter your password"
-            android:inputType="textPassword"
-            />
+            android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
@@ -142,34 +140,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.102" />
 
-    <TextView
-        android:id="@+id/textView21"
-        android:layout_width="217dp"
-        android:layout_height="28dp"
-        android:layout_marginTop="20dp"
-        android:text="Forgot Password:"
-        android:textAlignment="textEnd"
-        android:textColor="@color/white"
-        android:textSize="20dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button13"
-        app:layout_constraintHorizontal_bias="0.777"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtInputPassword"
-        app:layout_constraintVertical_bias="0.022" />
-
     <Button
-        android:id="@+id/button13"
-        android:layout_width="57dp"
-        android:layout_height="52dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/forgotpassworduser"
+        android:id="@+id/btnForgotPassword"
+        android:layout_width="139dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="261dp"
+        android:background="@drawable/border_button_blue"
+        android:text="Forgot \npassword?"
+        android:textColor="@color/white"
+        android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.858"
+        app:layout_constraintHorizontal_bias="0.816"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtInputPassword"
-        app:layout_constraintVertical_bias="0.023" />
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
