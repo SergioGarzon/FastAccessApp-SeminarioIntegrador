@@ -18,27 +18,27 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtUserWaitAutorization"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintVertical_bias="0.675" />
+        app:layout_constraintVertical_bias="0.366" />
 
     <ImageView
-        android:id="@+id/imageView8"
+        android:id="@+id/imgInformation"
         android:layout_width="217dp"
         android:layout_height="226dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.19"
+        app:layout_constraintVertical_bias="0.172"
         app:srcCompat="@drawable/userwaitingconfirmation" />
 
     <TextView
         android:id="@+id/txtUserWaitAutorization"
         android:layout_width="285dp"
         android:layout_height="117dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="168dp"
         android:text="User waiting for authorization"
         android:textAlignment="center"
         android:textColor="@color/white"
@@ -47,7 +47,24 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView8"
-        app:layout_constraintVertical_bias="0.099" />
+        app:layout_constraintTop_toBottomOf="@+id/txtInfoUser"
+        app:layout_constraintVertical_bias="0.722" />
+
+    <TextView
+        android:id="@+id/txtInfoUser"
+        android:layout_width="244dp"
+        android:layout_height="69dp"
+        android:layout_marginTop="28dp"
+        android:gravity="center"
+        android:text="Information"
+        android:textAlignment="center"
+        android:textColor="#0ea4af"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgInformation"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
