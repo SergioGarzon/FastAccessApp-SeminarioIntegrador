@@ -33,18 +33,13 @@ import java.util.Map;
 public class RegisterAccount extends AppCompatActivity {
 
     Button btnCancelCreateAccount, btnRegisterUser;
-    TextView txtLblCreateAccount, txtLblNameSurnames,
-            txtLblUsernameCreateAccount, txtLblPasswordCreateAccount, txtLblSelectRole;
+    Spinner spnTypeDocument;
 
-    TextInputLayout textInputLayoutNombre, txtInputLayoutPassword;
+    TextView txtLblCreateAccount, txtLblNamesSurnames, txtlblDocumentType;
 
-    TextInputEditText txtInputEditTextName, txtInputEditTextUserName;
+    TextInputLayout textInputLayoutFirstName, textInputLayoutLastName;
 
-    Spinner spinnerRol;
 
-    RequestQueue requestQueueRegisterAccount;
-
-    // private static final String url1 = "https://fastaccessapp.000webhostapp.com/proyectobdejemplo/save.php?";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,53 +47,40 @@ public class RegisterAccount extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register_account);
 
-        requestQueueRegisterAccount = Volley.newRequestQueue(this);
-
         btnCancelCreateAccount = findViewById(R.id.btnCancelCreateAccount);
         btnRegisterUser = findViewById(R.id.btnRegisterUser);
-
+        spnTypeDocument = findViewById(R.id.spnTypeDocument);
         txtLblCreateAccount =  findViewById(R.id.txtLblCreateAccount);
-        txtLblNameSurnames =  findViewById(R.id.txtLblNamesSurnames);
-        txtLblUsernameCreateAccount =  findViewById(R.id.txtLblUsernameCreateAccount);
-        txtLblPasswordCreateAccount =  findViewById(R.id.txtLblPasswordCreateAccount);
-        txtLblSelectRole = findViewById(R.id.txtLblSelectRole);
+        txtLblNamesSurnames =  findViewById(R.id.txtLblNamesSurnames);
+        textInputLayoutFirstName = findViewById(R.id.textInputLayoutFirstName);
+        textInputLayoutLastName = findViewById(R.id.textInputLayoutLastName);
+        txtlblDocumentType = findViewById(R.id.txtlblDocumentType);
 
-        textInputLayoutNombre = findViewById(R.id.textInputLayout2);
-        txtInputLayoutPassword = findViewById(R.id.textInputLayout3);
-
-        txtInputEditTextName = findViewById(R.id.txtInputEditTextName);
-        txtInputEditTextUserName = findViewById(R.id.txtInputEditTextUserName);
-
-        spinnerRol = findViewById(R.id.spinnerRol);
 
         if(LanguageSelected.languageSelected == 0) {
-            btnCancelCreateAccount.setText("CANCEL");
-            btnRegisterUser.setText("REGISTER");
+            btnCancelCreateAccount.setText("BACK");
+            btnRegisterUser.setText("NEXT");
+            txtLblNamesSurnames.setText("Names:");
             txtLblCreateAccount.setText("CREATE ACCOUNT");
-            txtLblNameSurnames.setText("Name and surnames:");
-            txtLblUsernameCreateAccount.setText("Username:");
-            txtLblPasswordCreateAccount.setText("Password:");
-            txtLblSelectRole.setText("Select Role:");
+            textInputLayoutFirstName.setHint("Enter your names");
+            textInputLayoutLastName.setHint("Enter your lastnames");
+            txtlblDocumentType.setText("Document type:");
 
-            txtInputEditTextUserName.setHint("Enter your username");
-
-            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.array_name_english, android.R.layout.simple_spinner_dropdown_item);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.document_type, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnerRol.setAdapter(adapter);
+            spnTypeDocument.setAdapter(adapter);
         } else {
-            btnCancelCreateAccount.setText("CANCELAR");
-            btnRegisterUser.setText("REGISTRARSE");
+            btnCancelCreateAccount.setText("VOLVER");
+            btnRegisterUser.setText("SIGUIENTE");
+            txtLblNamesSurnames.setText("Nombres:");
             txtLblCreateAccount.setText("CREAR CUENTA");
-            txtLblNameSurnames.setText("Nombre y apellido:");
-            txtLblUsernameCreateAccount.setText("Nombre de usuario:");
-            txtLblPasswordCreateAccount.setText("Contraseña:");
-            txtLblSelectRole.setText("Seleccionar rol:");
-            txtInputEditTextName.setHint("Ingrese su nombre y apellido");
+            textInputLayoutFirstName.setHint("Ingrese sus nombres");
+            textInputLayoutLastName.setHint("Ingrese sus apellidos");
+            txtlblDocumentType.setText("Tipo de documento:");
 
-
-            ArrayAdapter<CharSequence> adapter2 = ArrayAdapter.createFromResource(this, R.array.array_name, android.R.layout.simple_spinner_dropdown_item);
-            adapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-            spinnerRol.setAdapter(adapter2);
+            ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipo_documento, android.R.layout.simple_spinner_dropdown_item);
+            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+            spnTypeDocument.setAdapter(adapter);
         }
 
         btnCancelCreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -107,52 +89,12 @@ public class RegisterAccount extends AppCompatActivity {
                 backStart_Activity(v);
             }
         });
-
-        btnRegisterUser.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                createUserValidation();
-            }
-        });
     }
 
-    private boolean getValidateAccount() {
-        boolean flag = true;
-
-        if(textInputLayoutNombre.getEditText().getText().toString().compareTo("") == 0 ||
-                txtInputLayoutPassword.getEditText().getText().toString().compareTo("") == 0
-               ) {
-            flag = false;
-        }
-
-        return flag;
-    }
-
-    private void createUserValidation() {
-        if(getValidateAccount()) {
-            createUser(String.valueOf(textInputLayoutNombre.getEditText().getText().toString()),
-                    String.valueOf(txtInputLayoutPassword.getEditText().getText().toString()));
-        } else {
-            Vibrator vibrator = (Vibrator) getApplicationContext().getSystemService(Context.VIBRATOR_SERVICE);
-            vibrator.vibrate(1000);
-
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setMessage("Falta rellenar algunos campos");
-            dialog.setTitle("Error!");
-            dialog.setPositiveButton("Ok",
-                    new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    });
-            dialog.setCancelable(true);
-            dialog.create().show();
-        }
-    }
 
 
     private void backStart_Activity(View v) {
-        Intent nextActivity = new Intent(this, StartApplication.class);
+        Intent nextActivity = new Intent(this, SelectRegisterUser.class);
         startActivity(nextActivity);
     }
 
@@ -161,38 +103,4 @@ public class RegisterAccount extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
-    private void createUser(final String nombreUser1, final String password1) {
-
-        /*
-        StringRequest stringRequest2 = new StringRequest(
-
-                Request.Method.POST,
-                url1,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        nextRegisterSucessfully();
-                    }
-                },
-                new Response.ErrorListener() {
-                    @Override
-                    public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(RegisterAccount.this, "Error", Toast.LENGTH_SHORT).show();
-                    }
-                }
-        ){
-            @Nullable
-            @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
-                Map<String, String> params = new HashMap<>();
-                params.put("nombreUsuario", nombreUser1);
-                params.put("passwordUser", password1);
-                params.put("accesoValor", "0");
-                params.put("IdPersona", "0");
-                return params;
-            }
-        };
-
-        requestQueueRegisterAccount.add(stringRequest2);*/
-    }
 }

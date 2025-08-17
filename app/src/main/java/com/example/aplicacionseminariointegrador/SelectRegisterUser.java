@@ -54,4 +54,10 @@ public class SelectRegisterUser extends AppCompatActivity {
         Intent nextActivity = new Intent(this, StartApplication.class);
         startActivity(nextActivity);
     }
+
+    public void changeRegisterAccountActivity(View view) {
+        Intent nextActivity = new Intent(this, RegisterAccount.class);
+        startActivity(nextActivity);
+    }
+
 }

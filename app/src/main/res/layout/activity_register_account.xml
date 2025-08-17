@@ -7,37 +7,38 @@
     tools:context=".RegisterAccount"
     android:background="@drawable/backgroundapp">
 
+
     <TextView
         android:id="@+id/txtLblCreateAccount"
-        android:layout_width="389dp"
-        android:layout_height="56dp"
+        android:layout_width="228dp"
+        android:layout_height="103dp"
         android:text="CREATE ACCOUNT"
-        android:textAlignment="center"
+        android:textAlignment="textStart"
         android:textColor="#F6F6F6"
         android:textSize="40dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.196"
+        app:layout_constraintStart_toEndOf="@+id/imageView28"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.04" />
-
+        app:layout_constraintVertical_bias="0.068" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
+        android:id="@+id/textInputLayoutFirstName"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
         android:background="@drawable/border_button_white"
         android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLblNamesSurnames"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.025">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtInputEditTextName"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="Enter your names" />
@@ -45,101 +46,19 @@
 
     <TextView
         android:id="@+id/txtLblNamesSurnames"
-        android:layout_width="133dp"
-        android:layout_height="19dp"
-        android:text="Names: "
+        android:layout_width="158dp"
+        android:layout_height="28dp"
+        android:text="First Names:"
         android:textAlignment="viewStart"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.046"
+        app:layout_constraintHorizontal_bias="0.158"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLblCreateAccount"
-        app:layout_constraintVertical_bias="0.011" />
-
-    <TextView
-        android:id="@+id/txtLblUsernameCreateAccount"
-        android:layout_width="123dp"
-        android:layout_height="26dp"
-        android:text="Username:"
-        android:textAlignment="viewStart"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:endIconMode="clear_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.045"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.232" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout2"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
-        android:background="@drawable/border_button_white"
-        android:maxLines="1"
-        app:endIconMode="clear_text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLblUsernameCreateAccount"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtInputEditTextUserName"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter your username" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <TextView
-        android:id="@+id/txtLblPasswordCreateAccount"
-        android:layout_width="108dp"
-        android:layout_height="25dp"
-        android:text="Password:"
-        android:textAlignment="viewStart"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout2"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/txtLblSelectRole"
-        android:layout_width="107dp"
-        android:layout_height="16dp"
-        android:text="Select role:"
-        android:textAlignment="viewStart"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Spinner
-        android:id="@+id/spinnerRol"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
-        android:background="@drawable/border_button_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLblSelectRole"
-        app:layout_constraintVertical_bias="0.065" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView28"
+        app:layout_constraintVertical_bias="0.076" />
 
     <Button
         android:id="@+id/btnCancelCreateAccount"
@@ -147,7 +66,8 @@
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/border_buttons"
-        android:text="CANCEL"
+        android:onClick="backStart_Activity"
+        android:text="BACK"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -159,15 +79,16 @@
         app:layout_constraintVertical_bias="0.0" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout4"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
+        android:id="@+id/textInputLayoutLastName"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
         android:background="@drawable/border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toBottomOf="@+id/txtlblLayoutLastNames"
+        app:layout_constraintVertical_bias="0.032">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -176,135 +97,27 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:id="@+id/txtlblLayoutLastNames"
+        android:layout_width="149dp"
+        android:layout_height="26dp"
         android:text="Last names:"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="116dp"
-        android:layout_height="22dp"
-        android:text="Document Type:"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.042"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="145dp"
-        android:layout_height="37dp"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/border_button_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="166dp"
-        android:layout_height="19dp"
-        android:layout_marginStart="44dp"
-        android:text="Number:"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.027"
-        app:layout_constraintStart_toEndOf="@+id/textView4"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout4"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Select County Name:"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.036"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout3"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="221dp"
-        android:layout_height="37dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        android:background="@drawable/border_button_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/spinner"
-        app:layout_constraintTop_toBottomOf="@+id/textView8"
-        app:layout_constraintVertical_bias="0.0">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Enter number" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <Spinner
-        android:id="@+id/spinner2"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
-        android:background="@drawable/border_button_white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.384"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView9"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/textView10"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:text="Select City:"
-        android:textColor="#F6F6F6"
-        android:textSize="15dp"
-        android:textStyle="bold|italic"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.028"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner2"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFirstName"
+        app:layout_constraintVertical_bias="0.041" />
 
     <Button
         android:id="@+id/btnRegisterUser"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="112dp"
         android:background="@drawable/border_buttons"
-        android:text="REGISTER"
+        android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="30sp"
         android:textStyle="bold|italic"
@@ -312,42 +125,47 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerRol"
-        app:layout_constraintVertical_bias="0.088" />
+        app:layout_constraintTop_toBottomOf="@+id/spnTypeDocument"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="83dp"
+        android:layout_height="101dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.149"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.069"
+        app:srcCompat="@drawable/createaccount" />
+
+    <TextView
+        android:id="@+id/txtlblDocumentType"
+        android:layout_width="180dp"
+        android:layout_height="26dp"
+        android:text="Type document:"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName"
+        app:layout_constraintVertical_bias="0.042" />
 
     <Spinner
-        android:id="@+id/spinner3"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
-        android:layout_marginBottom="204dp"
+        android:id="@+id/spnTypeDocument"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
         android:background="@drawable/border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView10"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout3"
-        android:layout_width="385dp"
-        android:layout_height="37dp"
-        android:background="@drawable/border_button_white"
-        android:hint="Enter your password"
-        android:maxLines="1"
-        app:endIconDrawable="@drawable/custom_password_toggle"
-        app:endIconMode="password_toggle"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLblPasswordCreateAccount"
-        app:layout_constraintVertical_bias="0.0"
-        tools:layout_editor_absoluteX="10dp">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword" />
-
-    </com.google.android.material.textfield.TextInputLayout>
+        app:layout_constraintTop_toBottomOf="@+id/txtlblDocumentType"
+        app:layout_constraintVertical_bias="0.043" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

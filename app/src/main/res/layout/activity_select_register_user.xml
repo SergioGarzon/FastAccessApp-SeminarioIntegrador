@@ -29,8 +29,8 @@
 
     <TextView
         android:id="@+id/lblSelectOption"
-        android:layout_width="308dp"
-        android:layout_height="82dp"
+        android:layout_width="306dp"
+        android:layout_height="85dp"
         android:text="Select an option:"
         android:textAlignment="center"
         android:textColor="#F6F6F6"
@@ -52,7 +52,7 @@
         app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lblSelectOption"
-        app:layout_constraintVertical_bias="0.564">
+        app:layout_constraintVertical_bias="0.425">
 
         <TableRow
             android:layout_width="match_parent"
@@ -90,6 +90,7 @@
                 android:layout_width="281dp"
                 android:layout_height="60dp"
                 android:background="@drawable/border_buttons"
+                android:onClick="changeRegisterAccountActivity"
                 android:text="CREATE NEW ACCOUNT"
                 android:textColor="@color/white"
                 android:textSize="20sp"
