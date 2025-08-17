@@ -37,7 +37,7 @@ public class RegisterAccount extends AppCompatActivity {
 
     TextView txtLblCreateAccount, txtLblNamesSurnames, txtlblDocumentType;
 
-    TextInputLayout textInputLayoutFirstName, textInputLayoutLastName;
+    TextInputLayout textInputLayoutFirstName, textInputLayoutLastName, textInputLayoutDocumentNumber;
 
 
 
@@ -55,7 +55,7 @@ public class RegisterAccount extends AppCompatActivity {
         textInputLayoutFirstName = findViewById(R.id.textInputLayoutFirstName);
         textInputLayoutLastName = findViewById(R.id.textInputLayoutLastName);
         txtlblDocumentType = findViewById(R.id.txtlblDocumentType);
-
+        textInputLayoutDocumentNumber = findViewById(R.id.textInputLayoutDocumentNumber);
 
         if(LanguageSelected.languageSelected == 0) {
             btnCancelCreateAccount.setText("BACK");
@@ -65,6 +65,7 @@ public class RegisterAccount extends AppCompatActivity {
             textInputLayoutFirstName.setHint("Enter your names");
             textInputLayoutLastName.setHint("Enter your lastnames");
             txtlblDocumentType.setText("Document type:");
+            textInputLayoutDocumentNumber.setHint("Enter your document number");
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.document_type, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -77,6 +78,7 @@ public class RegisterAccount extends AppCompatActivity {
             textInputLayoutFirstName.setHint("Ingrese sus nombres");
             textInputLayoutLastName.setHint("Ingrese sus apellidos");
             txtlblDocumentType.setText("Tipo de documento:");
+            textInputLayoutDocumentNumber.setHint("Ingrese su número de documento");
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipo_documento, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);

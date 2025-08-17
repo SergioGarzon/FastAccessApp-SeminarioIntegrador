@@ -88,7 +88,7 @@
         app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtlblLayoutLastNames"
-        app:layout_constraintVertical_bias="0.032">
+        app:layout_constraintVertical_bias="0.018">
 
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
@@ -109,13 +109,13 @@
         app:layout_constraintHorizontal_bias="0.152"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutFirstName"
-        app:layout_constraintVertical_bias="0.041" />
+        app:layout_constraintVertical_bias="0.023" />
 
     <Button
         android:id="@+id/btnRegisterUser"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="112dp"
+        android:layout_marginBottom="92dp"
         android:background="@drawable/border_buttons"
         android:text="NEXT"
         android:textColor="@color/white"
@@ -125,8 +125,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spnTypeDocument"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayoutDocumentNumber"
+        app:layout_constraintVertical_bias="0.371" />
 
     <ImageView
         android:id="@+id/imageView28"
@@ -153,7 +153,7 @@
         app:layout_constraintHorizontal_bias="0.168"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayoutLastName"
-        app:layout_constraintVertical_bias="0.042" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <Spinner
         android:id="@+id/spnTypeDocument"
@@ -162,10 +162,45 @@
         android:background="@drawable/border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.481"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtlblDocumentType"
-        app:layout_constraintVertical_bias="0.043" />
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="215dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="12dp"
+        android:text="Document number:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.198"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spnTypeDocument"
+        app:layout_constraintVertical_bias="0.004" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayoutDocumentNumber"
+        android:layout_width="330dp"
+        android:layout_height="45dp"
+        android:background="@drawable/border_button_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="0.069">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your document number" />
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -86,6 +86,18 @@ public class LoginActivity extends AppCompatActivity {
                 backStartActivity(v);
             }
         });
+
+        btnForgotPassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                activityPasswordRecover(v);
+            }
+        });
+    }
+
+    private void activityPasswordRecover(View v) {
+        Intent nextActivity = new Intent(this, ResetPassword.class);
+        startActivity(nextActivity);
     }
 
     private void backStartActivity(View v) {
