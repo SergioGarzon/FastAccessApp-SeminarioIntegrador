@@ -69,9 +69,16 @@ public class RegisterAccount extends AppCompatActivity {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnTypeDocument.setAdapter(adapter);
 
-            textInputLayoutFirstName.setHint("Enter your names");
-            textInputLayoutLastName.setHint("Enter your lastnames");
-            textInputLayoutDocumentNumber.setHint("Enter your document number");
+            if (DataCharged.names.equals("") && DataCharged.lastnames.equals("") && DataCharged.nidSelected == 0 && DataCharged.nidNumber == 0) {
+                textInputLayoutFirstName.setHint("Enter your names");
+                textInputLayoutLastName.setHint("Enter your lastnames");
+                textInputLayoutDocumentNumber.setHint("Enter your document number");
+            } else {
+                textInputLayoutFirstName.getEditText().setText(DataCharged.names + "");
+                textInputLayoutLastName.getEditText().setText(DataCharged.lastnames + "");
+                textInputLayoutDocumentNumber.getEditText().setText(DataCharged.nidNumber + "");
+                spnTypeDocument.setSelection(DataCharged.nidSelected);
+            }
         } else {
             btnCancelCreateAccount.setText("VOLVER");
             btnRegisterUser.setText("SIGUIENTE");
@@ -83,9 +90,17 @@ public class RegisterAccount extends AppCompatActivity {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnTypeDocument.setAdapter(adapter);
 
-            textInputLayoutFirstName.setHint("Ingrese sus nombres");
-            textInputLayoutLastName.setHint("Ingrese sus apellidos");
-            txtlblDocumentType.setText("Tipo de documento:");
+            if (DataCharged.names.equals("") && DataCharged.lastnames.equals("") && DataCharged.nidSelected == 0 && DataCharged.nidNumber == 0) {
+                textInputLayoutFirstName.setHint("Ingrese sus nombres");
+                textInputLayoutLastName.setHint("Ingrese sus apellidos");
+                txtlblDocumentType.setText("Tipo de documento:");
+            } else {
+                textInputLayoutFirstName.getEditText().setText(DataCharged.names + "");
+                textInputLayoutLastName.getEditText().setText(DataCharged.lastnames + "");
+                textInputLayoutDocumentNumber.getEditText().setText(DataCharged.nidNumber + "");
+                spnTypeDocument.setSelection(DataCharged.nidSelected);
+            }
+
         }
 
         btnCancelCreateAccount.setOnClickListener(new View.OnClickListener() {
@@ -112,6 +127,11 @@ public class RegisterAccount extends AppCompatActivity {
     }
 
     private void nextRegisterStep(View v) {
+        DataCharged.names = textInputLayoutFirstName.getEditText().getText().toString();
+        DataCharged.lastnames = textInputLayoutLastName.getEditText().getText().toString();
+        DataCharged.nidSelected = spnTypeDocument.getSelectedItemPosition();
+        DataCharged.nidNumber = Integer.parseInt(textInputLayoutDocumentNumber.getEditText().getText().toString());
+
         Intent nextActivity = new Intent(this, RegisterAccountNext.class);
         startActivity(nextActivity);
     }

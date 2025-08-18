@@ -57,6 +57,12 @@ public class SelectRegisterUser extends AppCompatActivity {
     }
 
     public void changeRegisterAccountActivity(View view) {
+
+        DataCharged.names = "";
+        DataCharged.lastnames = "";
+        DataCharged.nidSelected = 0;
+        DataCharged.nidNumber = 0;
+
         Intent nextActivity = new Intent(this, RegisterAccount.class);
         startActivity(nextActivity);
     }
