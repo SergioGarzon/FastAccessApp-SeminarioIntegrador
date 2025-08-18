@@ -132,6 +132,7 @@ public class RegisterAccount extends AppCompatActivity {
         DataCharged.nidSelected = spnTypeDocument.getSelectedItemPosition();
         DataCharged.nidNumber = Integer.parseInt(textInputLayoutDocumentNumber.getEditText().getText().toString());
 
+
         Intent nextActivity = new Intent(this, RegisterAccountNext.class);
         startActivity(nextActivity);
     }

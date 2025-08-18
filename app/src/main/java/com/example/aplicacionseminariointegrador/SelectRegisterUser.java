@@ -62,6 +62,8 @@ public class SelectRegisterUser extends AppCompatActivity {
         DataCharged.lastnames = "";
         DataCharged.nidSelected = 0;
         DataCharged.nidNumber = 0;
+        DataCharged.phoneNumber = "";
+        DataCharged.emailAddress = "";
 
         Intent nextActivity = new Intent(this, RegisterAccount.class);
         startActivity(nextActivity);

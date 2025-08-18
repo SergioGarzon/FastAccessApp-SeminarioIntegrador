@@ -38,8 +38,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.836" />
+        app:layout_constraintTop_toBottomOf="@+id/txtILEmailAddress"
+        app:layout_constraintVertical_bias="0.681" />
 
     <TextView
         android:id="@+id/textView7"
@@ -70,19 +70,75 @@
         app:srcCompat="@drawable/createaccount" />
 
     <TextView
-        android:id="@+id/textView8"
-        android:layout_width="158dp"
-        android:layout_height="28dp"
+        android:id="@+id/txtViewPhoneNumber"
+        android:layout_width="277dp"
+        android:layout_height="32dp"
         android:layout_marginTop="32dp"
-        android:text="Phone number::"
+        android:text="Phone number:"
         android:textAlignment="viewStart"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintHorizontal_bias="0.313"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView30"
         app:layout_constraintVertical_bias="0.0" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtILPhoneNumber"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:background="@drawable/border_button_white"
+        android:maxLines="1"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewPhoneNumber"
+        app:layout_constraintVertical_bias="0.022">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your phone number" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/txtViewEmailAddress"
+        android:layout_width="246dp"
+        android:layout_height="29dp"
+        android:layout_marginBottom="352dp"
+        android:text="Email:"
+        android:textAlignment="viewStart"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.254"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtILPhoneNumber"
+        app:layout_constraintVertical_bias="0.159" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/txtILEmailAddress"
+        android:layout_width="327dp"
+        android:layout_height="51dp"
+        android:background="@drawable/border_button_white"
+        android:maxLines="1"
+        app:endIconMode="clear_text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtViewEmailAddress"
+        app:layout_constraintVertical_bias="0.037">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter your email address" />
+    </com.google.android.material.textfield.TextInputLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
