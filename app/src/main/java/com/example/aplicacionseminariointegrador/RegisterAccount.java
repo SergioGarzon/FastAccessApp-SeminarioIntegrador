@@ -23,6 +23,7 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+import com.example.aplicacionseminariointegrador.auxiliarclases.DataCharged;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
@@ -38,8 +39,6 @@ public class RegisterAccount extends AppCompatActivity {
     TextView txtLblCreateAccount, txtLblNamesSurnames, txtlblDocumentType;
 
     TextInputLayout textInputLayoutFirstName, textInputLayoutLastName, textInputLayoutDocumentNumber;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,32 +56,36 @@ public class RegisterAccount extends AppCompatActivity {
         txtlblDocumentType = findViewById(R.id.txtlblDocumentType);
         textInputLayoutDocumentNumber = findViewById(R.id.textInputLayoutDocumentNumber);
 
+
         if(LanguageSelected.languageSelected == 0) {
             btnCancelCreateAccount.setText("BACK");
             btnRegisterUser.setText("NEXT");
             txtLblNamesSurnames.setText("Names:");
             txtLblCreateAccount.setText("CREATE ACCOUNT");
-            textInputLayoutFirstName.setHint("Enter your names");
-            textInputLayoutLastName.setHint("Enter your lastnames");
+
             txtlblDocumentType.setText("Document type:");
-            textInputLayoutDocumentNumber.setHint("Enter your document number");
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.document_type, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnTypeDocument.setAdapter(adapter);
+
+            textInputLayoutFirstName.setHint("Enter your names");
+            textInputLayoutLastName.setHint("Enter your lastnames");
+            textInputLayoutDocumentNumber.setHint("Enter your document number");
         } else {
             btnCancelCreateAccount.setText("VOLVER");
             btnRegisterUser.setText("SIGUIENTE");
             txtLblNamesSurnames.setText("Nombres:");
             txtLblCreateAccount.setText("CREAR CUENTA");
-            textInputLayoutFirstName.setHint("Ingrese sus nombres");
-            textInputLayoutLastName.setHint("Ingrese sus apellidos");
-            txtlblDocumentType.setText("Tipo de documento:");
             textInputLayoutDocumentNumber.setHint("Ingrese su número de documento");
 
             ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.tipo_documento, android.R.layout.simple_spinner_dropdown_item);
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnTypeDocument.setAdapter(adapter);
+
+            textInputLayoutFirstName.setHint("Ingrese sus nombres");
+            textInputLayoutLastName.setHint("Ingrese sus apellidos");
+            txtlblDocumentType.setText("Tipo de documento:");
         }
 
         btnCancelCreateAccount.setOnClickListener(new View.OnClickListener() {
