@@ -91,6 +91,14 @@ public class RegisterAccount extends AppCompatActivity {
                 backStart_Activity(v);
             }
         });
+
+        btnRegisterUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                nextRegisterStep(v);
+            }
+        });
+
     }
 
 
@@ -100,8 +108,8 @@ public class RegisterAccount extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
-    private void nextRegisterSucessfully() {
-        Intent nextActivity = new Intent(this, RegisterSucessful.class);
+    private void nextRegisterStep(View v) {
+        Intent nextActivity = new Intent(this, RegisterAccountNext.class);
         startActivity(nextActivity);
     }
 
