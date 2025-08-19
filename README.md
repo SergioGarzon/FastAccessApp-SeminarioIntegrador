@@ -12,6 +12,10 @@ This application is for the final project of Integrative Seminar subject of the 
 
 #### Application screen
 
+##### DataBase Diagram 
+
+<img src="./Photos/databaseproject.png" alt="Database" />
+
 ##### Plash Screen
 
 <img src="./Photos/plashscreen.png" alt="Plash screen" width="250px" height="430px"/>
