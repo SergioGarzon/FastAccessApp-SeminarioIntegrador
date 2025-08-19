@@ -20,7 +20,7 @@
         } else {
             $row = mysqli_fetch_assoc($consulta);
 
-            echo "".$row['id_usuario']."/".$row['name_user']."+".$row['value_access'];          
+            echo "".$row['id_usuario']."/".$row['name_user']."+".$row['value_access']."-".$row['id_role'];          
         }
     }
 

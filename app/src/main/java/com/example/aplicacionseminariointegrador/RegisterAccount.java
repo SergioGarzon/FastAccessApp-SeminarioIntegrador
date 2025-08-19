@@ -56,7 +56,6 @@ public class RegisterAccount extends AppCompatActivity {
         txtlblDocumentType = findViewById(R.id.txtlblDocumentType);
         textInputLayoutDocumentNumber = findViewById(R.id.textInputLayoutDocumentNumber);
 
-
         if(LanguageSelected.languageSelected == 0) {
             btnCancelCreateAccount.setText("BACK");
             btnRegisterUser.setText("NEXT");
@@ -69,7 +68,7 @@ public class RegisterAccount extends AppCompatActivity {
             adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
             spnTypeDocument.setAdapter(adapter);
 
-            if (DataCharged.names.equals("") && DataCharged.lastnames.equals("") && DataCharged.nidSelected == 0 && DataCharged.nidNumber == 0) {
+            if (DataCharged.names.equals("") && DataCharged.lastnames.equals("") && DataCharged.nidNumber == 0) {
                 textInputLayoutFirstName.setHint("Enter your names");
                 textInputLayoutLastName.setHint("Enter your lastnames");
                 textInputLayoutDocumentNumber.setHint("Enter your document number");
@@ -116,22 +115,31 @@ public class RegisterAccount extends AppCompatActivity {
                 nextRegisterStep(v);
             }
         });
-
     }
 
-
-
     private void backStart_Activity(View v) {
+        DataCharged.names = "";
+        DataCharged.lastnames = "";
+        DataCharged.nidSelected = 0;
+        DataCharged.nidNumber = 0;
+
         Intent nextActivity = new Intent(this, SelectRegisterUser.class);
         startActivity(nextActivity);
     }
 
     private void nextRegisterStep(View v) {
-        DataCharged.names = textInputLayoutFirstName.getEditText().getText().toString();
-        DataCharged.lastnames = textInputLayoutLastName.getEditText().getText().toString();
-        DataCharged.nidSelected = spnTypeDocument.getSelectedItemPosition();
-        DataCharged.nidNumber = Integer.parseInt(textInputLayoutDocumentNumber.getEditText().getText().toString());
 
+        if(textInputLayoutFirstName.getEditText().getText().toString().compareTo("") != 0)
+            DataCharged.names = textInputLayoutFirstName.getEditText().getText().toString();
+
+        if(textInputLayoutLastName.getEditText().getText().toString().compareTo("") != 0)
+            DataCharged.lastnames = textInputLayoutLastName.getEditText().getText().toString();
+
+        if(spnTypeDocument.getSelectedItemPosition() != 0)
+            DataCharged.nidSelected = spnTypeDocument.getSelectedItemPosition();
+
+        if(textInputLayoutDocumentNumber.getEditText().getText().toString().compareTo("") != 0)
+            DataCharged.nidNumber = Integer.parseInt(textInputLayoutDocumentNumber.getEditText().getText().toString());
 
         Intent nextActivity = new Intent(this, RegisterAccountNext.class);
         startActivity(nextActivity);

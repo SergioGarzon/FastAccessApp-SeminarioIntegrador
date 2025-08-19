@@ -89,8 +89,12 @@ public class RegisterAccountNext extends AppCompatActivity {
     }
 
     private void backLeft_Activity(View v) {
-        DataCharged.phoneNumber = txtILPhoneNumber.getEditText().getText().toString();
-        DataCharged.emailAddress = txtILEmailAddress.getEditText().getText().toString();
+
+        if(txtILPhoneNumber.getEditText().getText().toString().compareTo("") != 0)
+            DataCharged.phoneNumber = txtILPhoneNumber.getEditText().getText().toString();
+
+        if(txtILEmailAddress.getEditText().getText().toString().compareTo("") != 0)
+            DataCharged.emailAddress = txtILEmailAddress.getEditText().getText().toString();
 
         Intent nextActivity = new Intent(this, RegisterAccount.class);
         startActivity(nextActivity);

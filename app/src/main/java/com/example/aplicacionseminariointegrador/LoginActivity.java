@@ -20,9 +20,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
-import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
-
 import java.time.LocalDateTime;
 import java.util.Hashtable;
 import java.util.Map;
@@ -155,38 +153,22 @@ public class LoginActivity extends AppCompatActivity {
                 } else {
                     String idUsuario = response.substring(0, response.indexOf("/"));
                     String nombreUsuario = response.substring(response.indexOf("/") + 1, response.indexOf("+"));
-                    String valor = response.substring(response.indexOf("+") + 1, response.length());
+                    String valor = response.substring(response.indexOf("+") + 1, response.indexOf("-"));
+                    String rol = response.substring(response.indexOf("-") + 1, response.length());
 
                     guardarHistorial(idUsuario);
 
                     switch (Integer.parseInt(valor)) {
-                        case 0:
+                        case 1:
+                        case 2:
+                        case 3:
                             usuarioPendiente(valor);
                             LanguageSelected.idUser = Integer.parseInt(idUsuario);
-                            LanguageSelected.sesion = 0;
-                            break;
-                        case 1:
-                            usuarioPendiente(valor);
-                            LanguageSelected.sesion = 0;
-                            break;
-                        case 2:
-                            usuarioPendiente(valor);
-                            LanguageSelected.sesion = 0;
-                            break;
-                        case 3:
-                            menuAplicacion(nombreUsuario); // Menu usuario administrador
-                            LanguageSelected.nameSession = nombreUsuario;
-                            LanguageSelected.sesion = 1;
                             break;
                         case 4:
-                            //menuSecurity(nombreUsuario);
+                            menuAplicacion(nombreUsuario, Integer.parseInt(rol)); // Menu usuario administrador
+                            LanguageSelected.idUser = Integer.parseInt(idUsuario);
                             LanguageSelected.nameSession = nombreUsuario;
-                            LanguageSelected.sesion = 3;
-                            break;
-                        case 5:
-                            menuResidente(nombreUsuario);
-                            LanguageSelected.nameSession = nombreUsuario;
-                            LanguageSelected.sesion = 2;
                             break;
                     }
                 }
@@ -270,28 +252,23 @@ public class LoginActivity extends AppCompatActivity {
         startActivity(nextActivity);
     }
 
+    private void menuAplicacion(String usuario, int rol) {
 
+        switch (rol) {
+            case 1:
+                LanguageSelected.sesion = 1;
+                Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
+                nextActivity3.putExtra("Usuario", usuario);
+                startActivity(nextActivity3);
+                break;
+            case 2:
+                LanguageSelected.sesion = 2;
+                Intent nextActivity4 = new Intent(this, MenuAplication.class);
+                nextActivity4.putExtra("Usuario", usuario);
+                startActivity(nextActivity4);
+                break;
+        }
 
-    private void menuResidente(String usuario) {
-        Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
-        nextActivity3.putExtra("Usuario", usuario);
-        startActivity(nextActivity3);
     }
-
-    private void menuAplicacion(String usuario) {
-        Intent nextActivity4 = new Intent(this, MenuAplication.class);
-        nextActivity4.putExtra("Usuario", usuario);
-        startActivity(nextActivity4);
-    }
-
-   /* private void menuSecurity(String usuario) {
-        Intent nextActivity3 = new Intent(this, menuSecurity.class);
-        nextActivity3.putExtra("Usuario", usuario);
-        startActivity(nextActivity3);
-    }*/
-
-
-
-
 
 }

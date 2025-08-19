@@ -39,7 +39,7 @@ public class UserInformationLogin extends AppCompatActivity {
         String messageUserSpanish = "";
 
         switch(Integer.parseInt(valor)) {
-            case 0:
+            case 1:
                 imgActivityInfo.setImageResource(R.drawable.userwaitingconfirmation);
                 infoUserEnglish = "Information";
                 infoUserSpanish = "Información";
@@ -48,7 +48,7 @@ public class UserInformationLogin extends AppCompatActivity {
                 txtInfoUser.setTextSize(45f);
                 txtInfoUser.setTextColor(Color.rgb(14, 164, 175));
                 break;
-            case 1:
+            case 2:
                 imgActivityInfo.setImageResource(R.drawable.usernoautorized);
                 infoUserEnglish = "Error";
                 infoUserSpanish = "Error";
@@ -57,7 +57,7 @@ public class UserInformationLogin extends AppCompatActivity {
                 txtInfoUser.setTextSize(45f);
                 txtInfoUser.setTextColor(Color.RED);
                 break;
-            case 2:
+            case 3:
                 imgActivityInfo.setImageResource(R.drawable.alertsymbol);
                 infoUserEnglish = "A problem has ocurred!";
                 infoUserSpanish = "¡Un problema ha ocurrido!";
