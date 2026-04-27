@@ -13,7 +13,6 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:background="@drawable/border_buttons"
-        android:onClick="changeActivity"
         android:text="OK"
         android:textColor="@color/white"
         android:textSize="30sp"

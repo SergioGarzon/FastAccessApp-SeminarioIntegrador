@@ -1,92 +1,60 @@
 package com.example.aplicacionseminariointegrador;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.TextView;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsAplicationBinding;
 
 public class CreditsAplication extends AppCompatActivity {
-
-    ImageButton imgBtnSergioLinkedIn, imgBtnFacundoLinkedIn,imgBtnGenaroLinkedIn, imgBtnMatiasLinkedIn;
-    TextView lblCredits;
-    Button btnCreditsOk;
-    LanguageSelected languageSelected;
-    String url = "https://www.linkedin.com/in/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_credits_aplication);
 
-        lblCredits = (TextView) findViewById(R.id.lblTxtCredits);
+        ActivityCreditsAplicationBinding binding = ActivityCreditsAplicationBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
-        btnCreditsOk = (Button) findViewById(R.id.btnCreditsOk);
+        String textCredits, textBtnCredits, url;
 
-        if(LanguageSelected.languageSelected == 0) {
-            lblCredits.setText("Fast Access App is a project development by UTN FRC's students:");
-            btnCreditsOk.setText("OK");
-        }
-        else {
-            lblCredits.setText("Fast Access App es un proyecto desarrollado por estudiantes de la UTN FRC:");
-            btnCreditsOk.setText("ACEPTAR");
-        }
+        textCredits = (LanguageSelected.languageSelected == 0) ? "Fast Access App is a project development by UTN FRC's students:" :
+                "Fast Access App es un proyecto desarrollado por estudiantes de la UTN FRC:";
 
-        imgBtnSergioLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinSergio);
+        textBtnCredits = (textCredits.contains("development")) ? "OK" : "ACEPTAR";
 
-        imgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(url +"sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
+        binding.lblTxtCredits.setText(textCredits);
+        binding.btnCreditsOk.setText(textBtnCredits);
 
-        imgBtnFacundoLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinFacundo);
+        binding.imgBtnLinkedinFacundo.setOnClickListener(v -> { openBrowser("facundo-rago/"); });
+        binding.imgBtnLinkedinSergio.setOnClickListener(v -> { openBrowser("sergio-gabriel-garzon/"); });
+        binding.imgBtnLinkedinMatias.setOnClickListener(v -> { openBrowser("matias-leonel-farach-b2482528a/"); });
+        binding.imgBtnLinkedInGenaro.setOnClickListener(v -> { openBrowser("genaro-paredes-6b5785238/"); });
 
-        imgBtnFacundoLinkedIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(url + "facundo-rago/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
+        binding.btnCreditsOk.setOnClickListener( v -> { finish(); });
 
-        imgBtnGenaroLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedInGenaro);
+        // Reemplazotodo esto que se utilizaba antes
+        //imgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
+        //   @Override
+        //    public void onClick(View v) {
+        //       Uri uri = Uri.parse(url +"sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
+        //        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+        //        startActivity(intent);
+        //    }
+        //});
 
-        imgBtnGenaroLinkedIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(url + "genaro-paredes-6b5785238/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
+    }
 
-        imgBtnMatiasLinkedIn = (ImageButton) findViewById(R.id.imgBtnLinkedinMatias);
-
-        imgBtnMatiasLinkedIn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Uri uri = Uri.parse(url +"matias-leonel-farach-b2482528a/"); // missing 'http://' will cause crashed
-                Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-                startActivity(intent);
-            }
-        });
+    // Metodo para abrir Navegador
+    private void openBrowser(String urn) {
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/" + urn)));
     }
 
     // Metodo para el boton Ingresar
     public void changeActivity(View view) {
-        Intent nextActivity = new Intent(this, StartApplication.class);
-        startActivity(nextActivity);
+        finish();
     }
 }
