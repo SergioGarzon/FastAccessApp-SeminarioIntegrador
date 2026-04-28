@@ -9,27 +9,37 @@
     tools:context=".AccessHistory"
     >
 
-    <TextView
-        android:id="@+id/txtHistoryAccessData"
-        android:layout_width="343dp"
-        android:layout_height="441dp"
-        android:layout_marginTop="28dp"
+    <ScrollView
+        android:layout_width="375dp"
+        android:layout_height="440dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/border_button_white"
-        android:text="Informacion"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:textSize="30dp"
+        android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tableLayout6"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0">
+
+        <TextView
+            android:id="@+id/txtHistoryAccessData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:text="Informacion"
+            android:textAlignment="textStart"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:textSize="20sp" />
+
+    </ScrollView>
+
 
     <Button
         android:id="@+id/btnBackAccessHistory"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="28dp"
         android:background="@drawable/border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
@@ -39,8 +49,9 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
+
         app:layout_constraintTop_toBottomOf="@+id/txtHistoryAccessData"
-        app:layout_constraintVertical_bias="0.521" />
+        app:layout_constraintVertical_bias="0.905" />
 
     <TextView
         android:id="@+id/txtAccessHistory"
@@ -87,7 +98,7 @@
                 tools:layout_editor_absoluteY="107dp" />
 
             <Spinner
-                android:id="@+id/spinner5"
+                android:id="@+id/spnUsersNames"
                 android:layout_width="220dp"
                 android:layout_height="28dp"
                 android:background="@drawable/border_button_white"
