@@ -19,7 +19,6 @@ import com.example.aplicacionseminariointegrador.databinding.ActivityAccessHisto
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -46,8 +45,11 @@ public class AccessHistory extends AppCompatActivity {
         String textoBoton = (LanguageSelected.languageSelected == 0) ? "BACK" : "VOLVER";
         binding.btnBackAccessHistory.setText(textoBoton);
 
+        String textoBotonEliminar = (LanguageSelected.languageSelected == 0) ? "DELETE HISTORY" : "ELIMINAR HISTORIAL";
+        binding.btnDeleteHistory.setText(textoBotonEliminar);
+
         cargarDatosSpinner();
-        extraerHistorial(LanguageSelected.idUser - 1);
+        extraerHistorial(LanguageSelected.idUser);
 
         binding.btnBackAccessHistory.setOnClickListener(v -> { finish(); });
 
@@ -65,9 +67,7 @@ public class AccessHistory extends AppCompatActivity {
             }
 
             @Override
-            public void onNothingSelected(AdapterView<?> adapterView) {
-
-            }
+            public void onNothingSelected(AdapterView<?> adapterView) {}
         });
     }
 
@@ -129,7 +129,7 @@ public class AccessHistory extends AppCompatActivity {
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String, String> params = new Hashtable<>();
-                params.put("id_usuario", String.valueOf(id_usuario_extraer + 1));
+                params.put("id_usuario", String.valueOf(id_usuario_extraer));
 
                 return params;
             }

@@ -35,17 +35,6 @@ public class CreditsAplication extends AppCompatActivity {
         binding.imgBtnLinkedInGenaro.setOnClickListener(v -> { openBrowser("genaro-paredes-6b5785238/"); });
 
         binding.btnCreditsOk.setOnClickListener( v -> { finish(); });
-
-        // Reemplazotodo esto que se utilizaba antes
-        //imgBtnSergioLinkedIn.setOnClickListener(new View.OnClickListener() {
-        //   @Override
-        //    public void onClick(View v) {
-        //       Uri uri = Uri.parse(url +"sergio-gabriel-garzon/"); // missing 'http://' will cause crashed
-        //        Intent intent = new Intent(Intent.ACTION_VIEW, uri);
-        //        startActivity(intent);
-        //    }
-        //});
-
     }
 
     // Metodo para abrir Navegador

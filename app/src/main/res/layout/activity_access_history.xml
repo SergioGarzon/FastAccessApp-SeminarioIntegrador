@@ -10,8 +10,9 @@
     >
 
     <ScrollView
-        android:layout_width="375dp"
-        android:layout_height="440dp"
+        android:id="@+id/scrollView2"
+        android:layout_width="374dp"
+        android:layout_height="427dp"
         android:layout_marginTop="24dp"
         android:background="@drawable/border_button_white"
         android:scrollbars="vertical"
@@ -29,8 +30,8 @@
             android:text="Informacion"
             android:textAlignment="textStart"
             android:textColor="@color/black"
-            android:textStyle="bold"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
     </ScrollView>
 
@@ -49,9 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/txtHistoryAccessData"
-        app:layout_constraintVertical_bias="0.905" />
+        app:layout_constraintTop_toBottomOf="@+id/btnDeleteHistory"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/txtAccessHistory"
@@ -108,6 +108,21 @@
         </TableRow>
 
     </TableLayout>
+
+    <Button
+        android:id="@+id/btnDeleteHistory"
+        android:layout_width="186dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="8dp"
+        android:text="Eliminar Historial"
+        android:background="@drawable/border_button_red"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.928"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

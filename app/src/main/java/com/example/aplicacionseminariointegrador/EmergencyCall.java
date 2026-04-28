@@ -13,16 +13,19 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.databinding.ActivityAccessHistoryBinding;
+import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsAplicationBinding;
 
 public class EmergencyCall extends AppCompatActivity {
-
+    private ActivityAccessHistoryBinding binding;
     ImageButton btnEmergency, btnPolice, btnSecurity, btnFireFighters;
     Button btnBackEmergencyMenuApplication;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_emergency_call);
+        ActivityCreditsAplicationBinding binding = ActivityCreditsAplicationBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
 
         btnEmergency = (ImageButton) findViewById(R.id.btnImgMedicalEmergency);
         btnPolice = (ImageButton) findViewById(R.id.imgBtnCallPolice);
@@ -35,13 +38,6 @@ public class EmergencyCall extends AppCompatActivity {
         } else {
             btnBackEmergencyMenuApplication.setText("VOLVER");
         }
-
-        btnEmergency.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneAndCall("107");
-            }
-        });
 
         btnPolice.setOnClickListener(new View.OnClickListener() {
             @Override
