@@ -4,86 +4,44 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.media.Image;
 import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
-
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
-import com.example.aplicacionseminariointegrador.databinding.ActivityAccessHistoryBinding;
-import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsAplicationBinding;
+import com.example.aplicacionseminariointegrador.databinding.ActivityEmergencyCallBinding;
 
 public class EmergencyCall extends AppCompatActivity {
-    private ActivityAccessHistoryBinding binding;
-    ImageButton btnEmergency, btnPolice, btnSecurity, btnFireFighters;
-    Button btnBackEmergencyMenuApplication;
+    private ActivityEmergencyCallBinding binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
-        ActivityCreditsAplicationBinding binding = ActivityCreditsAplicationBinding.inflate(getLayoutInflater());
+
+
+        binding = ActivityEmergencyCallBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        btnEmergency = (ImageButton) findViewById(R.id.btnImgMedicalEmergency);
-        btnPolice = (ImageButton) findViewById(R.id.imgBtnCallPolice);
-        btnSecurity = (ImageButton) findViewById(R.id.imgBtnSecurityGuardCountry);
-        btnFireFighters = (ImageButton) findViewById(R.id.imgBtnFireFigther);
-        btnBackEmergencyMenuApplication = (Button) findViewById(R.id.btnBackEmergencyMenuApplication);
+        int enabledAdmin = (LanguageSelected.idUser == 5) ? View.VISIBLE : View.INVISIBLE;
+        binding.btnCambiarNumeros.setVisibility(enabledAdmin);
 
         if(LanguageSelected.languageSelected == 0) {
-            btnBackEmergencyMenuApplication.setText("BACK");
+            binding.btnBackEmergencyMenuApplication.setText("BACK");
+            binding.btnCambiarNumeros.setText("CHANGE NUMBERS");
+            binding.txtDescripcionEmergencyCall.setText("You must press a button to call emergency services");
         } else {
-            btnBackEmergencyMenuApplication.setText("VOLVER");
+            binding.btnBackEmergencyMenuApplication.setText("VOLVER");
+            binding.btnCambiarNumeros.setText("CAMBIAR NUMEROS");
+            binding.txtDescripcionEmergencyCall.setText("Debe pulsar un botón para llamar a los servicios de emergencia.");
         }
 
-        btnPolice.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneAndCall("911");
-            }
-        });
-
-        btnFireFighters.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneAndCall("101");
-            }
-        });
-
-        btnSecurity.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                makePhoneAndCall("3517416569");
-            }
-        });
-
-        btnBackEmergencyMenuApplication.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                backMenuApplication(v);
-            }
-        });
-
+        binding.btnBackEmergencyMenuApplication.setOnClickListener(v -> { finish(); });
+        binding.imgBtnCallPolice.setOnClickListener(v -> { makePhoneAndCall("911"); });
+        binding.imgBtnFireFigther.setOnClickListener(v -> { makePhoneAndCall("101"); });
+        binding.imgBtnSecurityGuardCountry.setOnClickListener(v -> { makePhoneAndCall("3517416569"); });
+        binding.btnImgMedicalEmergency.setOnClickListener( v -> { makePhoneAndCall("107"); });
     }
 
-    private void backMenuApplication(View v) {
-        switch (LanguageSelected.sesion) {
-            case 1:
-                Intent nextActivity3 = new Intent(this, MenuApplicationResidente.class);
-                nextActivity3.putExtra("Usuario", LanguageSelected.nameSession);
-                startActivity(nextActivity3);
-                break;
-            case 2:
-                Intent nextActivity2 = new Intent(this, MenuAplication.class);
-                nextActivity2.putExtra("Usuario", LanguageSelected.nameSession);
-                startActivity(nextActivity2);
-                break;
-
-        }
-    }
     private void makePhoneAndCall(String tel) {
         Intent intent = new Intent(Intent.ACTION_CALL);
         intent.setData(Uri.parse("tel:" + tel));
@@ -91,4 +49,5 @@ public class EmergencyCall extends AppCompatActivity {
 
         Log.d("Eror", "No llama");
     }
+
 }

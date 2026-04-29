@@ -7,6 +7,7 @@
     android:background="@drawable/backgroundapp"
     tools:context=".EmergencyCall">
 
+
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="110dp"
@@ -18,7 +19,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025"
         app:srcCompat="@drawable/startlogotype" />
-
 
     <TextView
         android:id="@+id/textView"
@@ -35,13 +35,13 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView6"
-        app:layout_constraintVertical_bias="0.003" />
+        app:layout_constraintVertical_bias="0.001" />
 
     <Button
         android:id="@+id/btnBackEmergencyMenuApplication"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:layout_marginBottom="60dp"
+        android:layout_marginBottom="16dp"
         android:background="@drawable/border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
@@ -51,11 +51,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/btnCambiarNumeros"
+        app:layout_constraintVertical_bias="0.428" />
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/txtDescripcionEmergencyCall"
         android:layout_width="312dp"
         android:layout_height="88dp"
         android:layout_marginTop="32dp"
@@ -78,7 +78,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView11"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescripcionEmergencyCall"
         app:layout_constraintVertical_bias="0.246">
 
         <TableRow
@@ -129,7 +129,22 @@
 
     </TableLayout>
 
-
+    <Button
+        android:id="@+id/btnCambiarNumeros"
+        android:layout_width="142dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:text="Cambiar numeros"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        android:textStyle="bold|italic"
+        android:background="@drawable/border_button_orange"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.669"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

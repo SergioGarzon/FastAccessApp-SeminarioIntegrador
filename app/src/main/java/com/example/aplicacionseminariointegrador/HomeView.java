@@ -1,64 +1,117 @@
 package com.example.aplicacionseminariointegrador;
 
+import android.credentials.Credential;
 import android.os.Bundle;
-
 import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link HomeView#newInstance} factory method to
- * create an instance of this fragment.
- */
+
 public class HomeView extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
-
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
-
-    public HomeView() {
-        // Required empty public constructor
-    }
-
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment HomeView.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static HomeView newInstance(String param1, String param2) {
-        HomeView fragment = new HomeView();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private FragmentHomeViewBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_home_view, container, false);
+
+        binding = FragmentHomeViewBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+
+
+        if(LanguageSelected.languageSelected == 0) {
+            binding.btnIdLogin2.setText("LOGIN");
+            binding.btnIdRegister.setText("REGISTER");
+        }
+        else {
+            binding.btnIdLogin2.setText("ACCESO");
+            binding.btnIdRegister.setText("REGISTRO");
+        }
+
+        animation();
+
+        binding.btnIdLogin2.setOnClickListener(v -> {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.main_container, new CreditsView())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
+        return view;
     }
+
+    public void animation() {
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.animationvisible);
+        animation.setRepeatCount(Animation.INFINITE);
+        binding.lblFastAccessAppPrincipalTitle.setAnimation(animation);
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Buena práctica para evitar fugas de memoria
+    }
+
 }
+
+/*
+*
+    TextView txtFastAccessApp;
+    Button btnIdLogin2, btnIdRegister;
+
+    @SuppressLint("MissingInflatedId")
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_start_application);
+
+        txtFastAccessApp = findViewById(R.id.lblFastAccessAppPrincipalTitle);
+
+        btnIdLogin2 = (Button) findViewById(R.id.btnIdLogin2);
+        btnIdRegister = (Button) findViewById(R.id.btnIdRegister);
+
+        if(LanguageSelected.languageSelected == 0) {
+            btnIdLogin2.setText("LOGIN");
+            btnIdRegister.setText("REGISTER");
+        }
+        else {
+            btnIdLogin2.setText("ACCESO");
+            btnIdRegister.setText("REGISTRO");
+        }
+
+
+        animation();
+    }
+
+    public void changeActivityLogin(View view) {
+        Intent nextActivity = new Intent(this, LoginActivity.class);
+        startActivity(nextActivity);
+    }
+
+    public void changeActivityRegisterAcoount(View view) {
+        Intent nextActivity = new Intent(this, SelectRegisterUser.class);
+        startActivity(nextActivity);
+    }
+
+    public void changeActivityCredits(View view) {
+        Intent nextActivity = new Intent(this, CreditsAplication.class);
+        startActivity(nextActivity);
+    }
+
+    public void changeActivityOptions(View view) {
+        Intent nextActivity = new Intent(this, OptionsActivity.class);
+        startActivity(nextActivity);
+    }
+
+    @Override
+    public void onBackPressed() {
+        //Toast.makeText(StartApplication.this, "Action not allowed!", Toast.LENGTH_SHORT).show();
+        return;
+    }
+*/
