@@ -19,7 +19,7 @@ public class StartApplication extends AppCompatActivity {
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction()
                     .setReorderingAllowed(true)
-                    .add(R.id.main_container, HomeView.class, null)
+                    .add(R.id.main_container, FragmentHomeView.class, null)
                     .commit();
         }
     }

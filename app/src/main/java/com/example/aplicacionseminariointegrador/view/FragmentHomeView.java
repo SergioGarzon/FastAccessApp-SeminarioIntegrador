@@ -1,6 +1,5 @@
 package com.example.aplicacionseminariointegrador;
 
-import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,8 +10,7 @@ import android.view.animation.AnimationUtils;
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
 import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
 
-
-public class HomeView extends Fragment {
+public class FragmentHomeView extends Fragment {
 
     private FragmentHomeViewBinding binding;
 
@@ -37,12 +35,15 @@ public class HomeView extends Fragment {
 
         binding.btnCreditsInformation.setOnClickListener(v -> {
             getParentFragmentManager().beginTransaction()
-                    .replace(R.id.main_container, new CreditsView())
+                    .replace(R.id.main_container, new FragmentCreditsView())
                     .addToBackStack(null)
                     .commit();
         });
 
-        binding.btnIdLogin.setOnClickListener(v -> { });
+        binding.btnIdLogin.setOnClickListener(v -> { getParentFragmentManager().beginTransaction()
+                .replace(R.id.main_container, new FragmentLoginView())
+                .addToBackStack(null)
+                .commit();});
 
         return view;
     }

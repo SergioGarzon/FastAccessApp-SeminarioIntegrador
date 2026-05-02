@@ -11,10 +11,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
-import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsAplicationBinding;
 import com.example.aplicacionseminariointegrador.databinding.FragmentCreditsViewBinding;
 
-public class CreditsView extends Fragment {
+public class FragmentCreditsView extends Fragment {
     private FragmentCreditsViewBinding binding;
 
     @Override
