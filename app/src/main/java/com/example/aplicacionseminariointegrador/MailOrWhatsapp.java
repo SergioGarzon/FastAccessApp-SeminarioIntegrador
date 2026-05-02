@@ -145,11 +145,11 @@ public class MailOrWhatsapp extends AppCompatActivity {
                 break;
         }
     }
-
+/*
     @Override
     public void onBackPressed() {
         //Toast.makeText(StartApplication.this, "Action not allowed!", Toast.LENGTH_SHORT).show();
         return;
-    }
+    }*/
 
 }

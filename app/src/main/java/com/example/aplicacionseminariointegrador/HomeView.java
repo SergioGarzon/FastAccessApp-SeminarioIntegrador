@@ -1,6 +1,6 @@
 package com.example.aplicacionseminariointegrador;
 
-import android.credentials.Credential;
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
@@ -25,22 +25,24 @@ public class HomeView extends Fragment {
 
 
         if(LanguageSelected.languageSelected == 0) {
-            binding.btnIdLogin2.setText("LOGIN");
+            binding.btnIdLogin.setText("LOGIN");
             binding.btnIdRegister.setText("REGISTER");
         }
         else {
-            binding.btnIdLogin2.setText("ACCESO");
+            binding.btnIdLogin.setText("ACCESO");
             binding.btnIdRegister.setText("REGISTRO");
         }
 
         animation();
 
-        binding.btnIdLogin2.setOnClickListener(v -> {
+        binding.btnCreditsInformation.setOnClickListener(v -> {
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.main_container, new CreditsView())
                     .addToBackStack(null)
                     .commit();
         });
+
+        binding.btnIdLogin.setOnClickListener(v -> { });
 
         return view;
     }
@@ -58,6 +60,7 @@ public class HomeView extends Fragment {
     }
 
 }
+
 
 /*
 *

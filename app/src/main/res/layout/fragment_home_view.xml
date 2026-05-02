@@ -12,6 +12,7 @@
         android:id="@+id/btnIdRegister"
         android:layout_width="232dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="180dp"
         android:background="@drawable/border_buttons"
         android:onClick="changeActivityRegisterAcoount"
         android:text="REGISTER"
@@ -22,11 +23,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnIdLogin2"
-        app:layout_constraintVertical_bias="0.098" />
+        app:layout_constraintTop_toBottomOf="@+id/btnIdLogin"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/btnIdLogin2"
+        android:id="@+id/btnIdLogin"
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:background="@drawable/border_buttons"
@@ -59,13 +60,14 @@
         app:layout_constraintVertical_bias="0.074" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCreditsInformation"
         android:layout_width="51dp"
         android:layout_height="48dp"
         android:background="@drawable/information"
         android:onClick="changeActivityCredits"
         android:textSize="30sp"
         android:textStyle="bold|italic"
+        android:contentDescription="Button to Credits"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,19 +77,21 @@
         app:layout_constraintVertical_bias="0.023" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnConfiguration"
         android:layout_width="51dp"
         android:layout_height="48dp"
+        android:layout_marginBottom="592dp"
         android:background="@drawable/configuration"
         android:onClick="changeActivityOptions"
+        android:contentDescription="Button to Configuration"
+        android:text=""
         android:textSize="30sp"
         android:textStyle="bold|italic"
-        android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.955"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreditsInformation"
         app:layout_constraintVertical_bias="0.027" />
 
     <ImageView
