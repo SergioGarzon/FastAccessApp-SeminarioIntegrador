@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,7 +7,8 @@ import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
+import com.example.aplicacionseminariointegrador.R;
 
 public class StartActivity extends AppCompatActivity {
 

@@ -1,35 +1,20 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
-import android.os.Vibrator;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.android.volley.AuthFailureError;
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.VolleyError;
-import com.android.volley.toolbox.StringRequest;
-import com.android.volley.toolbox.Volley;
-import com.example.aplicacionseminariointegrador.auxiliarclases.DataCharged;
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
-import com.google.android.material.textfield.TextInputEditText;
-import com.google.android.material.textfield.TextInputLayout;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.example.aplicacionseminariointegrador.model.DataCharged;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
+import com.example.aplicacionseminariointegrador.R;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class RegisterAccount extends AppCompatActivity {
 

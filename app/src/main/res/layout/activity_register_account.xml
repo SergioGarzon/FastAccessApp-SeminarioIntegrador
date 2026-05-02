@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterAccount"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.RegisterAccount"
+    android:background="@drawable/img_backgroundapp">
 
 
     <TextView
@@ -28,7 +28,7 @@
         android:id="@+id/textInputLayoutFirstName"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -65,7 +65,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="4dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:onClick="backStart_Activity"
         android:text="BACK"
         android:textColor="@color/white"
@@ -82,7 +82,7 @@
         android:id="@+id/textInputLayoutLastName"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -116,7 +116,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="92dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -138,7 +138,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.069"
-        app:srcCompat="@drawable/createaccount" />
+        app:srcCompat="@drawable/img_createaccount" />
 
     <TextView
         android:id="@+id/txtlblDocumentType"
@@ -159,7 +159,7 @@
         android:id="@+id/spnTypeDocument"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.481"
@@ -188,7 +188,7 @@
         android:id="@+id/textInputLayoutDocumentNumber"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"

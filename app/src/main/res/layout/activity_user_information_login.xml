@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".UserInformationLogin">
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.UserInformationLogin">
 
     <Button
         android:id="@+id/btnBackLoginWaitAutorization"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="BACK LOGIN"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.136"
-        app:srcCompat="@drawable/userwaitingconfirmation" />
+        app:srcCompat="@drawable/img_userwaitingconfirmation" />
 
     <TextView
         android:id="@+id/txtUserWaitAutorization"

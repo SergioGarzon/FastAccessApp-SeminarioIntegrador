@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ModifyUsers"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.ModifyUsers"
+    android:background="@drawable/img_backgroundapp">
 
     <TextView
         android:id="@+id/txtNumberIdModifyUsers"
@@ -42,7 +42,7 @@
         android:id="@+id/txtInputLayoutIdModifyUsers"
         android:layout_width="351dp"
         android:layout_height="58dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -62,7 +62,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="56dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="CANCELAR"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -78,7 +78,7 @@
         android:id="@+id/btnAceptarModifyUser"
         android:layout_width="154dp"
         android:layout_height="62dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="ADMITIR"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -93,7 +93,7 @@
         android:id="@+id/btnAnularModfyUser"
         android:layout_width="154dp"
         android:layout_height="62dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="DENEGAR"
         android:textColor="@color/white"
         android:textSize="30sp"

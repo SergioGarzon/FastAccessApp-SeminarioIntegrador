@@ -1,10 +1,12 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+
+import com.example.aplicacionseminariointegrador.R;
 
 public class StartApplication extends AppCompatActivity {
 

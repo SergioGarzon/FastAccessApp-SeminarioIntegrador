@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -10,7 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 import com.example.aplicacionseminariointegrador.databinding.FragmentCreditsViewBinding;
 
 public class FragmentCreditsView extends Fragment {

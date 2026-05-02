@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".MenuApplicationResidente">
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.MenuApplicationResidente">
 
     <Button
         android:id="@+id/btnLogoutResident"
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="56dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:onClick="changeActivityPresentation"
         android:text="Logout"
         android:textColor="@color/white"
@@ -77,13 +77,13 @@
                 android:id="@+id/imageView9"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/profileaccount" />
+                app:srcCompat="@drawable/img_profileaccount" />
 
             <Button
                 android:id="@+id/btnProfilerAccountResident"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="ACCOUNT PROFILE"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -99,13 +99,13 @@
                 android:id="@+id/imageView11"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/chataccount" />
+                app:srcCompat="@drawable/img_chataccount" />
 
             <Button
                 android:id="@+id/btnChatResident"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CHAT"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -120,13 +120,13 @@
                 android:id="@+id/imageView13"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/sos" />
+                app:srcCompat="@drawable/img_sos" />
 
             <Button
                 android:id="@+id/btnCallEmergencyResident"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CALL EMERGENCY"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -143,13 +143,13 @@
                 android:id="@+id/imageView14"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/registervisitor" />
+                app:srcCompat="@drawable/img_registervisitor" />
 
             <Button
                 android:id="@+id/btnRegisterVisitorResident"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="VISITOR REGISTER"
                 android:textColor="@color/white"
                 android:textSize="20sp"

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".EmergencyCall">
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.EmergencyCall">
 
 
     <ImageView
@@ -18,7 +18,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.025"
-        app:srcCompat="@drawable/startlogotype" />
+        app:srcCompat="@drawable/img_startlogotype" />
 
     <TextView
         android:id="@+id/textView"
@@ -42,7 +42,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -89,7 +89,7 @@
                 android:id="@+id/imgBtnCallPolice"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@drawable/police"
+                android:background="@drawable/img_police"
                 android:padding="10dp"
                 android:scaleType="fitCenter"
                 android:tooltipText="Call to Police 911" />
@@ -98,7 +98,7 @@
                 android:id="@+id/imgBtnFireFigther"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@drawable/fireengine"
+                android:background="@drawable/img_fireengine"
                 android:padding="10dp"
                 android:scaleType="fitCenter"
                 android:tooltipText="Call to Fire Fighter 100" />
@@ -112,7 +112,7 @@
                 android:id="@+id/btnImgMedicalEmergency"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@drawable/ambulance"
+                android:background="@drawable/img_ambulance"
                 android:padding="10dp"
                 android:scaleType="fitCenter"
                 android:tooltipText="Call to Medical Emergency 107" />
@@ -121,7 +121,7 @@
                 android:id="@+id/imgBtnSecurityGuardCountry"
                 android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@drawable/administration"
+                android:background="@drawable/img_administration"
                 android:padding="10dp"
                 android:scaleType="fitCenter"
                 android:tooltipText="Call to Security Guard" />
@@ -138,7 +138,7 @@
         android:textColor="@color/white"
         android:textSize="13sp"
         android:textStyle="bold|italic"
-        android:background="@drawable/border_button_orange"
+        android:background="@drawable/btn_border_button_orange"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.669"

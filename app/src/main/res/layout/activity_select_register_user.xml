@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SelectRegisterUser"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.SelectRegisterUser"
+    android:background="@drawable/img_backgroundapp">
 
     <Button
         android:id="@+id/btnBackSelectOptionStart"
@@ -14,7 +14,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="23dp"
         android:layout_marginBottom="80dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:onClick="changeBackStartActivity"
         android:text="BACK"
         android:textColor="@color/white"
@@ -62,13 +62,13 @@
                 android:id="@+id/imageView8"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/repararcuenta" />
+                app:srcCompat="@drawable/img_repararcuenta" />
 
             <Button
                 android:id="@+id/btnResetAccount"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="Account recovery"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -83,13 +83,13 @@
                 android:id="@+id/imageView27"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/addaccount" />
+                app:srcCompat="@drawable/img_addaccount" />
 
             <Button
                 android:id="@+id/btnCreateNewAccount"
                 android:layout_width="281dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:onClick="changeRegisterAccountActivity"
                 android:text="CREATE NEW ACCOUNT"
                 android:textColor="@color/white"
@@ -116,6 +116,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.03"
-        app:srcCompat="@drawable/startlogotype" />
+        app:srcCompat="@drawable/img_startlogotype" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -7,13 +7,13 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     app:layoutDescription="@xml/activity_start_scene"
-    tools:context=".StartActivity">
+    tools:context=".view.StartActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/backgroundLayout"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:background="@drawable/bg"
+        android:background="@drawable/btn_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -27,5 +27,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/startlogotype" />
+        app:srcCompat="@drawable/img_startlogotype" />
 </androidx.constraintlayout.motion.widget.MotionLayout>

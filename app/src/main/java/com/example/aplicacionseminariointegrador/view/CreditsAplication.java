@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
@@ -6,7 +6,7 @@ import android.content.pm.ActivityInfo;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsAplicationBinding;
 
 public class CreditsAplication extends AppCompatActivity {

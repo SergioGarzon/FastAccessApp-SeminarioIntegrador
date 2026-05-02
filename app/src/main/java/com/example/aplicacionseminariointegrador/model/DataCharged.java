@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador.auxiliarclases;
+package com.example.aplicacionseminariointegrador.model;
 
 public class DataCharged {
     public static String names;

@@ -5,15 +5,15 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterAccountNext"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.RegisterAccountNext"
+    android:background="@drawable/img_backgroundapp">
 
     <Button
         android:id="@+id/btnBackRegisterStep1"
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="64dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -29,7 +29,7 @@
         android:id="@+id/btnNextRegisterSuccessfull"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.06"
-        app:srcCompat="@drawable/createaccount" />
+        app:srcCompat="@drawable/img_createaccount" />
 
     <TextView
         android:id="@+id/txtViewPhoneNumber"
@@ -90,7 +90,7 @@
         android:id="@+id/txtILPhoneNumber"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -126,7 +126,7 @@
         android:id="@+id/txtILEmailAddress"
         android:layout_width="327dp"
         android:layout_height="51dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:maxLines="1"
         app:endIconMode="clear_text"
         app:layout_constraintBottom_toBottomOf="parent"

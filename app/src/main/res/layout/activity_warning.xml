@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Warning"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.Warning"
+    android:background="@drawable/img_backgroundapp">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

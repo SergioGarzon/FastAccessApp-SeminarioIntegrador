@@ -4,15 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".MenuAplication">
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.MenuAplication">
 
     <Button
         android:id="@+id/btnLogoutResident"
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="16dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:onClick="changeActivityPresentation"
         android:text="Logout"
         android:textColor="@color/white"
@@ -77,13 +77,13 @@
                 android:id="@+id/imageView10"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/profileaccount" />
+                app:srcCompat="@drawable/img_profileaccount" />
 
             <Button
                 android:id="@+id/btnProfilerAccountResident"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="ACCOUNT PROFILE"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -98,13 +98,13 @@
                 android:id="@+id/imageView12"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/chataccount" />
+                app:srcCompat="@drawable/img_chataccount" />
 
             <Button
                 android:id="@+id/btnChatResident"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CHAT"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -119,13 +119,13 @@
                 android:id="@+id/imageView15"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/sos" />
+                app:srcCompat="@drawable/img_sos" />
 
             <Button
                 android:id="@+id/btnCallEmergencyResident"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CALL EMERGENCY"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -140,13 +140,13 @@
                 android:id="@+id/imageView23"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/notifications" />
+                app:srcCompat="@drawable/img_notifications" />
 
             <Button
                 android:id="@+id/button11"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="NOTIFICATIONS"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -161,13 +161,13 @@
                 android:id="@+id/imageView24"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/visitorqrscan" />
+                app:srcCompat="@drawable/img_visitorqrscan" />
 
             <Button
                 android:id="@+id/btnRegisterVisitorResident"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="SCAN QR VISITOR"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -183,13 +183,13 @@
                 android:id="@+id/imageView25"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/accesshistory" />
+                app:srcCompat="@drawable/img_accesshistory" />
 
             <Button
                 android:id="@+id/btnMenuHistory"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="ACCESS HISTORY"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -205,13 +205,13 @@
                 android:id="@+id/imageView26"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/settingbutton" />
+                app:srcCompat="@drawable/img_settingbutton" />
 
             <Button
                 android:id="@+id/btnUserConfiguration"
                 android:layout_width="290dp"
                 android:layout_height="60dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="GENERALS CONFIGURATIONS"
                 android:textColor="@color/white"
                 android:textSize="20sp"

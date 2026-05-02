@@ -31,82 +31,82 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="35">
         <activity
-            android:name=".Warning"
+            android:name=".view.Warning"
             android:exported="false" />
         <activity
-            android:name=".RegisterAccountNextStep"
+            android:name=".view.RegisterAccountNextStep"
             android:exported="false" />
         <activity
-            android:name=".RegisterAccountNext"
+            android:name=".view.RegisterAccountNext"
             android:exported="false" />
         <activity
-            android:name=".ResetPassword"
+            android:name=".view.ResetPassword"
             android:exported="false" />
         <activity
-            android:name=".SelectRegisterUser"
+            android:name=".view.SelectRegisterUser"
             android:exported="false" />
         <activity
             android:name=".CancelAcoount"
             android:exported="false" />
         <activity
-            android:name=".AccessHistory"
+            android:name=".view.AccessHistory"
             android:exported="false" />
         <activity
-            android:name=".EditVisibility"
+            android:name=".view.EditVisibility"
             android:exported="false" />
         <activity
-            android:name=".ProfileAccount"
+            android:name=".view.ProfileAccount"
             android:exported="false" />
         <activity
-            android:name=".ModifyUsers"
+            android:name=".view.ModifyUsers"
             android:exported="false" />
         <activity
-            android:name=".NotificationsUsersAccount"
+            android:name=".view.NotificationsUsersAccount"
             android:exported="false" />
         <activity
-            android:name=".MenuApplicationResidente"
+            android:name=".view.MenuApplicationResidente"
             android:exported="false" />
         <activity
-            android:name=".MailOrWhatsapp"
+            android:name=".view.MailOrWhatsapp"
             android:exported="false" />
         <activity
-            android:name=".GeneradorQR"
+            android:name=".view.GeneradorQR"
             android:exported="false" />
         <activity
-            android:name=".LectorQR"
+            android:name=".view.LectorQR"
             android:exported="false" />
         <activity
-            android:name=".VisitorsRegister"
+            android:name=".view.VisitorsRegister"
             android:exported="false" />
         <activity
-            android:name=".UserInformationLogin"
+            android:name=".view.UserInformationLogin"
             android:exported="false" />
         <activity
-            android:name=".EmergencyCall"
+            android:name=".view.EmergencyCall"
             android:exported="false" />
         <activity
-            android:name=".RegisterSucessful"
+            android:name=".view.RegisterSucessful"
             android:exported="false" />
         <activity
-            android:name=".OptionsActivity"
+            android:name=".view.OptionsActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".view.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".RegisterAccount"
+            android:name=".view.RegisterAccount"
             android:exported="false" />
         <activity
-            android:name=".StartApplication"
+            android:name=".view.StartApplication"
             android:exported="false" />
         <activity
-            android:name=".MenuAplication"
+            android:name=".view.MenuAplication"
             android:exported="false" />
         <activity
-            android:name=".CreditsAplication"
+            android:name=".view.CreditsAplication"
             android:exported="false" />
         <activity
-            android:name=".StartActivity"
+            android:name=".view.StartActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

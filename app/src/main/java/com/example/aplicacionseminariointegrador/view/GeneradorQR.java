@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,11 +13,13 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.aplicacionseminariointegrador.R;
 import com.google.zxing.BarcodeFormat;
 import com.journeyapps.barcodescanner.BarcodeEncoder;
 import android.graphics.Bitmap;
 
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 
 public class GeneradorQR extends AppCompatActivity {
 

@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -7,7 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
+import com.example.aplicacionseminariointegrador.R;
 import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
 
 public class FragmentHomeView extends Fragment {

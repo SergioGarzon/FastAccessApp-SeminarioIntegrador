@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".NotificationsUsersAccount"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.NotificationsUsersAccount"
+    android:background="@drawable/img_backgroundapp">
 
     <GridView
         android:id="@+id/grid1"
         android:layout_width="352dp"
         android:layout_height="340dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="40dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="CANCELAR"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -57,7 +57,7 @@
         android:id="@+id/btnModifyUser"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="MODIFICAR"
         android:textColor="@color/white"
         android:textSize="30sp"

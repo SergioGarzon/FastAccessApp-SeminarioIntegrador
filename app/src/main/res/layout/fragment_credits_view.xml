@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".FragmentCreditsView"
-        android:background="@drawable/backgroundapp">
+        tools:context=".view.FragmentCreditsView"
+        android:background="@drawable/img_backgroundapp">
 
 
     <Button
         android:id="@+id/btnCreditsOk"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="OK"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -64,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.586"
-        app:srcCompat="@drawable/startlogotype" />
+        app:srcCompat="@drawable/img_startlogotype" />
 
     <TableLayout
         android:layout_width="wrap_content"
@@ -90,7 +91,7 @@
                 android:contentDescription="Enter to LinkedIn"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Matias Farach's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/img_linkedin" />
 
             <TextView
                 android:id="@+id/lblMatiasFarach"
@@ -114,7 +115,7 @@
                 android:contentDescription="Enter to LinkedIn"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Sergio Garzón's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/img_linkedin" />
 
             <TextView
                 android:id="@+id/lblSergioGarzon"
@@ -138,7 +139,7 @@
                 android:contentDescription="Enter to LinkedIn"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Genaro Paredes's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/img_linkedin" />
 
             <TextView
                 android:id="@+id/lblGenaroParedes"
@@ -161,7 +162,7 @@
                 android:contentDescription="Enter to LinkedIn"
                 android:scaleType="fitCenter"
                 android:tooltipText="View Facundo Rago's linkedin profiler"
-                app:srcCompat="@drawable/linkedin" />
+                app:srcCompat="@drawable/img_linkedin" />
 
             <TextView
                 android:id="@+id/lblFacundoRago"

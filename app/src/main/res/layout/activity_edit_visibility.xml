@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".EditVisibility">
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.EditVisibility">
 
     <Button
         android:id="@+id/button10"
         android:layout_width="100dp"
         android:layout_height="55dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
         android:textSize="20sp"
@@ -29,7 +29,7 @@
         android:layout_width="376dp"
         android:layout_height="79dp"
         android:layout_marginTop="12dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

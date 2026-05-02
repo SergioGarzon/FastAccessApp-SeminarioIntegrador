@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".GeneradorQR"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.GeneradorQR"
+    android:background="@drawable/img_backgroundapp">
 
     <TextView
         android:id="@+id/txtViewQRGenerateCode"
@@ -41,7 +41,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/border_button_blue"
+        android:background="@drawable/btn_border_button_blue"
         android:text="GENERATE QR"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -58,7 +58,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="NEXT"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -74,7 +74,7 @@
         android:id="@+id/btnCancelQRGenerator"
         android:layout_width="232dp"
         android:layout_height="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="CANCEL"
         android:textColor="@color/white"
         android:textSize="25sp"

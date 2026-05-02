@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import android.os.Bundle;
 
@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
 import com.example.aplicacionseminariointegrador.databinding.FragmentLoginViewBinding;
 
 public class FragmentLoginView extends Fragment {

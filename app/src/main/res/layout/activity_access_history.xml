@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backgroundapp"
-    tools:context=".AccessHistory"
+    android:background="@drawable/img_backgroundapp"
+    tools:context=".view.AccessHistory"
     >
 
     <ScrollView
@@ -14,7 +14,7 @@
         android:layout_width="374dp"
         android:layout_height="427dp"
         android:layout_marginTop="24dp"
-        android:background="@drawable/border_button_white"
+        android:background="@drawable/btn_border_button_white"
         android:scrollbars="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -41,7 +41,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="28dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="BACK"
         android:textColor="@color/white"
         android:textSize="25sp"
@@ -101,7 +101,7 @@
                 android:id="@+id/spnUsersNames"
                 android:layout_width="220dp"
                 android:layout_height="28dp"
-                android:background="@drawable/border_button_white"
+                android:background="@drawable/btn_border_button_white"
                 tools:layout_editor_absoluteX="147dp"
                 tools:layout_editor_absoluteY="108dp" />
 
@@ -115,7 +115,7 @@
         android:layout_height="45dp"
         android:layout_marginTop="8dp"
         android:text="Eliminar Historial"
-        android:background="@drawable/border_button_red"
+        android:background="@drawable/btn_border_button_red"
         android:textColor="@color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

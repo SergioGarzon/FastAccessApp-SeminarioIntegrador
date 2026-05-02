@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterSucessful"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.RegisterSucessful"
+    android:background="@drawable/img_backgroundapp">
 
     <Button
         android:id="@+id/bntUserCreatedRegsister"
         android:layout_width="181dp"
         android:layout_height="64dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="OK"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -32,7 +32,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182"
-        app:srcCompat="@drawable/userconfirm" />
+        app:srcCompat="@drawable/img_userconfirm" />
 
     <TextView
         android:id="@+id/lblMessageUserCreated"

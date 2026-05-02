@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".StartApplication"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.StartApplication"
+    android:background="@drawable/img_backgroundapp">
 
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/main_container"

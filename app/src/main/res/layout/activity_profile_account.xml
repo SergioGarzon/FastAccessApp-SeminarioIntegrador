@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ProfileAccount"
-    android:background="@drawable/backgroundapp">
+    tools:context=".view.ProfileAccount"
+    android:background="@drawable/img_backgroundapp">
 
 
     <Button
@@ -14,7 +14,7 @@
         android:layout_width="232dp"
         android:layout_height="48dp"
         android:layout_marginBottom="48dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="CANCEL"
         android:textColor="@color/white"
         android:textSize="30sp"
@@ -36,13 +36,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.046"
-        app:srcCompat="@drawable/userphoto" />
+        app:srcCompat="@drawable/img_userphoto" />
 
     <Button
         android:id="@+id/button6"
         android:layout_width="75dp"
         android:layout_height="63dp"
-        android:background="@drawable/border_buttons"
+        android:background="@drawable/btn_border_buttons"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="40sp"
@@ -98,7 +98,7 @@
         app:layout_constraintStart_toEndOf="@+id/imageView7"
         app:layout_constraintTop_toBottomOf="@+id/lblStatus"
         app:layout_constraintVertical_bias="0.013"
-        app:srcCompat="@drawable/onlinepoint" />
+        app:srcCompat="@drawable/img_onlinepoint" />
 
 
     <TableLayout
@@ -121,7 +121,7 @@
                 android:id="@+id/imageView21"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/editbutton"
+                app:srcCompat="@drawable/img_editbutton"
                 tools:layout_editor_absoluteX="187dp"
                 tools:layout_editor_absoluteY="73dp" />
 
@@ -129,7 +129,7 @@
                 android:id="@+id/button8"
                 android:layout_width="281dp"
                 android:layout_height="55dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="EDIT NAME USER"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -148,7 +148,7 @@
                 android:id="@+id/imageView19"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/passwordlock"
+                app:srcCompat="@drawable/img_passwordlock"
                 tools:layout_editor_absoluteX="277dp"
                 tools:layout_editor_absoluteY="490dp" />
 
@@ -156,7 +156,7 @@
                 android:id="@+id/button4"
                 android:layout_width="281dp"
                 android:layout_height="55dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CHANGE PASSWORD"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -173,7 +173,7 @@
                 android:id="@+id/imageView22"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/editvisibility"
+                app:srcCompat="@drawable/img_editvisibility"
                 tools:layout_editor_absoluteX="223dp"
                 tools:layout_editor_absoluteY="104dp" />
 
@@ -181,7 +181,7 @@
                 android:id="@+id/btnVisibility"
                 android:layout_width="281dp"
                 android:layout_height="55dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="EDIT VISIBILITY"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -200,7 +200,7 @@
                 android:id="@+id/imageView20"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/changerolperson"
+                app:srcCompat="@drawable/img_changerolperson"
                 tools:layout_editor_absoluteX="282dp"
                 tools:layout_editor_absoluteY="505dp" />
 
@@ -208,7 +208,7 @@
                 android:id="@+id/button5"
                 android:layout_width="281dp"
                 android:layout_height="55dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CHANGE ROL"
                 android:textColor="@color/white"
                 android:textSize="20sp"
@@ -226,7 +226,7 @@
                 android:id="@+id/imageView18"
                 android:layout_width="60dp"
                 android:layout_height="60dp"
-                app:srcCompat="@drawable/dardebajausuario"
+                app:srcCompat="@drawable/img_dardebajausuario"
                 tools:layout_editor_absoluteX="64dp"
                 tools:layout_editor_absoluteY="174dp" />
 
@@ -234,7 +234,7 @@
                 android:id="@+id/button3"
                 android:layout_width="281dp"
                 android:layout_height="55dp"
-                android:background="@drawable/border_buttons"
+                android:background="@drawable/btn_border_buttons"
                 android:text="CANCEL ACCOUNT"
                 android:textColor="@color/white"
                 android:textSize="20sp"

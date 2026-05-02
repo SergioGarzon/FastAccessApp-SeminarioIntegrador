@@ -1,4 +1,4 @@
-package com.example.aplicacionseminariointegrador;
+package com.example.aplicacionseminariointegrador.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,7 +12,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.aplicacionseminariointegrador.auxiliarclases.LanguageSelected;
+import com.example.aplicacionseminariointegrador.model.LanguageSelected;
+import com.example.aplicacionseminariointegrador.R;
 
 public class UserInformationLogin extends AppCompatActivity {
     ImageView imgActivityInfo;
@@ -40,7 +41,7 @@ public class UserInformationLogin extends AppCompatActivity {
 
         switch(Integer.parseInt(valor)) {
             case 1:
-                imgActivityInfo.setImageResource(R.drawable.userwaitingconfirmation);
+                imgActivityInfo.setImageResource(R.drawable.img_userwaitingconfirmation);
                 infoUserEnglish = "Information";
                 infoUserSpanish = "Información";
                 messageUserEnglish = "User waiting autorization!";
@@ -49,7 +50,7 @@ public class UserInformationLogin extends AppCompatActivity {
                 txtInfoUser.setTextColor(Color.rgb(14, 164, 175));
                 break;
             case 2:
-                imgActivityInfo.setImageResource(R.drawable.usernoautorized);
+                imgActivityInfo.setImageResource(R.drawable.img_usernoautorized);
                 infoUserEnglish = "Error";
                 infoUserSpanish = "Error";
                 messageUserEnglish = "User no autorized";
@@ -58,7 +59,7 @@ public class UserInformationLogin extends AppCompatActivity {
                 txtInfoUser.setTextColor(Color.RED);
                 break;
             case 3:
-                imgActivityInfo.setImageResource(R.drawable.alertsymbol);
+                imgActivityInfo.setImageResource(R.drawable.img_alertsymbol);
                 infoUserEnglish = "A problem has ocurred!";
                 infoUserSpanish = "¡Un problema ha ocurrido!";
                 messageUserEnglish = "User requested the cancellation of his account";
