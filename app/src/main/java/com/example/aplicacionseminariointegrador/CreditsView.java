@@ -15,13 +15,13 @@ import com.example.aplicacionseminariointegrador.databinding.ActivityCreditsApli
 import com.example.aplicacionseminariointegrador.databinding.FragmentCreditsViewBinding;
 
 public class CreditsView extends Fragment {
-
+    private FragmentCreditsViewBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        FragmentCreditsViewBinding binding = FragmentCreditsViewBinding.inflate(getLayoutInflater());
+        binding = FragmentCreditsViewBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
         String textCredits, textBtnCredits, url;
@@ -46,5 +46,11 @@ public class CreditsView extends Fragment {
 
     private void openBrowser(String urn) {
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/" + urn)));
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Buena práctica para evitar fugas de memoria
     }
 }
