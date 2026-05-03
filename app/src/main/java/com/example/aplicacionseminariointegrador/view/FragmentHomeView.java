@@ -57,6 +57,11 @@ public class FragmentHomeView extends Fragment {
                 .commit()
         );
 
+        binding.btnIdRegister.setOnClickListener(v -> getParentFragmentManager().beginTransaction()
+                .replace(R.id.main_container, new FragmentRegisterView())
+                .addToBackStack(null)
+                .commit()
+        );
 
         return view;
     }

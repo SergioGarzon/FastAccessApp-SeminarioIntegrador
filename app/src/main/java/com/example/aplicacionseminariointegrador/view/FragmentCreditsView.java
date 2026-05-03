@@ -24,7 +24,7 @@ public class FragmentCreditsView extends Fragment {
         binding = FragmentCreditsViewBinding.inflate(getLayoutInflater());
         View view = binding.getRoot();
 
-        String textCredits, textBtnCredits, url;
+        String textCredits, textBtnCredits;
 
         textCredits = (LanguageSelected.languageSelected == 0) ? getString(R.string.credits_description) :
                 getString(R.string.creditos_descripcion);
