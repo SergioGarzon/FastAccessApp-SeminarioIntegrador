@@ -8,6 +8,7 @@ import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 
+import com.example.aplicacionseminariointegrador.BuildConfig;
 import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 import com.example.aplicacionseminariointegrador.R;
 import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
@@ -34,6 +35,8 @@ public class FragmentHomeView extends Fragment {
         }
 
         animation();
+
+        //binding.txtPruebaConfig.setText(BuildConfig.API_URL + "/fastaccessapp/history.php");
 
         binding.btnCreditsInformation.setOnClickListener(v -> {
             getParentFragmentManager().beginTransaction()

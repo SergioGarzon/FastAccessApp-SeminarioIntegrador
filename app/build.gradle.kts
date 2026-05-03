@@ -1,3 +1,18 @@
+import java.util.Properties
+
+val localProperties = Properties()
+val localPropertiesFile = rootProject.file("local.properties")
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.inputStream().use { stream ->
+        localProperties.load(stream)
+    }
+    // 👇 LOG PARA VERIFICAR QUE LEE LAS VARIABLES
+    //println("✅ API_KEY leída: ${localProperties.getProperty("API_URL")}")
+} //else {
+   // println("❌ No se encontró local.properties en: ${localPropertiesFile.absolutePath}")
+    //println("❌ No se encontró local.properties")
+//}
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -18,6 +33,8 @@ android {
         vectorDrawables {
             useSupportLibrary = true
         }
+
+        buildConfigField("String", "API_URL", "\"${localProperties.getProperty("API_URL")}\"")
     }
 
     buildTypes {
@@ -33,13 +50,16 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
     buildFeatures {
         compose = true
         viewBinding = true
+        buildConfig = true
     }
     composeOptions {
         kotlinCompilerExtensionVersion = "1.4.3"
     }
+
     packaging {
         resources {
             excludes += "/META-INF/{AL2.0,LGPL2.1}"
