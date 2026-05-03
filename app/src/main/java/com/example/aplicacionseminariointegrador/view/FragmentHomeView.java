@@ -38,24 +38,24 @@ public class FragmentHomeView extends Fragment {
 
         //binding.txtPruebaConfig.setText(BuildConfig.API_URL + "/fastaccessapp/history.php");
 
-        binding.btnCreditsInformation.setOnClickListener(v -> {
+        binding.btnCreditsInformation.setOnClickListener(v ->
             getParentFragmentManager().beginTransaction()
                     .replace(R.id.main_container, new FragmentCreditsView())
                     .addToBackStack(null)
-                    .commit();
-        });
+                    .commit()
+        );
 
-        binding.btnIdLogin.setOnClickListener(v -> { getParentFragmentManager().beginTransaction()
+        binding.btnIdLogin.setOnClickListener(v -> getParentFragmentManager().beginTransaction()
                 .replace(R.id.main_container, new FragmentLoginView())
                 .addToBackStack(null)
-                .commit();
-        });
+                .commit()
+        );
 
-        binding.btnConfiguration.setOnClickListener(v -> { getParentFragmentManager().beginTransaction()
+        binding.btnConfiguration.setOnClickListener(v -> getParentFragmentManager().beginTransaction()
                 .replace(R.id.main_container, new FragmentOptionsView())
                 .addToBackStack(null)
-                .commit();
-        });
+                .commit()
+        );
 
 
         return view;
