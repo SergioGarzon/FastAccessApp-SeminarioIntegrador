@@ -26,10 +26,10 @@ public class FragmentCreditsView extends Fragment {
 
         String textCredits, textBtnCredits, url;
 
-        textCredits = (LanguageSelected.languageSelected == 0) ? String.valueOf(R.string.credits_description) :
-                String.valueOf(R.string.creditos_descripcion);
+        textCredits = (LanguageSelected.languageSelected == 0) ? getString(R.string.credits_description) :
+                getString(R.string.creditos_descripcion);
 
-        textBtnCredits = (textCredits.contains("development")) ? "OK" : "ACEPTAR";
+        textBtnCredits = (textCredits.equals(getString(R.string.credits_description))) ? "OK" : "ACEPTAR";
 
         binding.lblTxtCredits.setText(textCredits);
         binding.btnCreditsOk.setText(textBtnCredits);
