@@ -25,7 +25,12 @@
         <item>PASSPORT</item>
         <item>OTHER</item>
     </string-array>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="btn_register">REGISTER</string>
+    <string name="btn_configuration">Button to Configuration</string>
+    <string name="btn_login">LOGIN</string>
+    <string name="btn_acceso">ACCESO</string>
+    <string name="btn_registro">REGISTRO</string>
+
 
 </resources>
