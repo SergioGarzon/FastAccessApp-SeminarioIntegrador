@@ -31,6 +31,9 @@
     <string name="btn_login">LOGIN</string>
     <string name="btn_acceso">ACCESO</string>
     <string name="btn_registro">REGISTRO</string>
+    <string name="credits_description">Fast Access App is a project development by UTN FRC\'s students:</string>
+    <string name="creditos_descripcion">Fast Access App es un proyecto desarrollado por estudiantes de la UTN FRC:</string>
+
 
 
 </resources>

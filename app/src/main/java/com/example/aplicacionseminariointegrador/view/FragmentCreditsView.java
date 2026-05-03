@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.aplicacionseminariointegrador.R;
 import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 import com.example.aplicacionseminariointegrador.databinding.FragmentCreditsViewBinding;
 
@@ -25,8 +26,8 @@ public class FragmentCreditsView extends Fragment {
 
         String textCredits, textBtnCredits, url;
 
-        textCredits = (LanguageSelected.languageSelected == 0) ? "Fast Access App is a project development by UTN FRC's students:" :
-                "Fast Access App es un proyecto desarrollado por estudiantes de la UTN FRC:";
+        textCredits = (LanguageSelected.languageSelected == 0) ? String.valueOf(R.string.credits_description) :
+                String.valueOf(R.string.creditos_descripcion);
 
         textBtnCredits = (textCredits.contains("development")) ? "OK" : "ACEPTAR";
 
