@@ -26,12 +26,12 @@ public class FragmentHomeView extends Fragment {
 
 
         if(LanguageSelected.languageSelected == 0) {
-            binding.btnIdLogin.setText("LOGIN");
-            binding.btnIdRegister.setText("REGISTER");
+            binding.btnIdLogin.setText(R.string.btn_login);
+            binding.btnIdRegister.setText(R.string.btn_register);
         }
         else {
-            binding.btnIdLogin.setText("ACCESO");
-            binding.btnIdRegister.setText("REGISTRO");
+            binding.btnIdLogin.setText(R.string.btn_acceso);
+            binding.btnIdRegister.setText(R.string.btn_registro);
         }
 
         animation();
