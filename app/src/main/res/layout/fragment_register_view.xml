@@ -189,9 +189,9 @@
 
     <Button
         android:id="@+id/btnRegisterUser"
-        android:layout_width="232dp"
-        android:layout_height="48dp"
-        android:layout_marginBottom="64dp"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="4dp"
         android:background="@drawable/btn_border_buttons"
         android:text="NEXT"
         android:textColor="@color/white"
@@ -199,14 +199,15 @@
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.87"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tableLayout2" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.545" />
 
     <Button
         android:id="@+id/btnCancelCreateAccount"
-        android:layout_width="232dp"
-        android:layout_height="48dp"
+        android:layout_width="171dp"
+        android:layout_height="52dp"
         android:layout_marginBottom="4dp"
         android:background="@drawable/btn_border_buttons"
         android:onClick="backStart_Activity"
@@ -215,11 +216,11 @@
         android:textSize="30sp"
         android:textStyle="bold|italic"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintEnd_toStartOf="@+id/btnRegisterUser"
+        app:layout_constraintHorizontal_bias="0.815"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnRegisterUser"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout2"
+        app:layout_constraintVertical_bias="0.545" />
 
     <ImageView
         android:id="@+id/imageView5"

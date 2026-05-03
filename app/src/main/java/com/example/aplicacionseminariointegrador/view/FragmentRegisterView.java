@@ -26,6 +26,15 @@ public class FragmentRegisterView extends Fragment {
 
         chargeSpinnerDocumentType();
 
+        binding.btnCancelCreateAccount.setOnClickListener(v -> { getParentFragmentManager().popBackStack(); });
+
+        binding.btnRegisterUser.setOnClickListener(v -> {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.main_container, new FragmentRegisterSecondView())
+                    .addToBackStack(null)
+                    .commit();
+        });
+
         return view;
     }
 
