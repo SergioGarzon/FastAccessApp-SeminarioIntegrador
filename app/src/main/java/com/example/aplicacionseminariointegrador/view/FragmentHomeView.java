@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
+
 import com.example.aplicacionseminariointegrador.model.LanguageSelected;
 import com.example.aplicacionseminariointegrador.R;
 import com.example.aplicacionseminariointegrador.databinding.FragmentHomeViewBinding;
@@ -44,7 +45,15 @@ public class FragmentHomeView extends Fragment {
         binding.btnIdLogin.setOnClickListener(v -> { getParentFragmentManager().beginTransaction()
                 .replace(R.id.main_container, new FragmentLoginView())
                 .addToBackStack(null)
-                .commit();});
+                .commit();
+        });
+
+        binding.btnConfiguration.setOnClickListener(v -> { getParentFragmentManager().beginTransaction()
+                .replace(R.id.main_container, new FragmentOptionsView())
+                .addToBackStack(null)
+                .commit();
+        });
+
 
         return view;
     }

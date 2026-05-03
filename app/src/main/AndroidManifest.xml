@@ -103,9 +103,6 @@
             android:name=".view.MenuAplication"
             android:exported="false" />
         <activity
-            android:name=".view.CreditsAplication"
-            android:exported="false" />
-        <activity
             android:name=".view.StartActivity"
             android:exported="true">
             <intent-filter>
