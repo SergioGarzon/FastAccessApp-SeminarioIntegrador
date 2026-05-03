@@ -29,15 +29,15 @@ public class FragmentCreditsView extends Fragment {
         textCredits = (LanguageSelected.languageSelected == 0) ? getString(R.string.credits_description) :
                 getString(R.string.creditos_descripcion);
 
-        textBtnCredits = (textCredits.equals(getString(R.string.credits_description))) ? "OK" : "ACEPTAR";
+        textBtnCredits = (textCredits.equals(getString(R.string.credits_description))) ? getString(R.string.text_ok) : getString(R.string.text_aceptar);
 
         binding.lblTxtCredits.setText(textCredits);
         binding.btnCreditsOk.setText(textBtnCredits);
 
-        binding.imgBtnLinkedinFacundo.setOnClickListener(v -> { openBrowser("facundo-rago/"); });
-        binding.imgBtnLinkedinSergio.setOnClickListener(v -> { openBrowser("sergio-gabriel-garzon/"); });
-        binding.imgBtnLinkedinMatias.setOnClickListener(v -> { openBrowser("matias-leonel-farach-b2482528a/"); });
-        binding.imgBtnLinkedInGenaro.setOnClickListener(v -> { openBrowser("genaro-paredes-6b5785238/"); });
+        binding.imgBtnLinkedinFacundo.setOnClickListener(v -> { openBrowser(getString(R.string.text_browser_url1)); });
+        binding.imgBtnLinkedinSergio.setOnClickListener(v -> { openBrowser(getString(R.string.text_browser_url2)); });
+        binding.imgBtnLinkedinMatias.setOnClickListener(v -> { openBrowser(getString(R.string.text_browser_url3)); });
+        binding.imgBtnLinkedInGenaro.setOnClickListener(v -> { openBrowser(getString(R.string.text_browser_url4)); });
 
         binding.btnCreditsOk.setOnClickListener( v -> { getParentFragmentManager().popBackStack(); });
 
@@ -45,7 +45,7 @@ public class FragmentCreditsView extends Fragment {
     }
 
     private void openBrowser(String urn) {
-        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.linkedin.com/in/" + urn)));
+        startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(getString(R.string.text_browser_url0) + urn)));
     }
 
     @Override

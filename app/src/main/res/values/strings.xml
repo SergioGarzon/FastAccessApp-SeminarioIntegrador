@@ -33,7 +33,35 @@
     <string name="btn_registro">REGISTRO</string>
     <string name="credits_description">Fast Access App is a project development by UTN FRC\'s students:</string>
     <string name="creditos_descripcion">Fast Access App es un proyecto desarrollado por estudiantes de la UTN FRC:</string>
+    <string name="text_browser_url0">"https://www.linkedin.com/in/"</string>
+    <string name="text_browser_url1">facundo-rago/</string>
+    <string name="text_browser_url2">sergio-gabriel-garzon/</string>
+    <string name="text_browser_url3">matias-leonel-farach-b2482528a/</string>
+    <string name="text_browser_url4">genaro-paredes-6b5785238/</string>
+    <string name="text_ok">OK</string>
+    <string name="text_aceptar">ACEPTAR</string>
+    <string name="btn_login_access">SIGN IN</string>
+    <string name="btn_cancel">CANCEL</string>
+    <string name="btn_forgot_password">Forgot Password?</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password:</string>
+    <string name="txt_enter_username">Enter your username</string>
+    <string name="txt_enter_password">Enter your password</string>
+    <string name="btn_iniciar_session">INICIAR SESION"</string>
+    <string name="btn_cancelar">CANCELAR</string>
+    <string name="btn_olvidateclave">¿Olvidate la contraseña?</string>
+    <string name="txt_nombreusuario">Nombre de usuario:</string>
+    <string name="txt_contrasenia">Contraseña:</string>
+    <string name="txt_error">Error!</string>
+    <string name="txt_ingreseusuario">Ingresa tu nombre de usuario</string>
+    <string name="txt_ingresecontrasena">Ingresa tu contraseña</string>
+    <string name="txt_datarequired">"Username and/or password is required"</string>
+    <string name="txt_datosingresar">Falta ingresar usuario y/o contraseña</string>
 
 
 
+    <!--
+            binding.txtInputPassword.setHint("Ingresa tu contraseña");
+
+    -->
 </resources>

@@ -27,23 +27,23 @@ public class FragmentLoginView extends Fragment {
         View view = binding.getRoot();
 
         if(LanguageSelected.languageSelected == 0) {
-            binding.btnLogin.setText("SIGN IN");
-            binding.btnCancelLogin.setText("CANCEL");
-            binding.btnForgotPassword.setText("Forgot Password?");
-            binding.txtLblUsername.setText("Username:");
-            binding.txtLblPass.setText("Password:");
-            binding.lblLogin.setText("LOGIN");
-            binding.txtInputUsername.setHint("Enter your username");
-            binding.txtInputPassword.setHint("Enter your password");
+            binding.btnLogin.setText(getString(R.string.btn_login_access));
+            binding.btnCancelLogin.setText(getString(R.string.btn_cancel));
+            binding.btnForgotPassword.setText(getString(R.string.btn_forgot_password));
+            binding.txtLblUsername.setText(R.string.txt_username);
+            binding.txtLblPass.setText(getString(R.string.txt_password));
+            binding.lblLogin.setText(getString(R.string.btn_login));
+            binding.txtInputUsername.setHint(getString(R.string.txt_enter_username));
+            binding.txtInputPassword.setHint(R.string.txt_enter_password);
         } else {
-            binding.btnLogin.setText("INICIAR SESION");
-            binding.btnCancelLogin.setText("CANCELAR");
-            binding.btnForgotPassword.setText("¿Olvidate la contraseña?");
-            binding.txtLblUsername.setText("Nombre de usuario:");
-            binding.txtLblPass.setText("Contraseña:");
-            binding.lblLogin.setText("ACCESO");
-            binding.txtInputUsername.setHint("Ingresa tu nombre de usuario");
-            binding.txtInputPassword.setHint("Ingresa tu contraseña");
+            binding.btnLogin.setText(getString(R.string.btn_iniciar_session));
+            binding.btnCancelLogin.setText(getString(R.string.btn_cancelar));
+            binding.btnForgotPassword.setText(getString(R.string.btn_olvidateclave));
+            binding.txtLblUsername.setText(getString(R.string.txt_nombreusuario));
+            binding.txtLblPass.setText(getString(R.string.txt_contrasenia));
+            binding.lblLogin.setText(getString(R.string.btn_acceso));
+            binding.txtInputUsername.setHint(getString(R.string.txt_ingreseusuario));
+            binding.txtInputPassword.setHint(getString(R.string.txt_ingresecontrasena));
         }
 
         binding.btnCancelLogin.setOnClickListener(v -> { getParentFragmentManager().popBackStack(); });
@@ -61,11 +61,11 @@ public class FragmentLoginView extends Fragment {
             AlertDialog.Builder dialog = new AlertDialog.Builder(getContext());
 
             String messagePassUser= (LanguageSelected.languageSelected == 0) ?
-                "Username and/or password is required": "Falta ingresar usuario y/o contraseña";
+                getString(R.string.txt_datarequired): getString(R.string.txt_datosingresar);
             dialog.setMessage(messagePassUser);
 
-            dialog.setTitle("Error!");
-            dialog.setPositiveButton("Ok",
+            dialog.setTitle(getString(R.string.txt_error));
+            dialog.setPositiveButton(getString(R.string.text_ok),
                     new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
                             dialog.cancel();
