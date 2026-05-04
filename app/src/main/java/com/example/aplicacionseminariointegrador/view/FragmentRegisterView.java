@@ -43,4 +43,10 @@ public class FragmentRegisterView extends Fragment {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.spnTypeDocument.setAdapter(adapter);
     }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Buena práctica para evitar fugas de memoria
+    }
 }

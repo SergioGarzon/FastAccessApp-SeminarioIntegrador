@@ -9,13 +9,28 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.aplicacionseminariointegrador.R;
+import com.example.aplicacionseminariointegrador.databinding.FragmentRegisterSecondViewBinding;
 
 public class FragmentRegisterSecondView extends Fragment {
+
+    private FragmentRegisterSecondViewBinding binding;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_register_second_view, container, false);
+
+        binding = FragmentRegisterSecondViewBinding.inflate(inflater, container, false);
+        View view = binding.getRoot();
+
+        binding.btnCancelCreateAccount2.setOnClickListener(v -> { getParentFragmentManager().popBackStack(); });
+
+
+        return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Buena práctica para evitar fugas de memoria
     }
 }

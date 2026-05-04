@@ -24,8 +24,14 @@ public class FragmentOptionsView extends Fragment {
         binding = FragmentOptionsViewBinding.inflate(inflater, container, false);
         View view = binding.getRoot();
 
-        binding.btnCancelOptions.setOnClickListener( v -> {getParentFragmentManager().popBackStack(); });
+        binding.btnCancelOptions.setOnClickListener( v -> { getParentFragmentManager().popBackStack(); });
 
         return view;
+    }
+
+    @Override
+    public void onDestroyView() {
+        super.onDestroyView();
+        binding = null; // Buena práctica para evitar fugas de memoria
     }
 }
