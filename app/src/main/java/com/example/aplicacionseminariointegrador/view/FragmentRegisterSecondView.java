@@ -24,6 +24,12 @@ public class FragmentRegisterSecondView extends Fragment {
 
         binding.btnCancelCreateAccount2.setOnClickListener(v -> { getParentFragmentManager().popBackStack(); });
 
+        binding.btnRegisterUser2.setOnClickListener(v -> {
+            getParentFragmentManager().beginTransaction()
+                    .replace(R.id.main_container, new FragmentRegisterThirdView())
+                    .addToBackStack(null)
+                    .commit();
+        });
 
         return view;
     }
